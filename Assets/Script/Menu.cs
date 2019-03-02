@@ -12,13 +12,16 @@ public Button button_caderno;
 public Button button_estatisticas;
 public Button button_sair;
 public Button button_quiz;
+public Button button_cadastro;
 public Button button_forca;
 public Button button_ferramentas;
+public string url = "https://qualif.000webhostapp.com/html/selectLogin.php";
 
  void Start()
     {
         button_jogar.onClick.AddListener(Jogar);
-        button_sair.onClick.AddListener(Sair);
+        button_cadastro.onClick.AddListener(Cadastrar);
+        //button_sair.onClick.AddListener(Sair);
         //button_forca.onClick.AddListener(Forca);
         //button_ferramentas.onClick.AddListener(Ferramentas);
 
@@ -26,12 +29,19 @@ public Button button_ferramentas;
 
    
  void Jogar(){
+
         SceneManager.LoadScene("TelaJogo");
     }
 
- void Sair(){
-        Application.Quit();
+ void Cadastrar(){
+
+        SceneManager.LoadScene("TelaCadastro");
     }
+
+
+ //void Sair(){
+        //Application.Quit();
+    //}
 
  void Forca(){
         SceneManager.LoadScene("JogoForca1");

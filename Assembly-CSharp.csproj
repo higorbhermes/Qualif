@@ -61,6 +61,7 @@
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\RedSpike.cs" />
      <Compile Include="Assets\Script\Splash.cs" />
+     <Compile Include="Assets\Script\TelaCadastro.cs" />
      <Compile Include="Assets\Script\TelaJogo.cs" />
      <Compile Include="Assets\Script\Tentativa2.cs" />
      <None Include="Assets\Graficos\Jumper\Spritesheets\spritesheet_jumper.xml" />

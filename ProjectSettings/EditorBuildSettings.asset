@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JogoForca1.unity
     guid: 920d1fecf3f0f41aabcb371698e6d7e1
+  - enabled: 1
+    path: Assets/TelaCadastro.unity
+    guid: a3e9c9a86e46c4b1082b5484517e5f87
