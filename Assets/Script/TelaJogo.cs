@@ -24,6 +24,7 @@ public Button button_ferramentas;
         button_forca.onClick.AddListener(Forca);
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Ferramentas);
+        Debug.Log("Tela Jogo");
 
      }
 

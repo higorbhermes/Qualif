@@ -8,30 +8,54 @@ public class Menu : MonoBehaviour {
 	
 
 public Button button_jogar;
-public Button button_caderno;
-public Button button_estatisticas;
-public Button button_sair;
-public Button button_quiz;
 public Button button_cadastro;
-public Button button_forca;
-public Button button_ferramentas;
+public InputField field_email;
+public InputField field_senha;
+public string email, senha, retorno;
 public string url = "https://qualif.000webhostapp.com/html/selectLogin.php";
+public string url_completa;
 
- void Start()
-    {
-        button_jogar.onClick.AddListener(Jogar);
+void Start(){
+        button_jogar.onClick.AddListener(Login);
         button_cadastro.onClick.AddListener(Cadastrar);
         //button_sair.onClick.AddListener(Sair);
-        //button_forca.onClick.AddListener(Forca);
-        //button_ferramentas.onClick.AddListener(Ferramentas);
-
-     }
+}
 
    
- void Jogar(){
+ void Login(){
 
-        SceneManager.LoadScene("TelaJogo");
-    }
+   if (field_email.text == "" || field_senha.text == ""){
+               // FeedBackError("Preencha todos os campos");
+        }
+   else{
+             email = field_email.text;
+             senha = field_senha.text;
+             url_completa = url+"?email="+email+"&senha="+senha;
+             Debug.Log(url_completa);
+             WWW www = new WWW (url);
+             StartCoroutine(ValidaLogin(www));
+        }
+ }
+
+ IEnumerator ValidaLogin(WWW www){
+        yield return www;
+        retorno = www.text.ToString();
+        Debug.Log(retorno);
+        if (retorno == "1"){
+            Debug.Log("Funcionou");
+        }
+        else{
+             Debug.Log("Erro ao Cadastrar!");
+        }
+        /*if (retorno == "0"){
+            Debug.Log("Erro no Login!");
+        }
+        else{
+             Debug.Log("Funcionou");
+        }*/
+
+}
+
 
  void Cadastrar(){
 

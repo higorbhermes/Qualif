@@ -137,12 +137,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168344671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5403442, y: -0.7701721, z: 1.5403605}
+  m_LocalPosition: {x: -1.5404053, y: -0.77020264, z: 1.5403605}
   m_LocalScale: {x: 0.15403594, y: 0.15403605, z: 0.15403605}
   m_Children:
   - {fileID: 2080252075}
   - {fileID: 916468045}
-  - {fileID: 569037015}
   - {fileID: 1891308765}
   - {fileID: 1032633753}
   - {fileID: 710327479}
@@ -211,80 +210,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &213794945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 213794946}
-  - component: {fileID: 213794948}
-  - component: {fileID: 213794947}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &213794946
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 213794945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -319.00003, y: 50, z: 0}
-  m_LocalScale: {x: 1.767195, y: 1.7671944, z: 1.7671944}
-  m_Children: []
-  m_Father: {fileID: 569037015}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -319, y: 50}
-  m_SizeDelta: {x: 211.3, y: 38}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &213794947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 213794945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: ESTATISTICAS
---- !u!222 &213794948
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 213794945}
 --- !u!1 &260149473
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,117 +419,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537237887}
---- !u!1 &569037014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 569037015}
-  - component: {fileID: 569037018}
-  - component: {fileID: 569037017}
-  - component: {fileID: 569037016}
-  m_Layer: 0
-  m_Name: button_estatisticas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &569037015
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569037014}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1367, y: -54, z: 0}
-  m_LocalScale: {x: 0.68002254, y: 0.6800224, z: 0.6800224}
-  m_Children:
-  - {fileID: 213794946}
-  m_Father: {fileID: 168344672}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1367, y: -54}
-  m_SizeDelta: {x: 740, y: 117.94}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &569037016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569037014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.18039216, g: 0.69411767, b: 0.9490196, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 569037017}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &569037017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569037014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &569037018
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569037014}
 --- !u!1 &580916627
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,8 +584,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 710327479}
-  - component: {fileID: 710327483}
   - component: {fileID: 710327482}
+  - component: {fileID: 710327483}
   - component: {fileID: 710327481}
   - component: {fileID: 710327480}
   m_Layer: 0
@@ -793,7 +607,7 @@ RectTransform:
   m_Children:
   - {fileID: 537237888}
   m_Father: {fileID: 168344672}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -886,14 +700,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button_jogar: {fileID: 916468046}
-  button_caderno: {fileID: 0}
-  button_estatisticas: {fileID: 0}
-  button_sair: {fileID: 0}
-  button_quiz: {fileID: 0}
   button_cadastro: {fileID: 710327480}
-  button_forca: {fileID: 0}
-  button_ferramentas: {fileID: 0}
+  field_email: {fileID: 1891308766}
+  field_senha: {fileID: 1032633754}
+  email: 
+  senha: 
+  retorno: 
   url: https://qualif.000webhostapp.com/html/selectLogin.php
+  url_completa: 
 --- !u!1 &823412444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,8 +938,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 916468045}
-  - component: {fileID: 916468049}
   - component: {fileID: 916468048}
+  - component: {fileID: 916468049}
   - component: {fileID: 916468047}
   - component: {fileID: 916468046}
   m_Layer: 0
@@ -1240,14 +1054,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button_jogar: {fileID: 916468046}
-  button_caderno: {fileID: 0}
-  button_estatisticas: {fileID: 0}
-  button_sair: {fileID: 0}
-  button_quiz: {fileID: 0}
   button_cadastro: {fileID: 710327480}
-  button_forca: {fileID: 0}
-  button_ferramentas: {fileID: 0}
+  field_email: {fileID: 1891308766}
+  field_senha: {fileID: 1032633754}
+  email: 
+  senha: 
+  retorno: 
   url: https://qualif.000webhostapp.com/html/selectLogin.php
+  url_completa: 
 --- !u!1 &1032633752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1074,7 @@ GameObject:
   - component: {fileID: 1032633755}
   - component: {fileID: 1032633754}
   m_Layer: 0
-  m_Name: InputField (1)
+  m_Name: field_senha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1279,7 +1093,7 @@ RectTransform:
   - {fileID: 835589312}
   - {fileID: 823412445}
   m_Father: {fileID: 168344672}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1542,7 +1356,7 @@ GameObject:
   - component: {fileID: 1891308767}
   - component: {fileID: 1891308766}
   m_Layer: 0
-  m_Name: InputField
+  m_Name: field_email
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1561,7 +1375,7 @@ RectTransform:
   - {fileID: 831624638}
   - {fileID: 580916628}
   m_Father: {fileID: 168344672}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

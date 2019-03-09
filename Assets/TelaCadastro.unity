@@ -137,7 +137,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168344671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5404053, y: -0.77020264, z: 1.5403605}
+  m_LocalPosition: {x: -1.5404053, y: -0.7701721, z: 1.5403605}
   m_LocalScale: {x: 0.15403594, y: 0.15403605, z: 0.15403605}
   m_Children:
   - {fileID: 2080252075}
@@ -349,6 +349,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &275392624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 275392625}
+  - component: {fileID: 275392627}
+  - component: {fileID: 275392626}
+  m_Layer: 0
+  m_Name: text_retorno
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &275392625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275392624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -307.0947, y: 19.539124, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1454180668}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -307.0947, y: 19.539124}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &275392626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275392624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &275392627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275392624}
 --- !u!1 &295104923
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +568,7 @@ Transform:
   m_LocalScale: {x: 146.35574, y: 151.28954, z: 33.27403}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537237887
 GameObject:
@@ -1035,7 +1109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dd81d0da38446978dcb215240b2af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button_jogar: {fileID: 916468046}
+  button_salvar: {fileID: 916468046}
   button_cancelar: {fileID: 710327480}
   field_nome: {fileID: 1819410847}
   field_sobrenome: {fileID: 1891308766}
@@ -1045,7 +1119,7 @@ MonoBehaviour:
   sobrenome: 
   email: 
   senha: 
-  url: https://qualif.000webhostapp.com/html/selectLogin.php
+  url: https://qualif.000webhostapp.com/html/cadastro.php
 --- !u!1 &823412444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02dd81d0da38446978dcb215240b2af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button_jogar: {fileID: 916468046}
+  button_salvar: {fileID: 916468046}
   button_cancelar: {fileID: 710327480}
   field_nome: {fileID: 1819410847}
   field_sobrenome: {fileID: 1891308766}
@@ -1401,7 +1475,7 @@ MonoBehaviour:
   sobrenome: 
   email: 
   senha: 
-  url: https://qualif.000webhostapp.com/html/selectLogin.php
+  url: https://qualif.000webhostapp.com/html/cadastro.php
 --- !u!1 &1032633752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1968,40 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352208009}
+--- !u!1 &1454180667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1454180668}
+  m_Layer: 0
+  m_Name: WWW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1454180668
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454180667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 639.99976, y: 359.99988, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 275392625}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 639.99976, y: 359.99988}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1819410845
 GameObject:
   m_ObjectHideFlags: 0
