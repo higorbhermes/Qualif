@@ -53,13 +53,13 @@ public string url = "https://qualif.000webhostapp.com/html/cadastro.php";
          //   Debug.Log("Cadastro Realizado com Sucesso!");
         
         retorno = www.text.ToString();
-        Debug.Log(retorno);
-        if (retorno == "1"){
+        //Debug.Log(retorno);
+        /*if (retorno == "1"){
             Debug.Log("Funcionou");
         }
         else{
              Debug.Log("Erro ao Cadastrar!");
-        }
+        }*/
 
 }
 

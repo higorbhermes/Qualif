@@ -12,6 +12,7 @@ public Button button_cadastro;
 public InputField field_email;
 public InputField field_senha;
 public string email, senha, retorno;
+public int teste;
 public string url = "https://qualif.000webhostapp.com/html/selectLogin.php";
 public string url_completa;
 
@@ -32,7 +33,7 @@ void Start(){
              senha = field_senha.text;
              url_completa = url+"?email="+email+"&senha="+senha;
              Debug.Log(url_completa);
-             WWW www = new WWW (url);
+             WWW www = new WWW (url_completa);
              StartCoroutine(ValidaLogin(www));
         }
  }
@@ -40,12 +41,14 @@ void Start(){
  IEnumerator ValidaLogin(WWW www){
         yield return www;
         retorno = www.text.ToString();
-        Debug.Log(retorno);
-        if (retorno == "1"){
-            Debug.Log("Funcionou");
+        retorno = retorno.TrimEnd();
+        string resultado_verdadeiro = "1";
+        bool resultado = resultado_verdadeiro.Equals(retorno);
+        if (resultado == true ){
+            Debug.Log("Seja Bem Vindo ao Qualif");
         }
         else{
-             Debug.Log("Erro ao Cadastrar!");
+             Debug.Log("Por favor, tente novamente");
         }
         /*if (retorno == "0"){
             Debug.Log("Erro no Login!");
