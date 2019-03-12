@@ -46,6 +46,8 @@ void Start(){
         bool resultado = resultado_verdadeiro.Equals(retorno);
         if (resultado == true ){
             Debug.Log("Seja Bem Vindo ao Qualif");
+            UserData.email = email;
+            SceneManager.LoadScene("TelaJogo");
         }
         else{
              Debug.Log("Por favor, tente novamente");

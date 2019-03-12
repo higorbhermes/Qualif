@@ -25,6 +25,7 @@ public Button button_ferramentas;
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Ferramentas);
         Debug.Log("Tela Jogo");
+        Debug.Log(""+UserData.email);
 
      }
 

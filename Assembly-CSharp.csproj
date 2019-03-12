@@ -64,6 +64,7 @@
      <Compile Include="Assets\Script\TelaCadastro.cs" />
      <Compile Include="Assets\Script\TelaJogo.cs" />
      <Compile Include="Assets\Script\Tentativa2.cs" />
+     <Compile Include="Assets\Script\UserData.cs" />
      <None Include="Assets\Graficos\Jumper\Spritesheets\spritesheet_jumper.xml" />
      <None Include="Assets\Graficos\Chão\PNG Dirt\Spritesheet\sheet.xml" />
      <None Include="Assets\Graficos\Jumper\License.txt" />

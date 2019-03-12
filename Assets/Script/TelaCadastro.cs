@@ -14,6 +14,7 @@ public InputField field_email;
 public InputField field_senha;
 public string nome, sobrenome, email, senha, retorno;
 public string url = "https://qualif.000webhostapp.com/html/cadastro.php";
+public string url_completa;
 
  void Start()
     {
@@ -37,9 +38,9 @@ public string url = "https://qualif.000webhostapp.com/html/cadastro.php";
              sobrenome = field_sobrenome.text;
              email = field_email.text;
              senha = field_senha.text;
-             url = url+"?nome="+nome+"&sobrenome="+sobrenome+"&email="+email+"&senha="+senha;
-             Debug.Log(url);
-             WWW www = new WWW (url);
+             url_completa = url+"?nome="+nome+"&sobrenome="+sobrenome+"&email="+email+"&senha="+senha;
+             Debug.Log(url_completa);
+             WWW www = new WWW (url_completa);
              StartCoroutine(ValidaLogin(www));
         }
       
@@ -53,13 +54,15 @@ public string url = "https://qualif.000webhostapp.com/html/cadastro.php";
          //   Debug.Log("Cadastro Realizado com Sucesso!");
         
         retorno = www.text.ToString();
-        //Debug.Log(retorno);
-        /*if (retorno == "1"){
+        Debug.Log(retorno);
+        retorno = retorno.TrimEnd();
+        if (retorno == "1"){
             Debug.Log("Funcionou");
+
         }
         else{
              Debug.Log("Erro ao Cadastrar!");
-        }*/
+        }
 
 }
 
