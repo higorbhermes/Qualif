@@ -43,6 +43,9 @@ void Voltar(){
     }
 
  void Forca(){
+
+        //Random randNum = new Random();
+        //int num_sorteado = randNum.Next(100);        
         SceneManager.LoadScene("JogoForca1");
     }
 

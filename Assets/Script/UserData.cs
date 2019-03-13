@@ -7,5 +7,6 @@ using UnityEngine.UI;
 public class UserData {
 
 public static string email = "";
+public static int[] JogoForcaAtual = new int [100];
 
 }
