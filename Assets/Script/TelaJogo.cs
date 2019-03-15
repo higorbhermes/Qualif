@@ -14,8 +14,9 @@ public Button button_sair;
 public Button button_quiz;
 public Button button_forca;
 public Button button_voltar;
-
 public Button button_ferramentas;
+public string num_gerado;
+public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
 
  void Start()
     {
@@ -24,12 +25,9 @@ public Button button_ferramentas;
         button_forca.onClick.AddListener(Forca);
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Ferramentas);
-        Debug.Log("Tela Jogo");
         Debug.Log(""+UserData.email);
-
      }
 
-   
  void Jogar(){
         SceneManager.LoadScene("TelaJogo");
     }
@@ -44,12 +42,21 @@ void Voltar(){
 
  void Forca(){
 
-        //Random randNum = new Random();
-        //int num_sorteado = randNum.Next(100);        
-        SceneManager.LoadScene("JogoForca1");
+        WWW www = new WWW (url_aleatorio);
+        StartCoroutine(Num_aleatorio(www));         
+        //SceneManager.LoadScene("JogoForca1");
     }
 
  void Ferramentas(){
         SceneManager.LoadScene("Cena1");
     }
+
+IEnumerator Num_aleatorio(WWW www){
+        yield return www;
+        num_gerado = www.text.ToString();
+        num_gerado = num_gerado.TrimEnd();
+        Debug.Log(""+num_gerado); 
+        Debug.Log("Gerou esse número: "+num_gerado); 
+        Debug.Log("E também esse: "+num_gerado);  
+}
 }
