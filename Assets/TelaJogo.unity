@@ -243,6 +243,10 @@ MonoBehaviour:
   button_forca: {fileID: 1150551765}
   button_voltar: {fileID: 1032805286}
   button_ferramentas: {fileID: 79434714}
+  num_gerado: 
+  num_letras: 
+  url_aleatorio: https://qualif.000webhostapp.com/html/num_aleatorio.php
+  url_selectJogoForca: https://qualif.000webhostapp.com/html/selectJogoForca.php
 --- !u!1 &123893906
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +597,10 @@ MonoBehaviour:
   button_forca: {fileID: 0}
   button_voltar: {fileID: 1032805286}
   button_ferramentas: {fileID: 79434714}
+  num_gerado: 
+  num_letras: 
+  url_aleatorio: https://qualif.000webhostapp.com/html/num_aleatorio.php
+  url_selectJogoForca: https://qualif.000webhostapp.com/html/selectJogoForca.php
 --- !u!114 &1032805286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,6 +806,10 @@ MonoBehaviour:
   button_forca: {fileID: 1150551765}
   button_voltar: {fileID: 0}
   button_ferramentas: {fileID: 79434714}
+  num_gerado: 
+  num_letras: 
+  url_aleatorio: https://qualif.000webhostapp.com/html/num_aleatorio.php
+  url_selectJogoForca: https://qualif.000webhostapp.com/html/selectJogoForca.php
 --- !u!1 &1171001113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +1062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pontos
+  m_Text: Dados
 --- !u!222 &1613269741
 CanvasRenderer:
   m_ObjectHideFlags: 0

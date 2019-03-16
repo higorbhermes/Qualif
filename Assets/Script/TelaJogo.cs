@@ -15,8 +15,9 @@ public Button button_quiz;
 public Button button_forca;
 public Button button_voltar;
 public Button button_ferramentas;
-public string num_gerado;
+public string num_gerado, num_letras;
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
+public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
 
  void Start()
     {
@@ -41,10 +42,8 @@ void Voltar(){
     }
 
  void Forca(){
-
         WWW www = new WWW (url_aleatorio);
-        StartCoroutine(Num_aleatorio(www));         
-        //SceneManager.LoadScene("JogoForca1");
+        StartCoroutine(Num_aleatorio(www));  
     }
 
  void Ferramentas(){
@@ -58,5 +57,18 @@ IEnumerator Num_aleatorio(WWW www){
         Debug.Log(""+num_gerado); 
         Debug.Log("Gerou esse número: "+num_gerado); 
         Debug.Log("E também esse: "+num_gerado);  
+        WWW wwww = new WWW (url_selectJogoForca+"?id="+num_gerado+"&opcao=2");
+        StartCoroutine(IniciarForca(wwww));  
+}
+
+IEnumerator IniciarForca(WWW wwww){
+        yield return wwww;
+        num_letras = wwww.text.ToString();
+        num_letras = num_letras.TrimEnd();
+        if (num_letras == "10"){
+            UserData.id_jogo_forca_atual = num_gerado;
+            UserData.cont_jogo_forca = 0;
+            SceneManager.LoadScene("JogoForca1");
+        }  
 }
 }

@@ -20,6 +20,7 @@ public Button button_ferramentas;
  void Start()
     {
       button_sair.onClick.AddListener(Sair);
+      Debug.Log("Id do Jogo:"+UserData.id_jogo_forca_atual); 
      }
 
    
