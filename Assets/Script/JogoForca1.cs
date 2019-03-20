@@ -139,63 +139,6 @@ void FixedUpdate(){
 
 }
 
-        /*url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=3";
-        WWW www = new WWW (url_completa);
-        StartCoroutine(Verificar_Letra(www));
-        if (letra == "A"){
-             letra_um.text = "A";
-             acertos = 1;
-        }
-        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=4";
-        www = new WWW (url_completa);
-        StartCoroutine(Verificar_Letra(www));
-        if (letra == "A"){
-             letra_dois.text = "A";
-             acertos = 1;
-        }
-        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=5";
-        www = new WWW (url_completa);
-        StartCoroutine(Verificar_Letra(www));
-        if (letra == "A"){
-             letra_tres.text = "A";
-             acertos = 1;
-        }
-    if (Input.GetKeyDown(KeyCode.I)){
-        Debug.Log("Apertou Letra I");
-        //cont = 1;
-        opcao = 3;
-        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=3";
-        WWW www = new WWW (url_completa);
-        StartCoroutine(Verificar_Letra(www));
-        if (letra == "I"){
-             letra_um.text = "I";
-             acertos = 1;
-        }
-        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=4";
-        www = new WWW (url_completa);
-        StartCoroutine(Verificar_Letra(www));
-        if (letra == "I"){
-             letra_dois.text = "I";
-             acertos = 1;
-        }
-        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=5";
-        www = new WWW (url_completa);
-        StartCoroutine(Verificar_Letra(www));
-        if (letra == "I"){
-             letra_tres.text = "I";
-             acertos = 1;
-        }
-
-
-        /*while (cont<=13){
-             url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao="+opcao;
-             WWW www = new WWW (url_completa);
-             StartCoroutine(Verificar_Letra(www));  
-             cont++;
-             opcao++;
-        }*/
-
-
 IEnumerator Verificar_Letra1(WWW www1){
         yield return www1;
         letra_1 = www1.text.ToString();
