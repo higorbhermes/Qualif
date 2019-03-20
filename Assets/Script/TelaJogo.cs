@@ -65,7 +65,7 @@ IEnumerator IniciarForca(WWW wwww){
         yield return wwww;
         num_letras = wwww.text.ToString();
         num_letras = num_letras.TrimEnd();
-        if (num_letras == "10"){
+        if (num_letras == "11"){
             UserData.id_jogo_forca_atual = num_gerado;
             UserData.cont_jogo_forca = 0;
             SceneManager.LoadScene("JogoForca1");
