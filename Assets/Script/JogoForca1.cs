@@ -17,14 +17,15 @@ public Button button_voltar;
 public Button button_ferramentas;
 public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
 public string url_completa;
-public string letra;
+public string letra, letra_digitada;
 public int cont, opcao, acertos;
-public Text letra_um, letra_dois, letra_tres, letra_quatro, letra_cinco, letra_seis, letra_sete, letra_oito, letra_nove, letra_dez, letra_onze;
+public Text letra_um, letra_dois, letra_tres, letra_quatro, letra_cinco, letra_seis, letra_sete, letra_oito, letra_nove, letra_dez, letra_onze, letras_digitadas;
 public string letra_1, letra_2, letra_3, letra_4, letra_5, letra_6, letra_7, letra_8, letra_9, letra_10, letra_11;
 
  void Start()
     {
       button_sair.onClick.AddListener(Sair);
+      letras_digitadas.text = "";
       Debug.Log("Id do Jogo:"+UserData.id_jogo_forca_atual); 
       url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=3";
       WWW www1 = new WWW (url_completa);
@@ -33,107 +34,107 @@ public string letra_1, letra_2, letra_3, letra_4, letra_5, letra_6, letra_7, let
 
 void FixedUpdate(){
     if (Input.GetKeyDown(KeyCode.A)){
-        string letra_digitada = "A";
+        letra_digitada = "A";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.B)){
-        string letra_digitada = "B";
+        letra_digitada = "B";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.C)){
-        string letra_digitada = "C";
+        letra_digitada = "C";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.D)){
-        string letra_digitada = "D";
+        letra_digitada = "D";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.E)){
-        string letra_digitada = "E";
+        letra_digitada = "E";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.F)){
-        string letra_digitada = "F";
+        letra_digitada = "F";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.G)){
-        string letra_digitada = "G";
+        letra_digitada = "G";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.H)){
-        string letra_digitada = "H";
+        letra_digitada = "H";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.I)){
-        string letra_digitada = "I";
+        letra_digitada = "I";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.J)){
-        string letra_digitada = "J";
+        letra_digitada = "J";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.K)){
-        string letra_digitada = "K";
+        letra_digitada = "K";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.L)){
-        string letra_digitada = "L";
+        letra_digitada = "L";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.M)){
-        string letra_digitada = "M";
+        letra_digitada = "M";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.N)){
-        string letra_digitada = "N";
+        letra_digitada = "N";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.O)){
-        string letra_digitada = "O";
+        letra_digitada = "O";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.P)){
-        string letra_digitada = "P";
+        letra_digitada = "P";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.Q)){
-        string letra_digitada = "Q";
+        letra_digitada = "Q";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.R)){
-        string letra_digitada = "R";
+        letra_digitada = "R";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.S)){
-        string letra_digitada = "S";
+        letra_digitada = "S";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.T)){
-        string letra_digitada = "T";
+        letra_digitada = "T";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.U)){
-        string letra_digitada = "U";
+        letra_digitada = "U";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.V)){
-        string letra_digitada = "V";
+        letra_digitada = "V";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.X)){
-        string letra_digitada = "X";
+        letra_digitada = "X";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.W)){
-        string letra_digitada = "W";
+        letra_digitada = "W";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.Y)){
-        string letra_digitada = "Y";
+        letra_digitada = "Y";
         ConferirLetra(letra_digitada);
     }
     if (Input.GetKeyDown(KeyCode.Z)){
-        string letra_digitada = "Z";
+        letra_digitada = "Z";
         ConferirLetra(letra_digitada);
     }
 
@@ -280,8 +281,19 @@ void ConferirLetra(string letra_digitada){
         letra_onze.text = letra_digitada;
         acertos++;
     }
+    Controle();
 }
 
+void Controle(){
+
+    letras_digitadas.text = letras_digitadas.text+" "+letra_digitada+" -";
+    if (acertos >= 0){
+
+
+        
+    }
+
+}
 
 void Jogar(){SceneManager.LoadScene("TelaJogo");}
 void Voltar(){SceneManager.LoadScene("Main"); }
