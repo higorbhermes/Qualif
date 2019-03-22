@@ -11,6 +11,7 @@ public Button button_jogar;
 public Button button_caderno;
 public Button button_estatisticas;
 public Button button_sair;
+public Button button_dica;
 public Button button_quiz;
 public Button button_forca;
 public Button button_voltar;
