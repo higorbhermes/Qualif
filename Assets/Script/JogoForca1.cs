@@ -19,9 +19,11 @@ public Button button_ferramentas;
 public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
 public string url_completa;
 public string letra, letra_digitada;
-public int cont, opcao, acertos;
+public int cont, opcao, acertos, erros = 0;
 public Text letra_um, letra_dois, letra_tres, letra_quatro, letra_cinco, letra_seis, letra_sete, letra_oito, letra_nove, letra_dez, letra_onze, letras_digitadas;
 public string letra_1, letra_2, letra_3, letra_4, letra_5, letra_6, letra_7, letra_8, letra_9, letra_10, letra_11;
+public GameObject forca1, forca2, forca3, forca4, emoji_normal, emoji_triste, emoji_feliz, emoji_vitoria, emoji_derrota;
+public bool acertou;
 
  void Start()
     {
@@ -241,59 +243,87 @@ void ConferirLetra(string letra_digitada){
     if (letra_digitada == letra_1){
         letra_um.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_2){
         letra_dois.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_3){
         letra_tres.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_4){
         letra_quatro.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_5){
         letra_cinco.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_6){
         letra_seis.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_7){
         letra_sete.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_8){
         letra_oito.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_9){
         letra_nove.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_10){
         letra_dez.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     if (letra_digitada == letra_11){
         letra_onze.text = letra_digitada;
         acertos++;
+        acertou = true;
     }
     Controle();
 }
 
 void Controle(){
-
     letras_digitadas.text = letras_digitadas.text+" "+letra_digitada+" -";
-    if (acertos >= 0){
-
-
-        
+    if (acertou == true){   
+            emoji_feliz.SetActive(true);
+            emoji_normal.SetActive(false);
+            emoji_triste.SetActive(false);
     }
-
+    else{
+        emoji_feliz.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_triste.SetActive(true);
+        erros = erros+1;
+        if (erros == 1){
+            forca1.SetActive(false);
+            forca2.SetActive(true);
+        }
+        if (erros == 2){
+            forca2.SetActive(false);
+            forca3.SetActive(true);
+        }
+        if (erros == 3){
+            forca3.SetActive(false);
+            forca4.SetActive(true);
+        }
+    }
+    acertou = false;
 }
 
 void Jogar(){SceneManager.LoadScene("TelaJogo");}
