@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public Button button_forca;
 public Button button_voltar;
 public Button button_ferramentas;
 public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
+public string url_converter = "https://qualif.000webhostapp.com/html/Converter.php";
+public string url_converter_auxiliar;
 public string url_completa, url_completa1, url_completa2, url_completa3, url_completa4, url_completa5, url_completa6, url_completa7, url_completa8, url_completa9, url_completa10, url_completa11;
 public string letra, letra_digitada;
 public int cont, opcao, acertos = 0, erros = 0;
@@ -28,7 +31,7 @@ public GameObject forca1, forca2, forca3, forca4, emoji_normal, emoji_triste, em
 public bool acertou;
 public string letra_revelada;
 public int i = 1;
-public int x;
+public int x, pontos;
 public bool ok_1 = false;
 public bool ok_2 = false;
 public bool ok_3 = false; 
@@ -44,6 +47,8 @@ public GameObject linha1, linha2,  linha3, linha4, linha5, linha6, linha7, linha
 
  void Start()
     {
+      pontos = UserData.pontuacao;
+      Pontuacao();
       button_sair.onClick.AddListener(Sair);
       button_dica.onClick.AddListener(Dica);
       button_revelar.onClick.AddListener(Revelar);
@@ -161,112 +166,119 @@ void FixedUpdate(){
       Debug.Log(""+url_completa11); 
         StartCoroutine(Verificar_Letra11(www11)); 
     }
-    if (Input.GetKeyDown(KeyCode.A)){
+    if (pontos<=0){
+        pontos = 0;
+        Pontuacao();
+    }
+    if (Input.GetKeyDown(KeyCode.A) && acertos<11 && erros<3){
         letra_digitada = "A";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.B)){
+    if (Input.GetKeyDown(KeyCode.B) && acertos<11 && erros<3){
         letra_digitada = "B";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.C)){
+    if (Input.GetKeyDown(KeyCode.C) && acertos<11 && erros<3){
         letra_digitada = "C";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.D)){
+    if (Input.GetKeyDown(KeyCode.D) && acertos<11 && erros<3){
         letra_digitada = "D";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.E)){
+    if (Input.GetKeyDown(KeyCode.E) && acertos<11 && erros<3){
         letra_digitada = "E";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.F)){
+    if (Input.GetKeyDown(KeyCode.F) && acertos<11 && erros<3){
         letra_digitada = "F";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.G)){
+    if (Input.GetKeyDown(KeyCode.G) && acertos<11 && erros<3){
         letra_digitada = "G";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.H)){
+    if (Input.GetKeyDown(KeyCode.H) && acertos<11 && erros<3){
         letra_digitada = "H";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.I)){
+    if (Input.GetKeyDown(KeyCode.I) && acertos<11 && erros<3){
         letra_digitada = "I";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.J)){
+    if (Input.GetKeyDown(KeyCode.J) && acertos<11 && erros<3){
         letra_digitada = "J";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.K)){
+    if (Input.GetKeyDown(KeyCode.K) && acertos<11 && erros<3){
         letra_digitada = "K";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.L)){
+    if (Input.GetKeyDown(KeyCode.L) && acertos<11 && erros<3){
         letra_digitada = "L";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.M)){
+    if (Input.GetKeyDown(KeyCode.M) && acertos<11 && erros<3){
         letra_digitada = "M";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.N)){
+    if (Input.GetKeyDown(KeyCode.N) && acertos<11 && erros<3){
         letra_digitada = "N";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.O)){
+    if (Input.GetKeyDown(KeyCode.O) && acertos<11 && erros<3){
         letra_digitada = "O";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.P)){
+    if (Input.GetKeyDown(KeyCode.P) && acertos<11 && erros<3){
         letra_digitada = "P";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.Q)){
+    if (Input.GetKeyDown(KeyCode.Q) && acertos<11 && erros<3){
         letra_digitada = "Q";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.R)){
+    if (Input.GetKeyDown(KeyCode.R) && acertos<11 && erros<3){
         letra_digitada = "R";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.S)){
+    if (Input.GetKeyDown(KeyCode.S) && acertos<11 && erros<3){
         letra_digitada = "S";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.T)){
+    if (Input.GetKeyDown(KeyCode.T) && acertos<11 && erros<3){
         letra_digitada = "T";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.U)){
+    if (Input.GetKeyDown(KeyCode.U) && acertos<11 && erros<3){
         letra_digitada = "U";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.V)){
+    if (Input.GetKeyDown(KeyCode.V) && acertos<11 && erros<3){
         letra_digitada = "V";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.X)){
+    if (Input.GetKeyDown(KeyCode.X) && acertos<11 && erros<3){
         letra_digitada = "X";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.W)){
+    if (Input.GetKeyDown(KeyCode.W) && acertos<11 && erros<3){
         letra_digitada = "W";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.Y)){
+    if (Input.GetKeyDown(KeyCode.Y) && acertos<11 && erros<3){
         letra_digitada = "Y";
         ConferirLetra(letra_digitada);
     }
-    if (Input.GetKeyDown(KeyCode.Z)){
+    if (Input.GetKeyDown(KeyCode.Z) && acertos<11 && erros<3){
         letra_digitada = "Z";
         ConferirLetra(letra_digitada);
     }
     if (acertos>=11){
         proximo_desafio.text = "Parabens! Aperte ENTER para o proximo desafio";
+    }
+    if (erros>=3){
+        proximo_desafio.text = "Você Errou! A resposta correta era: "+letra_1+letra_2+letra_3+letra_4+letra_5+letra_6+letra_7+letra_8+letra_9+letra_10+letra_11+". Aperte ESC ou clique em SAIR para encerrar a partida";
     }
 
 }
@@ -396,36 +408,42 @@ void ConferirLetra(string letra_digitada){
         letra_um.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha1);
     }
     if (letra_digitada == letra_2){
         letra_dois.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha2);
     }
     if (letra_digitada == letra_3){
         letra_tres.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha3);
     }
     if (letra_digitada == letra_4){
         letra_quatro.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha4);
     }
     if (letra_digitada == letra_5){
         letra_cinco.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha5);
     }
     if (letra_digitada == letra_6){
         letra_seis.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha6);
 
     }
@@ -433,30 +451,35 @@ void ConferirLetra(string letra_digitada){
         letra_sete.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha7);
     }
     if (letra_digitada == letra_8){
         letra_oito.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha8);
     }
     if (letra_digitada == letra_9){
         letra_nove.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha9);
     }
     if (letra_digitada == letra_10){
         letra_dez.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha10);
     }
     if (letra_digitada == letra_11){
         letra_onze.text = letra_digitada;
         acertos++;
         acertou = true;
+        pontos = pontos + 20;
         Destroy(linha11);
     }
     Controle();
@@ -474,6 +497,7 @@ void Controle(){
         emoji_normal.SetActive(false);
         emoji_triste.SetActive(true);
         erros = erros+1;
+        pontos = pontos - 10; 
         if (erros == 1){
             forca1.SetActive(false);
             forca2.SetActive(true);
@@ -488,14 +512,19 @@ void Controle(){
         }
     }
     acertou = false;
+    Pontuacao();
 }
 
 void Jogar(){SceneManager.LoadScene("TelaJogo");}
 
 void Dica(){
-     url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=2";
-     WWW www_dica = new WWW (url_completa);
-     StartCoroutine(Verificar_Dica(www_dica));
+    if (pontos>=40  && acertos<11 && erros<3){
+        pontos = pontos - 40;
+        Pontuacao();
+        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=2";
+        WWW www_dica = new WWW (url_completa);
+        StartCoroutine(Verificar_Dica(www_dica));
+    }
 }
 
 IEnumerator Verificar_Dica(WWW www_dica){
@@ -506,9 +535,11 @@ IEnumerator Verificar_Dica(WWW www_dica){
 
 void Revelar(){
     i = 1;
-    if (acertos<=11){
+    if (acertos<=11 && pontos>=80 && acertos<11 && erros<3){
       Debug.Log("Passou Aqui"); 
+      pontos = pontos-80;
         while (i<11){
+            Pontuacao();
             if (i == 1){
                 if(letra_um.text == ""){
                     letra_um.text = letra_1;
@@ -677,12 +708,25 @@ void Revelar(){
             acertos++;
             Destroy(linha11);
         }
+        letra_revelada = "";
     }
 }
 
 
 void Voltar(){SceneManager.LoadScene("Main"); }
 void Sair(){SceneManager.LoadScene("TelaJogo");}
+
+void Pontuacao(){
+      url_converter_auxiliar = url_converter+"?numero="+pontos;
+      WWW www_converter = new WWW (url_converter_auxiliar);
+      StartCoroutine(ConverterPontuacao(www_converter));  
+}
+
+IEnumerator ConverterPontuacao(WWW www_converter){
+        yield return www_converter;
+        pontuacao.text = www_converter.text.ToString();
+        pontuacao.text = pontuacao.text.TrimEnd();
+}
 
  void Forca(){
         SceneManager.LoadScene("JogoForca1");

@@ -261,6 +261,8 @@ MonoBehaviour:
   button_voltar: {fileID: 0}
   button_ferramentas: {fileID: 0}
   url_selectJogoForca: https://qualif.000webhostapp.com/html/selectJogoForca.php
+  url_converter: https://qualif.000webhostapp.com/html/Converter.php
+  url_converter_auxiliar: 
   url_completa: 
   url_completa1: 
   url_completa2: 
@@ -318,6 +320,7 @@ MonoBehaviour:
   letra_revelada: 
   i: 1
   x: 0
+  pontos: 0
   ok_1: 0
   ok_2: 0
   ok_3: 0
@@ -3586,7 +3589,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 
 --- !u!222 &2120718073
 CanvasRenderer:
   m_ObjectHideFlags: 0
