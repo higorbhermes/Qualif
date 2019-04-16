@@ -25,6 +25,7 @@ public int num, merda;
         //button_jogar.onClick.AddListener(Jogar);
         //button_sair.onClick.AddListener(Sair);
         button_forca.onClick.AddListener(Forca);
+        button_quiz.onClick.AddListener(Quiz);
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Ferramentas);
         Debug.Log(""+UserData.email);
@@ -34,6 +35,10 @@ public int num, merda;
  void Jogar(){
         SceneManager.LoadScene("TelaJogo");
     }
+
+void Quiz(){
+     SceneManager.LoadScene("JogoQuiz");
+}
 
 void Voltar(){
         SceneManager.LoadScene("Main");

@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Splash.unity
     guid: f2b6afbf162f54299adbfe233d07e234
   - enabled: 0
@@ -35,3 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JogoForca12Letras.unity
     guid: baa39a0e488ea47e68828d3f4d906f47
+  - enabled: 1
+    path: Assets/JogoQuiz.unity
+    guid: e3737aa9e95f04c9bb1f46ada78292df
