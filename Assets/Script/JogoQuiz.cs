@@ -33,7 +33,7 @@ public bool liberado = false;
 public bool limpar_mensagem = true;
 public bool acertou = false, errou = false, fim_fase = false, é_igual;
 public int num_ajuda = 0, num;
-public string resposta_escolhida, num_gerado;
+public string resposta_escolhida = "", num_gerado;
 
 void Start(){
         button_ajuda.onClick.AddListener(Ajuda);
@@ -154,12 +154,31 @@ void FixedUpdate(){
          alternativa_a.GetComponent<Toggle>().isOn = false;
          resposta_escolhida = "E";
     }
+    if  (alternativa_a.GetComponent<Toggle>().isOn == false && resposta_escolhida == "A"){
+         resposta_escolhida = "";
+    }
+    if  (alternativa_b.GetComponent<Toggle>().isOn == false && resposta_escolhida == "B"){
+         resposta_escolhida = "";
+    }
+    if  (alternativa_c.GetComponent<Toggle>().isOn == false && resposta_escolhida == "C"){
+         resposta_escolhida = "";
+    }
+    if  (alternativa_d.GetComponent<Toggle>().isOn == false && resposta_escolhida == "D"){
+         resposta_escolhida = "";
+    }
+    if  (alternativa_e.GetComponent<Toggle>().isOn == false && resposta_escolhida == "E"){
+         resposta_escolhida = "";
+    }
     if (enunciado.text =="" || letra_a.text  =="" || letra_b.text  =="" || letra_c.text =="" || letra_d.text =="" || letra_e.text =="" || banca == "" || ano =="" || gabarito ==""){
        if (liberado == false){mensagem.text = "Conectando ao Servidor...Aguarde um momento!"; }
     }
     else{
         liberado = true;
-        if (errou == true){
+        if (acertou == false && errou == false && limpar_mensagem == true){
+                mensagem.text = "";
+        }
+        /*if (errou == true){
+            Debug.Log("Passou Aqui");
             mensagem.text = "Você Errou! A alternativa correta era: "+gabarito+". Aperte ESPAÇO ou clique em SAIR para encerrar a partida";
         }
         else{
@@ -169,7 +188,7 @@ void FixedUpdate(){
             else{
                 mensagem.text = "";
             }
-        }
+        }*/
     }
     if (Input.GetKeyDown(KeyCode.Space)){
         if (acertou == true){
@@ -321,26 +340,38 @@ void Ajuda(){
         letra_e.text = "";
         num_ajuda++;
      }
+     alternativa_a.GetComponent<Toggle>().isOn = false;
+     alternativa_b.GetComponent<Toggle>().isOn = false;
+     alternativa_c.GetComponent<Toggle>().isOn = false;
+     alternativa_d.GetComponent<Toggle>().isOn = false;
+     alternativa_e.GetComponent<Toggle>().isOn = false;
 }
 
 void Responder(){
     if (liberado == true){
-        if (resposta_escolhida == gabarito && acertou == false){
+        if (resposta_escolhida != ""){
+            if (resposta_escolhida == gabarito && acertou == false){
+             Debug.Log("Acertou");
              WWW www_salvar = new WWW (url_salvar+"?id_quiz="+UserData.id_jogo_quiz_atual+"&email="+UserData.email+"&resposta=1");
              StartCoroutine(SalvarJogo(www_salvar));
              UserData.cont_jogo_quiz = UserData.cont_jogo_quiz+1;
              UserData.JogoQuizAtual[UserData.cont_jogo_quiz] = UserData.id_jogo_quiz_atual;
              acertou = true;
-             fim_fase = true;
-        }
-        if (resposta_escolhida != gabarito && errou == false){
+             mensagem.text = "Parabéns, você acertou! Aperte ESPAÇO para jogar o próximo desafio";
+            }
+            if (resposta_escolhida != gabarito && errou == false){
+             Debug.Log("Errou");
              WWW www_salvar = new WWW (url_salvar+"?id_quiz="+UserData.id_jogo_quiz_atual+"&email="+UserData.email+"&resposta=0");
              StartCoroutine(SalvarJogo(www_salvar));
+             mensagem.text = "Você Errou! A alternativa correta era: "+gabarito+". Aperte ESPAÇO ou clique em SAIR para encerrar a partida";
              errou = true;
-             fim_fase = true;
+            }
+        }
+        else{
+             limpar_mensagem = false;
+             mensagem.text = "Você não selecionou nenhuma alternativa!";
         }
     }
-
 }
 
 IEnumerator SalvarJogo(WWW www_salvar){
