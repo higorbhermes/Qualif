@@ -12,5 +12,8 @@ public static int cont_jogo_forca;
 public static int id_jogo_forca_atual;
 public static int pontuacao = 100;
 public static bool som = true;
+public static int[] JogoQuizAtual = new int [11];
+public static int cont_jogo_quiz;
+public static int id_jogo_quiz_atual;
 
 }

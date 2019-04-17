@@ -18,7 +18,8 @@ public Button button_ferramentas;
 public string num_gerado, num_letras;
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
 public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
-public int num, merda;
+public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
+public int num, merda, opcao;
 
  void Start()
     {
@@ -37,7 +38,9 @@ public int num, merda;
     }
 
 void Quiz(){
-     SceneManager.LoadScene("JogoQuiz");
+     opcao = 1;
+     WWW www = new WWW (url_aleatorio);
+     StartCoroutine(Num_aleatorio(www));
 }
 
 void Voltar(){
@@ -49,6 +52,7 @@ void Voltar(){
     }
 
  void Forca(){
+        opcao = 2;
         WWW www = new WWW (url_aleatorio);
         StartCoroutine(Num_aleatorio(www));
 
@@ -62,11 +66,17 @@ IEnumerator Num_aleatorio(WWW www){
         yield return www;
         num_gerado = www.text.ToString();
         num_gerado = num_gerado.TrimEnd();
-        Debug.Log(""+num_gerado); 
-        Debug.Log("Gerou esse número: "+num_gerado); 
-        Debug.Log("E também esse: "+num_gerado);  
-        WWW wwww = new WWW (url_selectJogoForca+"?id="+num_gerado+"&opcao=2");
-        StartCoroutine(IniciarForca(wwww)); 
+        if (opcao == 1){
+            num = int.Parse(num_gerado);
+            UserData.id_jogo_quiz_atual = num;
+            UserData.cont_jogo_quiz = 0;
+            SceneManager.LoadScene("JogoQuiz");
+        }
+        if (opcao == 2){
+            WWW wwww = new WWW (url_selectJogoForca+"?id="+num_gerado+"&opcao=2");
+            StartCoroutine(IniciarForca(wwww)); 
+        }
+
 }
 
 IEnumerator IniciarForca(WWW wwww){
