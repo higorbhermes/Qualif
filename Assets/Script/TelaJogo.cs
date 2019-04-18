@@ -59,7 +59,7 @@ void Voltar(){
     }
 
  void Ferramentas(){
-        SceneManager.LoadScene("Cena1");
+        SceneManager.LoadScene("JogoMemoria");
     }
 
 IEnumerator Num_aleatorio(WWW www){

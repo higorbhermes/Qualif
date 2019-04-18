@@ -38,3 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JogoQuiz.unity
     guid: e3737aa9e95f04c9bb1f46ada78292df
+  - enabled: 1
+    path: Assets/JogoMemoria.unity
+    guid: 3645d1f5f02804af0b274977455a5be8
