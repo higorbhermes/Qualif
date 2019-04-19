@@ -44,7 +44,7 @@ void Quiz(){
 }
 
 void Voltar(){
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("JogoMemoria");
     }
 
  void Sair(){
@@ -58,9 +58,9 @@ void Voltar(){
 
     }
 
- void Ferramentas(){
+void Ferramentas(){
         SceneManager.LoadScene("JogoMemoria");
-    }
+}
 
 IEnumerator Num_aleatorio(WWW www){
         yield return www;
@@ -70,7 +70,7 @@ IEnumerator Num_aleatorio(WWW www){
             num = int.Parse(num_gerado);
             UserData.id_jogo_quiz_atual = num;
             UserData.cont_jogo_quiz = 0;
-            SceneManager.LoadScene("JogoQuiz");
+            SceneManager.LoadScene("Cena1");
         }
         if (opcao == 2){
             WWW wwww = new WWW (url_selectJogoForca+"?id="+num_gerado+"&opcao=2");
