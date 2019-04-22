@@ -51,6 +51,11 @@ public GameObject obj_figura11;
 public GameObject obj_figura12;
 public GameObject obj_figura13;
 public GameObject obj_figura14;
+public GameObject emoji_normal;
+public GameObject emoji_feliz;
+public GameObject emoji_triste;
+public GameObject emoji_chorando;
+public GameObject emoji_amei;
 public Text mensagem1, mensagem2;
 public string num_gerado;
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
@@ -58,7 +63,8 @@ public string url_salvar = "https://qualif.000webhostapp.com/html/salvarJogadorQ
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
 public int primeira_escolha = 0, segunda_escolha = 0;
 public int contador = 0;
-public bool acertou = false, errou = false, final = false, liberado = true, limpou1 = false,  limpou2 = false;
+public bool acertou = false, errou = false, final = false, liberado = true, limpou1 = false,  limpou2 = false, inicio = true;
+public bool revelou1 = false, revelou2 = false, revelou3 = false, revelou4 = false, revelou5 = false, revelou6 = false, revelou7 = false, revelou8 = false, revelou9 = false, revelou10 = false, revelou11 = false, revelou12 = false, revelou13 = false, revelou14 = false;
 
 
 
@@ -100,156 +106,72 @@ void Start(){
 }
 
 void FixedUpdate(){
+    if (inicio == true){
+        if (revelou1 == false){
+            obj_carta1.SetActive(true);
+            obj_figura1.SetActive(false);
+        }
+        if (revelou2 == false){
+            obj_carta2.SetActive(true);
+            obj_figura2.SetActive(false);
+        }
+        if (revelou3 == false){
+            obj_carta3.SetActive(true);
+            obj_figura3.SetActive(false);
+        }
+        if (revelou4 == false){
+            obj_carta4.SetActive(true);
+            obj_figura4.SetActive(false);
+        }
+        if (revelou5 == false){
+            obj_carta5.SetActive(true);
+            obj_figura5.SetActive(false);
+        }
+        if (revelou6 == false){
+            obj_carta6.SetActive(true);
+            obj_figura6.SetActive(false);
+        }
+        if (revelou7 == false){
+            obj_carta7.SetActive(true);
+            obj_figura7.SetActive(false);
+        }
+        if (revelou8 == false){
+            obj_carta8.SetActive(true);
+            obj_figura8.SetActive(false);
+        }
+        if (revelou9 == false){
+            obj_carta9.SetActive(true);
+            obj_figura9.SetActive(false);
+        }
+        if (revelou10 == false){
+            obj_carta10.SetActive(true);
+            obj_figura10.SetActive(false);
+        }
+        if (revelou11 == false){
+            obj_carta11.SetActive(true);
+            obj_figura11.SetActive(false);
+        }
+        if (revelou12 == false){
+            obj_carta12.SetActive(true);
+            obj_figura12.SetActive(false);
+        }
+        if (revelou13 == false){
+            obj_carta13.SetActive(true);
+            obj_figura13.SetActive(false);
+        }
+        if (revelou14 == false){
+            obj_carta14.SetActive(true);
+            obj_figura14.SetActive(false);
+        }
+        primeira_escolha = 0;
+        segunda_escolha = 0;
+    }
     if (Input.GetKeyDown(KeyCode.Space) && errou == true){
         mensagem1.text = "";
         mensagem2.text = "";
-        if (primeira_escolha == 1){
-             obj_carta1.SetActive(true);
-             obj_figura1.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 2){
-             obj_carta2.SetActive(true);
-             obj_figura2.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 3){
-             obj_carta3.SetActive(true);
-             obj_figura3.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 4){
-             obj_carta4.SetActive(true);
-             obj_figura4.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 5){
-             obj_carta5.SetActive(true);
-             obj_figura5.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 6){
-             obj_carta6.SetActive(true);
-             obj_figura6.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 7){
-             obj_carta7.SetActive(true);
-             obj_figura7.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 8){
-             obj_carta8.SetActive(true);
-             obj_figura8.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 9){
-             obj_carta9.SetActive(true);
-             obj_figura9.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 10){
-             obj_carta10.SetActive(true);
-             obj_figura10.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 11){
-             obj_carta11.SetActive(true);
-             obj_figura11.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 12){
-             obj_carta12.SetActive(true);
-             obj_figura12.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 13){
-             obj_carta13.SetActive(true);
-             obj_figura13.SetActive(false);
-             limpou1 = true;
-        }
-        if (primeira_escolha == 14){
-             obj_carta14.SetActive(true);
-             obj_figura14.SetActive(false);
-             limpou1 = true;
-        }
-        if (segunda_escolha == 1){
-             obj_carta1.SetActive(true);
-             obj_figura1.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 2){
-             obj_carta2.SetActive(true);
-             obj_figura2.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 3){
-             obj_carta3.SetActive(true);
-             obj_figura3.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 4){
-             obj_carta4.SetActive(true);
-             obj_figura4.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 5){
-             obj_carta5.SetActive(true);
-             obj_figura5.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 6){
-             obj_carta6.SetActive(true);
-             obj_figura6.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 7){
-             obj_carta7.SetActive(true);
-             obj_figura7.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 8){
-             obj_carta8.SetActive(true);
-             obj_figura8.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 9){
-             obj_carta9.SetActive(true);
-             obj_figura9.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 10){
-             obj_carta10.SetActive(true);
-             obj_figura10.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 11){
-             obj_carta11.SetActive(true);
-             obj_figura11.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 12){
-             obj_carta12.SetActive(true);
-             obj_figura12.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 13){
-             obj_carta13.SetActive(true);
-             obj_figura13.SetActive(false);
-             limpou2 = true;
-        }
-        if (segunda_escolha == 14){
-             obj_carta14.SetActive(true);
-             obj_figura14.SetActive(false);
-        }
         errou = false;
         liberado = true;
-    }
-    if (limpou1 == true){
-             primeira_escolha = 0;
-    }
-    if (limpou2 == true){
-             segunda_escolha = 0;
+        inicio = true;
     }
     if (Input.GetKeyDown(KeyCode.Space) && final == true){
         mensagem1.text = "Você venceu";
@@ -264,6 +186,7 @@ void FixedUpdate(){
 
 void Carta1(){
     if (liberado == true){
+     inicio = false;
      limpou1 = false;
      obj_carta1.SetActive(false);
      obj_figura1.SetActive(true);
@@ -283,6 +206,7 @@ void Carta1(){
 void Carta2(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta2.SetActive(false);
      obj_figura2.SetActive(true);
      mensagem1.text = "";
@@ -301,6 +225,7 @@ void Carta2(){
 void Carta3(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta3.SetActive(false);
      obj_figura3.SetActive(true);
      mensagem1.text = "";
@@ -319,6 +244,7 @@ void Carta3(){
 void Carta4(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta4.SetActive(false);
      obj_figura4.SetActive(true);
      mensagem1.text = "";
@@ -337,6 +263,7 @@ void Carta4(){
 void Carta5(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta5.SetActive(false);
      obj_figura5.SetActive(true);
      mensagem1.text = "";
@@ -355,6 +282,7 @@ void Carta5(){
 void Carta6(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta6.SetActive(false);
      obj_figura6.SetActive(true);
      mensagem1.text = "";
@@ -373,6 +301,7 @@ void Carta6(){
 void Carta7(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta7.SetActive(false);
      obj_figura7.SetActive(true);
      mensagem1.text = "";
@@ -391,6 +320,7 @@ void Carta7(){
 void Carta8(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta8.SetActive(false);
      obj_figura8.SetActive(true);
      mensagem1.text = "";
@@ -409,6 +339,7 @@ void Carta8(){
 void Carta9(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta9.SetActive(false);
      obj_figura9.SetActive(true);
      mensagem1.text = "";
@@ -427,6 +358,7 @@ void Carta9(){
 void Carta10(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta10.SetActive(false);
      obj_figura10.SetActive(true);
      mensagem1.text = "";
@@ -445,6 +377,7 @@ void Carta10(){
 void Carta11(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta11.SetActive(false);
      obj_figura11.SetActive(true);
      mensagem1.text = "";
@@ -463,6 +396,7 @@ void Carta11(){
 void Carta12(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta12.SetActive(false);
      obj_figura12.SetActive(true);
      mensagem1.text = "";
@@ -481,6 +415,7 @@ void Carta12(){
 void Carta13(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta13.SetActive(false);
      obj_figura13.SetActive(true);
      mensagem1.text = "";
@@ -499,6 +434,7 @@ void Carta13(){
 void Carta14(){
     if (liberado == true){
      limpou1 = false;
+     inicio = false;
      obj_carta14.SetActive(false);
      obj_figura14.SetActive(true);
      mensagem1.text = "";
@@ -517,6 +453,8 @@ void Carta14(){
 void VerificarJogada(){
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         acertou = true;
+        revelou1 = true;
+        revelou12 = true;
         contador = contador+1;
         primeira_escolha = 0;
         segunda_escolha = 0; 
@@ -525,6 +463,8 @@ void VerificarJogada(){
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         acertou = true;
+        revelou2 = true;
+        revelou13 = true;
         contador = contador+1;
         primeira_escolha = 0;
         segunda_escolha = 0; 
@@ -533,6 +473,8 @@ void VerificarJogada(){
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         acertou = true;
+        revelou3 = true;
+        revelou5 = true;
         contador = contador+1;
         primeira_escolha = 0;
         segunda_escolha = 0; 
@@ -541,6 +483,8 @@ void VerificarJogada(){
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         acertou = true;
+        revelou4 = true;
+        revelou8 = true;
         contador = contador+1;
         primeira_escolha = 0;
         segunda_escolha = 0; 
@@ -549,6 +493,8 @@ void VerificarJogada(){
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         acertou = true;
+        revelou6 = true;
+        revelou11 = true;
         contador = contador+1;
         primeira_escolha = 0;
         segunda_escolha = 0; 
@@ -557,6 +503,8 @@ void VerificarJogada(){
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         acertou = true;
+        revelou7 = true;
+        revelou10 = true;
         contador = contador+1;
         primeira_escolha = 0;
         segunda_escolha = 0; 
@@ -565,6 +513,8 @@ void VerificarJogada(){
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         acertou = true;
+        revelou9 = true;
+        revelou14 = true;
         primeira_escolha = 0;
         segunda_escolha = 0; 
         contador = contador+1;
