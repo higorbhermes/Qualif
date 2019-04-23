@@ -62,9 +62,12 @@ public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/select
 public string url_salvar = "https://qualif.000webhostapp.com/html/salvarJogadorQuiz.php";
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
 public int primeira_escolha = 0, segunda_escolha = 0;
-public int contador = 0;
-public bool acertou = false, errou = false, final = false, liberado = true, limpou1 = false,  limpou2 = false, inicio = true;
+public int contador = 0, aux = 0;
+public bool acertou = false, errou = false, final = false, liberado = true, limpou1 = false,  limpou2 = false, inicio = true, amostra = true;
 public bool revelou1 = false, revelou2 = false, revelou3 = false, revelou4 = false, revelou5 = false, revelou6 = false, revelou7 = false, revelou8 = false, revelou9 = false, revelou10 = false, revelou11 = false, revelou12 = false, revelou13 = false, revelou14 = false;
+public double timer = 0.5;
+public double timerErro = 0.5;
+public double oldTimer;
 
 
 
@@ -106,6 +109,87 @@ void Start(){
 }
 
 void FixedUpdate(){
+    timer -= Time.deltaTime;
+    if (timer > -2.5){
+       inicio = false;
+        obj_carta1.SetActive(false);
+        obj_carta2.SetActive(false);
+        obj_carta3.SetActive(false);
+        obj_carta4.SetActive(false);
+        obj_carta5.SetActive(false);
+        obj_carta6.SetActive(false);
+        obj_carta7.SetActive(false);
+        obj_carta8.SetActive(false);
+        obj_carta9.SetActive(false);
+        obj_carta10.SetActive(false);
+        obj_carta11.SetActive(false);
+        obj_carta12.SetActive(false);
+        obj_carta13.SetActive(false);
+        obj_carta14.SetActive(false);
+        obj_figura1.SetActive(true);
+        obj_figura2.SetActive(true);
+        obj_figura3.SetActive(true);
+        obj_figura4.SetActive(true);
+        obj_figura5.SetActive(true);
+        obj_figura6.SetActive(true);
+        obj_figura7.SetActive(true);
+        obj_figura8.SetActive(true);
+        obj_figura9.SetActive(true);
+        obj_figura10.SetActive(true);
+        obj_figura11.SetActive(true);
+        obj_figura12.SetActive(true);
+        obj_figura13.SetActive(true);
+        obj_figura14.SetActive(true);
+    }
+    else{
+      if (amostra == true){
+        obj_carta1.SetActive(true);
+        obj_carta2.SetActive(true);
+        obj_carta3.SetActive(true);
+        obj_carta4.SetActive(true);
+        obj_carta5.SetActive(true);
+        obj_carta6.SetActive(true);
+        obj_carta7.SetActive(true);
+        obj_carta8.SetActive(true);
+        obj_carta9.SetActive(true);
+        obj_carta10.SetActive(true);
+        obj_carta11.SetActive(true);
+        obj_carta12.SetActive(true);
+        obj_carta13.SetActive(true);
+        obj_carta14.SetActive(true);
+        obj_figura1.SetActive(false);
+        obj_figura2.SetActive(false);
+        obj_figura3.SetActive(false);
+        obj_figura4.SetActive(false);
+        obj_figura5.SetActive(false);
+        obj_figura6.SetActive(false);
+        obj_figura7.SetActive(false);
+        obj_figura8.SetActive(false);
+        obj_figura9.SetActive(false);
+        obj_figura10.SetActive(false);
+        obj_figura11.SetActive(false);
+        obj_figura12.SetActive(false);
+        obj_figura13.SetActive(false);
+        obj_figura14.SetActive(false);
+        amostra = false;
+        inicio = true;
+       }
+    }
+    if (timerErro > -2 && aux == 1){
+        liberado = false;
+    }
+    else{
+        if (aux == 1){
+            primeira_escolha = 0;
+            segunda_escolha = 0;
+            aux = 0;
+            mensagem1.text = "";
+            errou = false;
+            liberado = true;
+            timerErro = 0.5;
+            inicio = true;
+        }
+    }
     if (inicio == true){
         if (revelou1 == false){
             obj_carta1.SetActive(true);
@@ -166,21 +250,31 @@ void FixedUpdate(){
         primeira_escolha = 0;
         segunda_escolha = 0;
     }
-    if (Input.GetKeyDown(KeyCode.Space) && errou == true){
-        mensagem1.text = "";
-        mensagem2.text = "";
-        errou = false;
-        liberado = true;
-        inicio = true;
-    }
-    if (Input.GetKeyDown(KeyCode.Space) && final == true){
+    /*if (Input.GetKeyDown(KeyCode.Space)){
+          mensagem1.text = "";
+          mensagem2.text = "";
+          errou = false;
+          liberado = true;
+          inicio = true;
+    }*/
+
+    /*if (Input.GetKeyDown(KeyCode.Space) && final == true){
         mensagem1.text = "Você venceu";
         mensagem2.text = "";
-    }
+    }*/
     if (contador == 7){
        mensagem1.text = "Parabéns, você acertou ! Aperte ESPAÇO para o próximo desafio!";
        liberado = false;
        final = true;
+       emoji_chorando.SetActive(false);
+       emoji_normal.SetActive(false);
+       emoji_feliz.SetActive(false);
+       emoji_triste.SetActive(false);
+       emoji_amei.SetActive(true);
+    }
+    if (errou == true){
+          aux = 1;
+          timerErro -= Time.deltaTime;
     }
 }
 
@@ -192,6 +286,11 @@ void Carta1(){
      obj_figura1.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 1;
      }
@@ -211,6 +310,11 @@ void Carta2(){
      obj_figura2.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 2;
      }
@@ -230,6 +334,11 @@ void Carta3(){
      obj_figura3.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 3;
      }
@@ -249,6 +358,11 @@ void Carta4(){
      obj_figura4.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 4;
      }
@@ -268,6 +382,11 @@ void Carta5(){
      obj_figura5.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 5;
      }
@@ -287,6 +406,11 @@ void Carta6(){
      obj_figura6.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 6;
      }
@@ -306,6 +430,11 @@ void Carta7(){
      obj_figura7.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 7;
      }
@@ -325,6 +454,11 @@ void Carta8(){
      obj_figura8.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 8;
      }
@@ -344,6 +478,11 @@ void Carta9(){
      obj_figura9.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 9;
      }
@@ -363,6 +502,11 @@ void Carta10(){
      obj_figura10.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 10;
      }
@@ -382,6 +526,11 @@ void Carta11(){
      obj_figura11.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 11;
      }
@@ -401,6 +550,11 @@ void Carta12(){
      obj_figura12.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 12;
      }
@@ -420,6 +574,11 @@ void Carta13(){
      obj_figura13.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 13;
      }
@@ -439,6 +598,11 @@ void Carta14(){
      obj_figura14.SetActive(true);
      mensagem1.text = "";
      mensagem2.text = "";
+     emoji_chorando.SetActive(false);
+     emoji_normal.SetActive(true);
+     emoji_feliz.SetActive(false);
+     emoji_triste.SetActive(false);
+     emoji_amei.SetActive(false);
      if (primeira_escolha == 0){
          primeira_escolha = 14;
      }
@@ -452,6 +616,11 @@ void Carta14(){
 
 void VerificarJogada(){
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou1 = true;
         revelou12 = true;
@@ -462,6 +631,11 @@ void VerificarJogada(){
         mensagem2.text = "O Diagrama de Ishikawa permite estruturar  as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema dentro da nossa empresa.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou2 = true;
         revelou13 = true;
@@ -472,6 +646,11 @@ void VerificarJogada(){
         mensagem2.text = "Um Histograma é a representação gráfica, em colunas, de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, o Histograma permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou3 = true;
         revelou5 = true;
@@ -482,6 +661,11 @@ void VerificarJogada(){
         mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou4 = true;
         revelou8 = true;
@@ -492,6 +676,11 @@ void VerificarJogada(){
         mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou6 = true;
         revelou11 = true;
@@ -502,6 +691,11 @@ void VerificarJogada(){
         mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou7 = true;
         revelou10 = true;
@@ -512,6 +706,11 @@ void VerificarJogada(){
         mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
+        emoji_chorando.SetActive(false);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(true);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
         acertou = true;
         revelou9 = true;
         revelou14 = true;
@@ -523,9 +722,14 @@ void VerificarJogada(){
 
     }
     if (acertou == false){
-        mensagem1.text = "Ops, este não é o par correto! Pressione ESPAÇO para continuar jogando!";
+        mensagem1.text = "Ops, este não é o par correto!";
         errou = true;
         liberado = false;
+        emoji_chorando.SetActive(true);
+        emoji_normal.SetActive(false);
+        emoji_feliz.SetActive(false);
+        emoji_triste.SetActive(false);
+        emoji_amei.SetActive(false);
     }
     acertou = false;
 }
