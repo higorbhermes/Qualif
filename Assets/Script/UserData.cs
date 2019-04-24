@@ -15,5 +15,9 @@ public static bool som = true;
 public static int[] JogoQuizAtual = new int [11];
 public static int cont_jogo_quiz;
 public static int id_jogo_quiz_atual;
+public static int[] JogoMemoriaAtual = new int [4];
+public static int cont_jogo_memoria;
+public static int id_jogo_memoria_atual;
+public static string cod_memoria; 
 
 }

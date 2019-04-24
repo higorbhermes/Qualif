@@ -15,8 +15,9 @@ public Button button_quiz;
 public Button button_forca;
 public Button button_voltar;
 public Button button_ferramentas;
-public string num_gerado, num_letras;
+public string num_gerado, num_gerado2, num_letras;
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
+public string url_aleatorio_memoria = "https://qualif.000webhostapp.com/html/num_aleatorio_memoria.php";
 public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
 public int num, merda, opcao;
@@ -28,9 +29,8 @@ public int num, merda, opcao;
         button_forca.onClick.AddListener(Forca);
         button_quiz.onClick.AddListener(Quiz);
         button_voltar.onClick.AddListener(Voltar);
-        button_ferramentas.onClick.AddListener(Ferramentas);
+        button_ferramentas.onClick.AddListener(Memória);
         Debug.Log(""+UserData.email);
-        //merda = System.Random.Range (4,6);
      }
 
  void Jogar(){
@@ -51,32 +51,101 @@ void Voltar(){
         Application.Quit();
     }
 
- void Forca(){
+void Forca(){
         opcao = 2;
         WWW www = new WWW (url_aleatorio);
         StartCoroutine(Num_aleatorio(www));
 
-    }
-
-void Ferramentas(){
-        SceneManager.LoadScene("JogoMemoria");
 }
+
+void Memória(){
+        WWW www = new WWW (url_aleatorio_memoria);
+        StartCoroutine(Num_aleatorio_Memoria(www));
+}
+
+IEnumerator Num_aleatorio_Memoria(WWW www){
+        yield return www;
+        num_gerado = www.text.ToString();
+        num_gerado = num_gerado.TrimEnd();
+        WWW wwwww = new WWW (url_aleatorio);
+        StartCoroutine(IniciarMemoria(wwwww));
+}
+
 
 IEnumerator Num_aleatorio(WWW www){
         yield return www;
         num_gerado = www.text.ToString();
         num_gerado = num_gerado.TrimEnd();
+        Debug.Log(num_gerado);
         if (opcao == 1){
             num = int.Parse(num_gerado);
             UserData.id_jogo_quiz_atual = num;
             UserData.cont_jogo_quiz = 0;
-            SceneManager.LoadScene("Cena1");
+            SceneManager.LoadScene("JogoQuiz");
         }
         if (opcao == 2){
             WWW wwww = new WWW (url_selectJogoForca+"?id="+num_gerado+"&opcao=2");
             StartCoroutine(IniciarForca(wwww)); 
         }
+}
 
+IEnumerator IniciarMemoria(WWW wwwww){
+        yield return wwwww;
+        num_gerado2 = wwwww.text.ToString();
+        num_gerado2 = num_gerado2.TrimEnd();
+        UserData.cod_memoria = num_gerado2;
+        if (num_gerado == "1"){
+            if (num_gerado2 == "1" || num_gerado2 == "2"){
+               SceneManager.LoadScene("JogoMemoria");
+            }
+            if (num_gerado2 == "3" || num_gerado2 == "4"){
+               SceneManager.LoadScene("JogoMemoriav2");
+            }
+            if (num_gerado2 == "5" || num_gerado2 == "6"){
+               SceneManager.LoadScene("JogoMemoriav3");
+            }
+            if (num_gerado2 == "7" || num_gerado2 == "8"){
+               SceneManager.LoadScene("JogoMemoriav4");
+            }
+            if (num_gerado2 == "9" || num_gerado2 == "10"){
+               SceneManager.LoadScene("JogoMemoriav5");
+            }
+        }
+        if (num_gerado == "2"){
+            if (num_gerado2 == "1" || num_gerado2 == "2"){
+               SceneManager.LoadScene("JogoMemoria2v1");
+            }
+            if (num_gerado2 == "3" || num_gerado2 == "4"){
+               SceneManager.LoadScene("JogoMemoria2v2");
+            }
+            if (num_gerado2 == "5" || num_gerado2 == "6"){
+               SceneManager.LoadScene("JogoMemoria2v3");
+            }
+            if (num_gerado2 == "7" || num_gerado2 == "8"){
+               SceneManager.LoadScene("JogoMemoria2v4");
+            }
+            if (num_gerado2 == "9" || num_gerado2 == "10"){
+               SceneManager.LoadScene("JogoMemoria2v5");
+            }
+        }
+        if (num_gerado == "3"){
+            if (num_gerado2 == "1" || num_gerado2 == "2"){
+               SceneManager.LoadScene("JogoMemoria3v1");
+            }
+            if (num_gerado2 == "3" || num_gerado2 == "4"){
+               SceneManager.LoadScene("JogoMemoria3v2");
+            }
+            if (num_gerado2 == "5" || num_gerado2 == "6"){
+               SceneManager.LoadScene("JogoMemoria3v3");
+            }
+            if (num_gerado2 == "7" || num_gerado2 == "8"){
+               SceneManager.LoadScene("JogoMemoria3v4");
+            }
+            if (num_gerado2 == "9" || num_gerado2 == "10"){
+               SceneManager.LoadScene("JogoMemoria3v5");
+            }
+        }
+        
 }
 
 IEnumerator IniciarForca(WWW wwww){

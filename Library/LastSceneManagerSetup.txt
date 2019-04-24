@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/JogoMemoria.unity
+- path: Assets/JogoMemoriav5.unity
   isLoaded: 1
   isActive: 1

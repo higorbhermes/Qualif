@@ -376,6 +376,7 @@ MonoBehaviour:
   emoji_amei: {fileID: 1776704468}
   mensagem1: {fileID: 1417686728}
   mensagem2: {fileID: 283462485}
+  titulo: {fileID: 1064407597}
   num_gerado: 
   url_selectJogoQuiz: https://qualif.000webhostapp.com/html/selectJogoQuiz.php
   url_salvar: https://qualif.000webhostapp.com/html/salvarJogadorQuiz.php
@@ -383,6 +384,7 @@ MonoBehaviour:
   primeira_escolha: 0
   segunda_escolha: 0
   contador: 0
+  aux: 0
   acertou: 0
   errou: 0
   final: 0
@@ -390,6 +392,7 @@ MonoBehaviour:
   limpou1: 0
   limpou2: 0
   inicio: 1
+  amostra: 1
   revelou1: 0
   revelou2: 0
   revelou3: 0
@@ -404,6 +407,9 @@ MonoBehaviour:
   revelou12: 0
   revelou13: 0
   revelou14: 0
+  timer: 0.5
+  timerErro: 0.5
+  oldTimer: 0
 --- !u!1 &59319218
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +536,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66910746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1077.6794, y: 168, z: 0}
+  m_LocalPosition: {x: 1077.6792, y: 168, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2120718071}
@@ -539,7 +545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2606875, y: 1}
   m_AnchorMax: {x: 0.2606875, y: 1}
-  m_AnchoredPosition: {x: 1383.9995, y: -192}
+  m_AnchoredPosition: {x: 1383.9993, y: -192}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66910748
@@ -2407,7 +2413,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dc49c5749dd07487496d2f1bb49b8bbc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93438efef910c4deebf8baff552cb498, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3997,7 +4003,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dc49c5749dd07487496d2f1bb49b8bbc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93438efef910c4deebf8baff552cb498, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4544,7 +4550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'JOGO DA MEMORIA
+  m_Text: '
 
 '
 --- !u!222 &1064407598
