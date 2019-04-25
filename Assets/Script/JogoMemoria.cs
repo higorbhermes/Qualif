@@ -68,6 +68,7 @@ public bool revelou1 = false, revelou2 = false, revelou3 = false, revelou4 = fal
 public double timer = 0.5;
 public double timerErro = 0.5;
 public double oldTimer;
+public int tt = UserData.cont_jogo_memoria;
 
 
 
@@ -294,7 +295,7 @@ IEnumerator Num_aleatorio(WWW www_gerarnumero){
         yield return www_gerarnumero;
         num_gerado = www_gerarnumero.text.ToString();
         num_gerado = num_gerado.TrimEnd();
-        UserData.cont_jogo_memoria =  UserData.cont_jogo_memoria++;
+        UserData.cont_jogo_memoria =  UserData.cont_jogo_memoria+1;
             if (num_gerado == "1" || num_gerado == "2"){
                UserData.cod_memoria = "";
                UserData.cod_memoria = num_gerado;
@@ -1324,10 +1325,6 @@ void VerificarJogada(){
 void Parar(){
      UserData.id_jogo_memoria_atual = 0;
      UserData.cont_jogo_memoria = 0;
-     UserData.JogoMemoriaAtual[0] = 0;
-     UserData.JogoMemoriaAtual[1] = 0;
-     UserData.JogoMemoriaAtual[2] = 0;
-     UserData.JogoMemoriaAtual[3] = 0;
      SceneManager.LoadScene("TelaJogo");
 }
 }
