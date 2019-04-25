@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/JogoMemoriav5.unity
+- path: Assets/TelaJogo.unity
   isLoaded: 1
   isActive: 1

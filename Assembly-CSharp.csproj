@@ -57,6 +57,8 @@
      <Compile Include="Assets\Script\JogoForca12Letras.cs" />
      <Compile Include="Assets\Script\JogoMemoria.cs" />
      <Compile Include="Assets\Script\JogoMemoria2.cs" />
+     <Compile Include="Assets\Script\JogoMemoria3.cs" />
+     <Compile Include="Assets\Script\JogoMemoria4.cs" />
      <Compile Include="Assets\Script\JogoQuiz.cs" />
      <Compile Include="Assets\Script\Menu.cs" />
      <Compile Include="Assets\Script\MonstroHorizontal.cs" />

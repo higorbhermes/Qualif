@@ -265,7 +265,7 @@ void FixedUpdate(){
     }*/
     if (Input.GetKeyDown(KeyCode.Space)){
         if (final == true){
-           if (UserData.cont_jogo_forca<=2){
+           if (UserData.cont_jogo_memoria<=3){
                 WWW www_gerarnumero = new WWW (url_aleatorio);
                 StartCoroutine(Num_aleatorio(www_gerarnumero));
             }

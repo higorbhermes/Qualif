@@ -159,6 +159,7 @@ Assets/Script/JogoForca10Letras.cs
 Assets/Script/JogoForca12Letras.cs
 Assets/Script/JogoMemoria.cs
 Assets/Script/JogoMemoria2.cs
+Assets/Script/JogoMemoria3.cs
 Assets/Script/JogoQuiz.cs
 Assets/Script/Menu.cs
 Assets/Script/MonstroHorizontal.cs

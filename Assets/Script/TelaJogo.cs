@@ -94,6 +94,7 @@ IEnumerator IniciarMemoria(WWW wwwww){
         num_gerado2 = wwwww.text.ToString();
         num_gerado2 = num_gerado2.TrimEnd();
         UserData.cod_memoria = num_gerado2;
+        UserData.cont_jogo_memoria = 0;
         if (num_gerado == "1"){
             if (num_gerado2 == "1" || num_gerado2 == "2"){
                SceneManager.LoadScene("JogoMemoria");
@@ -143,6 +144,23 @@ IEnumerator IniciarMemoria(WWW wwwww){
             }
             if (num_gerado2 == "9" || num_gerado2 == "10"){
                SceneManager.LoadScene("JogoMemoria3v5");
+            }
+        }
+        if (num_gerado == "4"){
+            if (num_gerado2 == "1" || num_gerado2 == "2"){
+               SceneManager.LoadScene("JogoMemoria4v1");
+            }
+            if (num_gerado2 == "3" || num_gerado2 == "4"){
+               SceneManager.LoadScene("JogoMemoria4v2");
+            }
+            if (num_gerado2 == "5" || num_gerado2 == "6"){
+               SceneManager.LoadScene("JogoMemoria4v3");
+            }
+            if (num_gerado2 == "7" || num_gerado2 == "8"){
+               SceneManager.LoadScene("JogoMemoria4v4");
+            }
+            if (num_gerado2 == "9" || num_gerado2 == "10"){
+               SceneManager.LoadScene("JogoMemoria4v5");
             }
         }
         

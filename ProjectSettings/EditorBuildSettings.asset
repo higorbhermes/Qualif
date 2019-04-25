@@ -68,3 +68,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JogoMemoria2v4.unity
     guid: 477161c259cb644d1b1e10d988b22364
+  - enabled: 1
+    path: Assets/JogoMemoria3v1.unity
+    guid: 75242fa44ecc44645bd39373c0fc3ddf
+  - enabled: 1
+    path: Assets/JogoMemoria3v2.unity
+    guid: 38a8e3b9d7b414697ba85e3553d7a419
+  - enabled: 1
+    path: Assets/JogoMemoria3v3.unity
+    guid: ea58417123272439f81b8b40bc3379bc
+  - enabled: 1
+    path: Assets/JogoMemoria3v4.unity
+    guid: ac9a70f54e002427ca0704bfd360d5f5
+  - enabled: 1
+    path: Assets/JogoMemoria3v5.unity
+    guid: eb55a033d0b4947c586341e3dcb02307
+  - enabled: 1
+    path: Assets/JogoMemoria4v1.unity
+    guid: 8149d7f6f708d4d458c8ad12c3037df8
+  - enabled: 1
+    path: Assets/JogoMemoria4v2.unity
+    guid: bf9031f15fcde46e2a90bb3c8699178e
+  - enabled: 1
+    path: Assets/JogoMemoria4v4.unity
+    guid: 468715b4087834847839500b7cd67ed8
+  - enabled: 1
+    path: Assets/JogoMemoria4v5.unity
+    guid: be71c598df2894b129f5fdd0897efc0d
