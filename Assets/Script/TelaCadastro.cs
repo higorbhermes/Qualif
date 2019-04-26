@@ -8,6 +8,7 @@ public class TelaCadastro : MonoBehaviour {
 
 public Button button_salvar;
 public Button button_cancelar;
+public Text mensagem;
 public InputField field_nome;
 public InputField field_sobrenome;
 public InputField field_email;
@@ -31,7 +32,7 @@ public string url_completa;
  void Salvar(){
 
         if (field_nome.text == "" || field_sobrenome.text == "" || field_email.text == "" || field_senha.text == ""){
-               // FeedBackError("Preencha todos os campos");
+               //mensagem.text = "Preencha todos os campos!";
         }
         else{
              nome = field_nome.text;
@@ -43,25 +44,19 @@ public string url_completa;
              WWW www = new WWW (url_completa);
              StartCoroutine(ValidaLogin(www));
         }
-      
-        //SceneManager.LoadScene("TelaJogo");
     }
 
 
  IEnumerator ValidaLogin(WWW www){
         yield return www;
-       // if (www.error == null){
-         //   Debug.Log("Cadastro Realizado com Sucesso!");
-        
         retorno = www.text.ToString();
         Debug.Log(retorno);
         retorno = retorno.TrimEnd();
         if (retorno == "1"){
-            Debug.Log("Funcionou");
-
+               //mensagem.text = "Seus dados foram salvos com sucesso!";
         }
         else{
-             Debug.Log("Erro ao Cadastrar!");
+               //mensagem.text = "Houve um erro no seu cadastro";
         }
 
 }

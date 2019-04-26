@@ -70,6 +70,7 @@
      <Compile Include="Assets\Script\Splash.cs" />
      <Compile Include="Assets\Script\TelaCadastro.cs" />
      <Compile Include="Assets\Script\TelaJogo.cs" />
+     <Compile Include="Assets\Script\TelaMeusDados.cs" />
      <Compile Include="Assets\Script\TelaVitoria.cs" />
      <Compile Include="Assets\Script\Tentativa2.cs" />
      <Compile Include="Assets\Script\UserData.cs" />

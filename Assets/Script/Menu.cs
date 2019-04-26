@@ -15,18 +15,39 @@ public string email, senha, retorno;
 public int teste;
 public string url = "https://qualif.000webhostapp.com/html/selectLogin.php";
 public string url_completa;
+public int msg = 1, msg1 = 0, msg2 = 0, msg3 = 0;
+public Text mensagem;
 
 void Start(){
-        button_jogar.onClick.AddListener(Login);
-        button_cadastro.onClick.AddListener(Cadastrar);
-        //button_sair.onClick.AddListener(Sair);
+     button_jogar.onClick.AddListener(Login);
+     button_cadastro.onClick.AddListener(Cadastrar);
+}
+
+void FixedUpdate(){
+    if (msg == 1){
+       mensagem.text = "";
+    }
+    if (msg1 == 1){
+       mensagem.text = "Preencha todos os dados!";
+    }
+    if (msg2 == 1){
+       mensagem.text = "Seja bem vindo ao Qualif!";
+    }
+    if (msg3 == 1){
+       mensagem.text = "Não foi possível realizar o seu login!";
+    }
+    if (Input.GetKeyDown(KeyCode.Escape)){
+       Application.Quit();
+    }
 }
 
    
- void Login(){
+void Login(){
 
-   if (field_email.text == "" || field_senha.text == ""){
-               // FeedBackError("Preencha todos os campos");
+  if (field_email.text == "" || field_senha.text == ""){
+              //mensagem.text = "Preencha todos os campos";
+            //msg = 0;
+            //msg1 = 1;
         }
    else{
              email = field_email.text;
@@ -45,15 +66,19 @@ void Start(){
         string resultado_verdadeiro = "1";
         bool resultado = resultado_verdadeiro.Equals(retorno);
         if (resultado == true ){
-            Debug.Log("Seja Bem Vindo ao Qualif");
+            msg = 0;
+            msg2 = 1;
+            //mensagem.text = "Seja bem Vindo ao Qualif";
             UserData.email = email;
             SceneManager.LoadScene("TelaJogo");
         }
         else{
-             Debug.Log("Por favor, tente novamente");
+            msg = 0;
+            msg3 = 1;
+             //mensagem.text = "Não foi possível realizar o seu login";
         }
         /*if (retorno == "0"){
-            Debug.Log("Erro no Login!");
+            Debug.Log("Erro no Login!" Nao foi possivel realizar seu login!);
         }
         else{
              Debug.Log("Funcionou");

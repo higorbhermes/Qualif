@@ -8,6 +8,7 @@ public class TelaJogo : MonoBehaviour {
 	
 
 public Button button_jogar;
+public Button button_dados;
 public Button button_caderno;
 public Button button_estatisticas;
 public Button button_sair;
@@ -27,6 +28,7 @@ public int num, merda, opcao;
         //button_jogar.onClick.AddListener(Jogar);
         //button_sair.onClick.AddListener(Sair);
         button_forca.onClick.AddListener(Forca);
+        button_dados.onClick.AddListener(Dados);
         button_quiz.onClick.AddListener(Quiz);
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Memória);
@@ -46,6 +48,11 @@ void Quiz(){
 void Voltar(){
         SceneManager.LoadScene("JogoMemoria");
     }
+
+void Dados(){
+        SceneManager.LoadScene("TelaMeusDados");
+    }
+
 
  void Sair(){
         Application.Quit();

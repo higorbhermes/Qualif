@@ -23,8 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JogoForca1.unity
     guid: 920d1fecf3f0f41aabcb371698e6d7e1
-  - enabled: 1
-    path: Assets/TelaCadastro.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/a3e9c9a86e46c4b1082b5484517e5f87
     guid: a3e9c9a86e46c4b1082b5484517e5f87
   - enabled: 1
     path: Assets/TelaVitoria.unity
@@ -95,3 +95,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JogoMemoria4v5.unity
     guid: be71c598df2894b129f5fdd0897efc0d
+  - enabled: 1
+    path: Assets/TelaCadastro.unity
+    guid: 23032c2182e5b47a5b025f0c4eff7c5b
+  - enabled: 1
+    path: Assets/TelaMeusDados.unity
+    guid: e1bf4e80e414e457a999f80bf13012e9

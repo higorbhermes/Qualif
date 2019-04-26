@@ -9,7 +9,7 @@ public class TelaVitoria : MonoBehaviour {
 public Text mensagem;
 
 void Start(){
-   mensagem.text = "Parabéns, "+UserData.email+"! Você conclui todos os desafios!"; 
+   mensagem.text = "Parabéns, "+UserData.email+"! Você concluiu todos os desafios!"; 
 }
 
 void FixedUpdate(){
