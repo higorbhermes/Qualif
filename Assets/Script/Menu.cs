@@ -24,18 +24,6 @@ void Start(){
 }
 
 void FixedUpdate(){
-    if (msg == 1){
-       mensagem.text = "";
-    }
-    if (msg1 == 1){
-       mensagem.text = "Preencha todos os dados!";
-    }
-    if (msg2 == 1){
-       mensagem.text = "Seja bem vindo ao Qualif!";
-    }
-    if (msg3 == 1){
-       mensagem.text = "Não foi possível realizar o seu login!";
-    }
     if (Input.GetKeyDown(KeyCode.Escape)){
        Application.Quit();
     }
@@ -45,7 +33,7 @@ void FixedUpdate(){
 void Login(){
 
   if (field_email.text == "" || field_senha.text == ""){
-              //mensagem.text = "Preencha todos os campos";
+             mensagem.text = "Preencha todos os campos!";
             //msg = 0;
             //msg1 = 1;
         }
@@ -66,16 +54,11 @@ void Login(){
         string resultado_verdadeiro = "1";
         bool resultado = resultado_verdadeiro.Equals(retorno);
         if (resultado == true ){
-            msg = 0;
-            msg2 = 1;
-            //mensagem.text = "Seja bem Vindo ao Qualif";
             UserData.email = email;
             SceneManager.LoadScene("TelaJogo");
         }
         else{
-            msg = 0;
-            msg3 = 1;
-             //mensagem.text = "Não foi possível realizar o seu login";
+            mensagem.text = "Não foi possível realizar o seu login!";
         }
         /*if (retorno == "0"){
             Debug.Log("Erro no Login!" Nao foi possivel realizar seu login!);

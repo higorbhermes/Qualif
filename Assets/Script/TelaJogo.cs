@@ -46,7 +46,7 @@ void Quiz(){
 }
 
 void Voltar(){
-        SceneManager.LoadScene("JogoMemoria");
+        SceneManager.LoadScene("Main");
     }
 
 void Dados(){

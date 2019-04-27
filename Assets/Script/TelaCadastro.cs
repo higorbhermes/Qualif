@@ -24,15 +24,13 @@ public string url_completa;
         //button_sair.onClick.AddListener(Sair);
         //button_forca.onClick.AddListener(Forca);
         //button_ferramentas.onClick.AddListener(Ferramentas);
-        Debug.Log("Tela Jogo");
-
      }
 
    
  void Salvar(){
 
         if (field_nome.text == "" || field_sobrenome.text == "" || field_email.text == "" || field_senha.text == ""){
-               //mensagem.text = "Preencha todos os campos!";
+            mensagem.text = "Preencha todos os campos!";
         }
         else{
              nome = field_nome.text;
@@ -53,10 +51,10 @@ public string url_completa;
         Debug.Log(retorno);
         retorno = retorno.TrimEnd();
         if (retorno == "1"){
-               //mensagem.text = "Seus dados foram salvos com sucesso!";
+            mensagem.text = "O seu cadastro foi realizado com sucesso!";
         }
         else{
-               //mensagem.text = "Houve um erro no seu cadastro";
+            mensagem.text = "Houve um erro ao cadastrar, tente novamente!";
         }
 
 }
