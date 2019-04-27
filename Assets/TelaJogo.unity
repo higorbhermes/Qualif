@@ -493,7 +493,7 @@ MonoBehaviour:
   button_jogar: {fileID: 0}
   button_dados: {fileID: 1170769826}
   button_caderno: {fileID: 0}
-  button_estatisticas: {fileID: 0}
+  button_estatisticas: {fileID: 1352023680}
   button_sair: {fileID: 0}
   button_quiz: {fileID: 1654684268}
   button_forca: {fileID: 1150551765}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 1352023681}
   - component: {fileID: 1352023680}
   m_Layer: 0
-  m_Name: button_outro
+  m_Name: button_pontuacao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -30,13 +30,18 @@ public int num, merda, opcao;
         button_forca.onClick.AddListener(Forca);
         button_dados.onClick.AddListener(Dados);
         button_quiz.onClick.AddListener(Quiz);
+        button_estatisticas.onClick.AddListener(Pontuacao);
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Memória);
         Debug.Log(""+UserData.email);
      }
 
- void Jogar(){
+void Jogar(){
         SceneManager.LoadScene("TelaJogo");
+    }
+
+void Pontuacao(){
+        SceneManager.LoadScene("Pontuacao");
     }
 
 void Quiz(){

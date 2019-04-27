@@ -66,6 +66,7 @@
      <Compile Include="Assets\Script\NewBehaviourScript.cs" />
      <Compile Include="Assets\Script\PauseControl.cs" />
      <Compile Include="Assets\Script\Player.cs" />
+     <Compile Include="Assets\Script\Pontuacao.cs" />
      <Compile Include="Assets\Script\RedSpike.cs" />
      <Compile Include="Assets\Script\Splash.cs" />
      <Compile Include="Assets\Script\TelaCadastro.cs" />
