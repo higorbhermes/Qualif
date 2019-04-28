@@ -915,7 +915,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651800645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -491, y: -56, z: 0}
+  m_LocalPosition: {x: -491, y: -137, z: 0}
   m_LocalScale: {x: 1.4565598, y: 1.4565598, z: 1.4565598}
   m_Children:
   - {fileID: 546575798}
@@ -925,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: -56}
+  m_AnchoredPosition: {x: -491, y: -137}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &651800647
@@ -1152,7 +1152,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 782926889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -214.99998, z: 0}
+  m_LocalPosition: {x: 1.5, y: -215.00002, z: 0}
   m_LocalScale: {x: 0.5407199, y: 0.5407199, z: 0.5407199}
   m_Children: []
   m_Father: {fileID: 945581289}
@@ -1195,7 +1195,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: Carregando...
+  m_Text: 
 --- !u!222 &782926892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1666,6 +1666,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1367191848}
+  - component: {fileID: 1367191849}
   - component: {fileID: 1367191847}
   - component: {fileID: 1367191846}
   - component: {fileID: 1367191845}
@@ -1740,6 +1741,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367191849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367191844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1ee066f93c743ce8eba99640a2da11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button_jogar: {fileID: 172938067}
+  button_parar: {fileID: 249689909}
+  aleatorio: {fileID: 653231694}
+  erros: {fileID: 1528539656}
+  acertos: {fileID: 651800645}
+  respondidas: {fileID: 1752088610}
+  ineditas: {fileID: 2059149495}
+  text_aleatorio: {fileID: 1212465622}
+  text_ineditas: {fileID: 672869106}
+  text_respondidas: {fileID: 1306634911}
+  text_erros: {fileID: 1455515476}
+  text_acertos: {fileID: 104709584}
+  mensagem: {fileID: 782926891}
+  url_selectJogoQuiz: https://qualif.000webhostapp.com/html/selectJogoQuiz.php
+  url_salvar: https://qualif.000webhostapp.com/html/salvarJogadorQuiz.php
+  url_aleatorio: https://qualif.000webhostapp.com/html/num_aleatorio.php
+  url_selectJogoForca: https://qualif.000webhostapp.com/html/selectJogoForca.php
+  url_verificartotal: https://qualif.000webhostapp.com/html/pontuacao.php
+  url_RespondideuOuNaoQuiz: https://qualif.000webhostapp.com/html/respondeu_ou_nao_jogoquiz.php
+  url_AcertouOuNaoQuiz: https://qualif.000webhostapp.com/html/acertou_ou_nao_jogoquiz.php
+  url_verificarNaoRespondidasOuRespondidasForca: https://qualif.000webhostapp.com/html/respondeu_ou_nao_forca.php
+  ok_1: 0
+  ok_2: 0
+  ok_3: 0
+  ok_4: 0
+  ok_5: 0
+  ok_6: 0
+  ok_7: 0
+  ok_8: 0
+  ok_9: 0
+  ok_10: 0
+  limpar_mensagem: 1
+  acertou: 0
+  errou: 0
+  fim_fase: 0
+  "\xE9_igual": 0
+  num_ajuda: 0
+  num: 0
+  resposta_escolhida: 
+  num_gerado: 
+  num_letras: 
+  controle: 0
 --- !u!1 &1455515474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,7 +1964,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1528539656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -491, y: -137, z: 0}
+  m_LocalPosition: {x: -491, y: -56, z: 0}
   m_LocalScale: {x: 1.4565598, y: 1.4565598, z: 1.4565598}
   m_Children:
   - {fileID: 1592759820}
@@ -1920,7 +1974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: -137}
+  m_AnchoredPosition: {x: -491, y: -56}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528539658

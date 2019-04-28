@@ -46,8 +46,10 @@ void Pontuacao(){
 
 void Quiz(){
      opcao = 1;
-     WWW www = new WWW (url_aleatorio);
-     StartCoroutine(Num_aleatorio(www));
+     UserData.escolha = "1";
+     SceneManager.LoadScene("TelaFiltro");
+     //WWW www = new WWW (url_aleatorio);
+     //StartCoroutine(Num_aleatorio(www));
 }
 
 void Voltar(){
@@ -59,15 +61,14 @@ void Dados(){
     }
 
 
- void Sair(){
-        Application.Quit();
-    }
+void Sair(){
+     Application.Quit();
+}
 
 void Forca(){
-        opcao = 2;
-        WWW www = new WWW (url_aleatorio);
-        StartCoroutine(Num_aleatorio(www));
-
+     opcao = 2;
+     UserData.escolha = "2";
+     SceneManager.LoadScene("TelaFiltro");
 }
 
 void Memória(){

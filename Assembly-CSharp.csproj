@@ -70,6 +70,8 @@
      <Compile Include="Assets\Script\RedSpike.cs" />
      <Compile Include="Assets\Script\Splash.cs" />
      <Compile Include="Assets\Script\TelaCadastro.cs" />
+     <Compile Include="Assets\Script\TelaFiltro.cs" />
+     <Compile Include="Assets\Script\TelaFiltroVV.cs" />
      <Compile Include="Assets\Script\TelaJogo.cs" />
      <Compile Include="Assets\Script\TelaMeusDados.cs" />
      <Compile Include="Assets\Script\TelaVitoria.cs" />

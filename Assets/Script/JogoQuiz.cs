@@ -192,15 +192,121 @@ void FixedUpdate(){
     }
     if (Input.GetKeyDown(KeyCode.Space)){
         if (acertou == true){
-           if (UserData.cont_jogo_forca<=9){
-               PrepararDesafio();
-            }
-            else{
-               SceneManager.LoadScene("TelaVitoria");
-            }
+           if (UserData.quiz_alternativo == true){
+               if (UserData.cont_jogo_quiz == 2 && UserData.quiz2 == true){
+                    UserData.id_jogo_quiz_atual = 2;
+                    UserData.cont_jogo_quiz = 2;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 3;
+               }
+               if (UserData.cont_jogo_quiz == 3 && UserData.quiz3 == true){
+                    UserData.id_jogo_quiz_atual = 3;
+                    UserData.cont_jogo_quiz = 3;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 4;
+               }
+               if (UserData.cont_jogo_quiz == 4 && UserData.quiz4 == true){
+                    UserData.id_jogo_quiz_atual = 4;
+                    UserData.cont_jogo_quiz = 4;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 5;
+               }
+               if (UserData.cont_jogo_quiz == 5 && UserData.quiz5 == true){
+                    UserData.id_jogo_quiz_atual = 5;
+                    UserData.cont_jogo_quiz = 5;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 6;
+               }
+               if (UserData.cont_jogo_quiz == 6 && UserData.quiz6 == true){
+                    UserData.id_jogo_quiz_atual = 6;
+                    UserData.cont_jogo_quiz = 6;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 7;
+               }
+               if (UserData.cont_jogo_quiz == 7 && UserData.quiz7 == true){
+                    UserData.id_jogo_quiz_atual = 7;
+                    UserData.cont_jogo_quiz = 7;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 8;
+               }
+               if (UserData.cont_jogo_quiz == 8 && UserData.quiz8 == true){
+                    UserData.id_jogo_quiz_atual = 8;
+                    UserData.cont_jogo_quiz = 8;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 9;
+               }
+               if (UserData.cont_jogo_quiz == 9 && UserData.quiz9 == true){
+                    UserData.id_jogo_quiz_atual = 9;
+                    UserData.cont_jogo_quiz = 9;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.id_jogo_quiz_atual = 10;
+               }
+               if (UserData.cont_jogo_quiz == 10 && UserData.quiz10 == true){
+                    UserData.id_jogo_quiz_atual = 10;
+                    UserData.cont_jogo_quiz = 10;
+                    SceneManager.LoadScene("JogoQuiz");
+               }
+               else{
+                    UserData.quiz1 = false;
+                    UserData.quiz2 = false;
+                    UserData.quiz3 = false;
+                    UserData.quiz4 = false;
+                    UserData.quiz5 = false;
+                    UserData.quiz6 = false;
+                    UserData.quiz7 = false;
+                    UserData.quiz8 = false;
+                    UserData.quiz9 = false;
+                    UserData.quiz10 = false;
+                    SceneManager.LoadScene("TelaVitoria");                    
+               }
+           }
+           else{
+                if (UserData.cont_jogo_quiz<=9){
+                    PrepararDesafio();
+                }
+                else{
+                    UserData.quiz1 = false;
+                    UserData.quiz2 = false;
+                    UserData.quiz3 = false;
+                    UserData.quiz4 = false;
+                    UserData.quiz5 = false;
+                    UserData.quiz6 = false;
+                    UserData.quiz7 = false;
+                    UserData.quiz8 = false;
+                    UserData.quiz9 = false;
+                    UserData.quiz10 = false;
+                    SceneManager.LoadScene("TelaVitoria");
+                }
+           }
         }
         if (errou == true){
            SceneManager.LoadScene("TelaJogo");
+            UserData.quiz1 = false;
+            UserData.quiz2 = false;
+            UserData.quiz3 = false;
+            UserData.quiz4 = false;
+            UserData.quiz5 = false;
+            UserData.quiz6 = false;
+            UserData.quiz7 = false;
+            UserData.quiz8 = false;
+            UserData.quiz9 = false;
+            UserData.quiz10 = false;
         }
     }
 }
@@ -251,7 +357,7 @@ IEnumerator Num_aleatorio(WWW www_gerarnumero){
         }
         else{
             UserData.id_jogo_quiz_atual = num;
-            UserData.cont_jogo_quiz =  UserData.cont_jogo_quiz++;
+            //UserData.cont_jogo_quiz =  UserData.cont_jogo_quiz+1;
             SceneManager.LoadScene("JogoQuiz");
         }
 }
@@ -379,6 +485,16 @@ IEnumerator SalvarJogo(WWW www_salvar){
 }
 
 void Parar(){
+     UserData.quiz1 = false;
+     UserData.quiz2 = false;
+     UserData.quiz3 = false;
+     UserData.quiz4 = false;
+     UserData.quiz5 = false;
+     UserData.quiz6 = false;
+     UserData.quiz7 = false;
+     UserData.quiz8 = false;
+     UserData.quiz9 = false;
+     UserData.quiz10 = false;
      SceneManager.LoadScene("TelaJogo");
 }
 
