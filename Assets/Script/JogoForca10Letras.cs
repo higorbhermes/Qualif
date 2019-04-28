@@ -386,6 +386,92 @@ void FixedUpdate(){
         StartCoroutine(Num_aleatorio(www_gerarnumero));
     }*/
     if (Input.GetKeyDown(KeyCode.Space) && liberar_fase == true){
+        if (UserData.forca_alternativo == true){
+               if (UserData.cont_jogo_forca == 2 && UserData.forca2 == true){
+                      UserData.id_jogo_forca_atual = 2;
+                      UserData.cont_jogo_forca = 2;
+                      SceneManager.LoadScene("JogoForca10Letras");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 3;
+               }
+               if (UserData.cont_jogo_forca == 3 && UserData.forca3 == true){
+                      UserData.id_jogo_forca_atual = 3;
+                      UserData.cont_jogo_forca = 3;
+                      SceneManager.LoadScene("JogoForca10Letras");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 4;
+               }
+               if (UserData.cont_jogo_forca == 4 && UserData.forca4 == true){
+                      UserData.id_jogo_forca_atual = 4;
+                      UserData.cont_jogo_forca = 4;
+                      SceneManager.LoadScene("JogoForca1");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 5;
+               }
+               if (UserData.cont_jogo_forca == 5 && UserData.forca5 == true){
+                      UserData.id_jogo_forca_atual = 5;
+                      UserData.cont_jogo_forca = 5;
+                      SceneManager.LoadScene("JogoForca1");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 6;
+               }
+               if (UserData.cont_jogo_forca == 6 && UserData.forca6 == true){
+                      UserData.id_jogo_forca_atual = 6;
+                      UserData.cont_jogo_forca = 6; 
+                      SceneManager.LoadScene("JogoForca12Letras");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 7;
+               }
+               if (UserData.cont_jogo_forca == 7 && UserData.forca7 == true){
+                      UserData.id_jogo_forca_atual = 7;
+                      UserData.cont_jogo_forca = 7; 
+                      SceneManager.LoadScene("JogoForca12Letras");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 8;
+               }
+               if (UserData.cont_jogo_forca == 8 && UserData.forca8 == true){
+                      UserData.id_jogo_forca_atual = 8;
+                      UserData.cont_jogo_forca = 8; 
+                      SceneManager.LoadScene("JogoForca12Letras");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 9;
+               }
+               if (UserData.cont_jogo_forca == 9 && UserData.forca9 == true){
+                      UserData.id_jogo_forca_atual = 9;
+                      UserData.cont_jogo_forca = 9; 
+                      SceneManager.LoadScene("JogoForca12Letras");
+               }
+               else{
+                    UserData.id_jogo_forca_atual = 10;
+               }
+               if (UserData.cont_jogo_forca == 10 && UserData.forca10 == true){
+                      UserData.id_jogo_forca_atual = 10;
+                      UserData.cont_jogo_forca = 10;
+                      SceneManager.LoadScene("JogoForca10Letras");
+               }
+               else{
+                    UserData.forca1 = false;
+                    UserData.forca2 = false;
+                    UserData.forca3 = false;
+                    UserData.forca4 = false;
+                    UserData.forca5 = false;
+                    UserData.forca6 = false;
+                    UserData.forca7 = false;
+                    UserData.forca8 = false;
+                    UserData.forca9 = false;
+                    UserData.forca10 = false;
+                    UserData.forca_alternativo = false;
+                    SceneManager.LoadScene("TelaVitoria");                    
+               }
+        }
+        else{
         if (UserData.cont_jogo_forca<=9){
                PrepararDesafio();
                //while (é_igual == true){
@@ -397,11 +483,35 @@ void FixedUpdate(){
                //StartCoroutine(IniciarForca(wwww)); 
         }
         else{
+                    UserData.forca1 = false;
+                    UserData.forca2 = false;
+                    UserData.forca3 = false;
+                    UserData.forca4 = false;
+                    UserData.forca5 = false;
+                    UserData.forca6 = false;
+                    UserData.forca7 = false;
+                    UserData.forca8 = false;
+                    UserData.forca9 = false;
+                    UserData.forca10 = false;
+                    UserData.forca_alternativo = false;
             SceneManager.LoadScene("TelaVitoria");
         }
+        }
+
     }
     if (Input.GetKeyDown(KeyCode.Space) && bloquear_jogo == true){
             UserData.pontuacao = 100;
+                    UserData.forca1 = false;
+                    UserData.forca2 = false;
+                    UserData.forca3 = false;
+                    UserData.forca4 = false;
+                    UserData.forca5 = false;
+                    UserData.forca6 = false;
+                    UserData.forca7 = false;
+                    UserData.forca8 = false;
+                    UserData.forca9 = false;
+                    UserData.forca10 = false;
+                    UserData.forca_alternativo = false;
             SceneManager.LoadScene("TelaJogo");
 
     }
@@ -445,19 +555,16 @@ IEnumerator IniciarForca(WWW wwww){
         if (num_letras == "10"){
             num = int.Parse(num_gerado);
             UserData.id_jogo_forca_atual = num;
-            UserData.cont_jogo_forca = UserData.cont_jogo_forca++;
             SceneManager.LoadScene("JogoForca10Letras");
         }  
         if (num_letras == "11"){
             num = int.Parse(num_gerado);
             UserData.id_jogo_forca_atual = num;
-            UserData.cont_jogo_forca = UserData.cont_jogo_forca++;
             SceneManager.LoadScene("JogoForca1");
         } 
         if (num_letras == "12"){
             num = int.Parse(num_gerado);
             UserData.id_jogo_forca_atual = num;
-            UserData.cont_jogo_forca = UserData.cont_jogo_forca++;
             SceneManager.LoadScene("JogoForca12Letras");
         }   
 }
@@ -919,7 +1026,21 @@ void Revelar(){
 
 
 void Voltar(){SceneManager.LoadScene("Main"); }
-void Sair(){UserData.pontuacao = 100; SceneManager.LoadScene("TelaJogo");}
+void Sair(){
+UserData.pontuacao = 100; 
+UserData.forca1 = false;
+UserData.forca2 = false;
+UserData.forca3 = false;
+UserData.forca4 = false;
+UserData.forca5 = false;
+UserData.forca6 = false;
+UserData.forca7 = false;
+UserData.forca8 = false;
+UserData.forca9 = false;
+UserData.forca10 = false;
+UserData.forca_alternativo = false;
+SceneManager.LoadScene("TelaJogo");
+}
 
 void Pontuacao(){
       url_converter_auxiliar = url_converter+"?numero="+pontos;

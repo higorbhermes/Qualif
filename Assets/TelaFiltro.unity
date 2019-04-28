@@ -915,7 +915,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651800645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -491, y: -137, z: 0}
+  m_LocalPosition: {x: -491, y: -152, z: 0}
   m_LocalScale: {x: 1.4565598, y: 1.4565598, z: 1.4565598}
   m_Children:
   - {fileID: 546575798}
@@ -925,7 +925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: -137}
+  m_AnchoredPosition: {x: -491, y: -152}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &651800647
@@ -996,7 +996,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 653231694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -491, y: 163, z: 0}
+  m_LocalPosition: {x: -491, y: 181, z: 0}
   m_LocalScale: {x: 1.4565625, y: 1.4565625, z: 1.4565625}
   m_Children:
   - {fileID: 1213835608}
@@ -1006,7 +1006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: 163}
+  m_AnchoredPosition: {x: -491, y: 181}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653231696
@@ -1152,7 +1152,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 782926889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -215.00002, z: 0}
+  m_LocalPosition: {x: 1.5, y: -225.99998, z: 0}
   m_LocalScale: {x: 0.5407199, y: 0.5407199, z: 0.5407199}
   m_Children: []
   m_Father: {fileID: 945581289}
@@ -1160,7 +1160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: -215.00002}
+  m_AnchoredPosition: {x: 1.5, y: -226}
   m_SizeDelta: {x: 2281.5, y: 119.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782926891
@@ -1772,7 +1772,8 @@ MonoBehaviour:
   url_verificartotal: https://qualif.000webhostapp.com/html/pontuacao.php
   url_RespondideuOuNaoQuiz: https://qualif.000webhostapp.com/html/respondeu_ou_nao_jogoquiz.php
   url_AcertouOuNaoQuiz: https://qualif.000webhostapp.com/html/acertou_ou_nao_jogoquiz.php
-  url_verificarNaoRespondidasOuRespondidasForca: https://qualif.000webhostapp.com/html/respondeu_ou_nao_forca.php
+  url_RespondideuOuNaoForca: https://qualif.000webhostapp.com/html/respondeu_ou_nao_jogoforca.php
+  url_AcertouOuNaoForca: https://qualif.000webhostapp.com/html/acertou_ou_nao_jogoforca.php
   ok_1: 0
   ok_2: 0
   ok_3: 0
@@ -1964,7 +1965,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1528539656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -491, y: -56, z: 0}
+  m_LocalPosition: {x: -491, y: -67, z: 0}
   m_LocalScale: {x: 1.4565598, y: 1.4565598, z: 1.4565598}
   m_Children:
   - {fileID: 1592759820}
@@ -1974,7 +1975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: -56}
+  m_AnchoredPosition: {x: -491, y: -67}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528539658
@@ -2394,7 +2395,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2059149495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -491, y: 96, z: 0}
+  m_LocalPosition: {x: -491, y: 100, z: 0}
   m_LocalScale: {x: 1.4565598, y: 1.4565598, z: 1.4565598}
   m_Children:
   - {fileID: 1682805709}
@@ -2404,7 +2405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -491, y: 96}
+  m_AnchoredPosition: {x: -491, y: 100}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059149497

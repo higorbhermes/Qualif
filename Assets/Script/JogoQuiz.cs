@@ -273,6 +273,7 @@ void FixedUpdate(){
                     UserData.quiz8 = false;
                     UserData.quiz9 = false;
                     UserData.quiz10 = false;
+                    UserData.quiz_alternativo = false;
                     SceneManager.LoadScene("TelaVitoria");                    
                }
            }
@@ -291,12 +292,12 @@ void FixedUpdate(){
                     UserData.quiz8 = false;
                     UserData.quiz9 = false;
                     UserData.quiz10 = false;
+                    UserData.quiz_alternativo = false;
                     SceneManager.LoadScene("TelaVitoria");
                 }
            }
         }
         if (errou == true){
-           SceneManager.LoadScene("TelaJogo");
             UserData.quiz1 = false;
             UserData.quiz2 = false;
             UserData.quiz3 = false;
@@ -307,6 +308,8 @@ void FixedUpdate(){
             UserData.quiz8 = false;
             UserData.quiz9 = false;
             UserData.quiz10 = false;
+            UserData.quiz_alternativo = false;
+           SceneManager.LoadScene("TelaJogo");
         }
     }
 }
@@ -495,6 +498,7 @@ void Parar(){
      UserData.quiz8 = false;
      UserData.quiz9 = false;
      UserData.quiz10 = false;
+     UserData.quiz_alternativo = false;
      SceneManager.LoadScene("TelaJogo");
 }
 
