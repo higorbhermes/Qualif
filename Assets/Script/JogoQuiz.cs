@@ -33,7 +33,7 @@ public bool liberado = false;
 public bool limpar_mensagem = true;
 public bool acertou = false, errou = false, fim_fase = false, é_igual;
 public int num_ajuda = 0, num;
-public string resposta_escolhida = "", num_gerado;
+public string resposta_escolhida = "", num_gerado, text_enunciado;
 
 void Start(){
         button_ajuda.onClick.AddListener(Ajuda);
@@ -66,7 +66,6 @@ void Start(){
         url_completa9 = url_selectJogoQuiz+"?id="+UserData.id_jogo_quiz_atual+"&opcao=10";
         WWW www9 = new WWW (url_completa9);
         StartCoroutine(Verificar_Gabarito(www9)); 
-        enunciado.text = banca+" ("+ano+") - "+ enunciado.text;
         Conferir();
 }
 
@@ -169,11 +168,12 @@ void FixedUpdate(){
     if  (alternativa_e.GetComponent<Toggle>().isOn == false && resposta_escolhida == "E"){
          resposta_escolhida = "";
     }
-    if (enunciado.text =="" || letra_a.text  =="" || letra_b.text  =="" || letra_c.text =="" || letra_d.text =="" || letra_e.text =="" || banca == "" || ano =="" || gabarito ==""){
+    if (text_enunciado =="" || letra_a.text  =="" || letra_b.text  =="" || letra_c.text =="" || letra_d.text =="" || letra_e.text =="" || banca == "" || ano =="" || gabarito ==""){
        if (liberado == false){mensagem.text = "Conectando ao Servidor...Aguarde um momento!"; }
     }
     else{
         liberado = true;
+        enunciado.text = banca+" ("+ano+") - "+ text_enunciado;
         if (acertou == false && errou == false && limpar_mensagem == true){
                 mensagem.text = "";
         }
@@ -364,8 +364,8 @@ IEnumerator Num_aleatorio(WWW www_gerarnumero){
 
 IEnumerator Verificar_Enunciado(WWW www1){
         yield return www1;
-        enunciado.text = www1.text.ToString();
-        enunciado.text = enunciado.text.TrimEnd();
+        text_enunciado = www1.text.ToString();
+        text_enunciado = text_enunciado.TrimEnd();
         ok_1 = true;
 }
 

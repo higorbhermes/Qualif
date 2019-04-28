@@ -50,10 +50,9 @@ $email = mysqli_real_escape_string($conn, $_GET['email']);
     $query = "SELECT * FROM JogadorQuiz WHERE id_quiz = '4' && email = '$email'";
     $statement = $conn->prepare($query);
     $statement->execute();
-    $result = $statement->get_result();
     $forcaArray = $result->fetch_assoc();
     if ($forcaArray == null){
-        echo 2;
+        echo "2";
     }
     else{
         echo $forcaArray['Acertou'];
