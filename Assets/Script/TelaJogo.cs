@@ -53,7 +53,7 @@ void Quiz(){
 }
 
 void Voltar(){
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Cena1");
     }
 
 void Dados(){
