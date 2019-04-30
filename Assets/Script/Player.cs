@@ -27,9 +27,13 @@ public class Player : MonoBehaviour {
     public LayerMask LayerMaskMonsters;
     public GameObject LastCheckpoint;
     private float distToGround;
-    public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_fluxograma, ferramenta_carta;
-    public GameObject raw_folha, raw_peixe, raw_pareto, raw_histograma, raw_fluxograma, raw_carta;
-    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta;
+    public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_fluxograma, ferramenta_carta, ferramenta_dispersao;
+    public GameObject raw_folha, raw_peixe, raw_pareto, raw_histograma, raw_fluxograma, raw_carta, raw_dispersao;
+    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta, painel_dispersao;
+    public bool folha = false, peixe = false, pareto = false, histograma = false, fluxograma = false, carta = false, dispersao = false;
+    public Text text_folha, text_peixe, text_pareto, text_histograma, text_fluxograma, text_carta, text_dispersao;
+    public Button button_sim_folha, button_sim_peixe, button_sim_pareto, button_sim_histograma, button_sim_fluxograma, button_sim_carta, button_sim_dispersao;
+    public Button button_não_folha, button_não_peixe, button_não_pareto, button_não_histograma, button_não_fluxograma, button_não_carta, button_não_dispersao;
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +45,15 @@ public class Player : MonoBehaviour {
 		TextLives.text = vidas.ToString();
 		TextMoedas.text = moedas.ToString();
         PainelInicio.SetActive(true);
-        text_inicio.text = "A equipe de desenvolvimento do Qualif necessita realizar um mapeamento dos possíveis problemas do aplicativo, para isso pretende utilizar uma ferramenta que possibilite visualizar as causas e seus possiveis efeitos. Sua missão é encontrar a ferramenta de software adequada e levá-la até a equipe para auxiliá-los. Porém, tome cuidado, pois você irá encontrar várias ferramentas, entretanto, somente uma é a solução da sua missão. Boa sorte!";}
+        text_inicio.text = "A equipe de desenvolvimento do Qualif necessita realizar um mapeamento dos possíveis problemas do aplicativo, para isso pretende utilizar uma ferramenta que possibilite visualizar as causas e seus possiveis efeitos. Sua missão é encontrar a ferramenta de software adequada e levá-la até a equipe para auxiliá-los. Porém, tome cuidado, pois você irá encontrar várias ferramentas, entretanto, somente uma é a solução da sua missão. Boa sorte!";
+        text_folha.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_peixe.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_pareto.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_histograma.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_fluxograma.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_carta.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_dispersao.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+}
 
     void GameOver(){
          SceneManager.LoadScene("TelaJogo");
