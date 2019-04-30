@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.CodeDom;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using Image = UnityEngine.Experimental.UIElements.Image;
 using Object = UnityEngine.Object;
 
@@ -17,19 +18,38 @@ public class Player : MonoBehaviour {
     public bool estaNoChao;
     public bool ferramenta;
     public bool lado_direito;
+    public GameObject PainelGameOver;
+    public GameObject PainelInicio;
+    public Button button_inicio;
+    public Button button_GameOver;
+    public Text text_inicio;
     public LayerMask LayerMaskPlatform;
     public LayerMask LayerMaskMonsters;
     public GameObject LastCheckpoint;
     private float distToGround;
+    public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_fluxograma, ferramenta_carta;
+    public GameObject raw_folha, raw_peixe, raw_pareto, raw_histograma, raw_fluxograma, raw_carta;
+    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta;
 
 	// Use this for initialization
 	void Start () {
 		moedas = 0;
 		vidas = 3;
-		ferramenta = false;
+		ferramenta = true;
+        button_GameOver.onClick.AddListener(GameOver);
+        button_inicio.onClick.AddListener(Inicio);
 		TextLives.text = vidas.ToString();
 		TextMoedas.text = moedas.ToString();
-	}
+        PainelInicio.SetActive(true);
+        text_inicio.text = "A equipe de desenvolvimento do Qualif necessita realizar um mapeamento dos possíveis problemas do aplicativo, para isso pretende utilizar uma ferramenta que possibilite visualizar as causas e seus possiveis efeitos. Sua missão é encontrar a ferramenta de software adequada e levá-la até a equipe para auxiliá-los. Porém, tome cuidado, pois você irá encontrar várias ferramentas, entretanto, somente uma é a solução da sua missão. Boa sorte!";}
+
+    void GameOver(){
+         SceneManager.LoadScene("TelaJogo");
+    }
+
+    void Inicio(){
+         PainelInicio.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -37,6 +57,10 @@ public class Player : MonoBehaviour {
 		float movimento = Input.GetAxis("Horizontal");
 		lado_direito = transform.localScale.x > 0;
 		rigidbody.velocity = new Vector2(movimento*velocidadeMaxima, rigidbody.velocity.y);
+        if (vidas <0){
+            TextLives.text = "0";
+           PainelGameOver.SetActive(true);
+        }
 		if (Input.GetKeyDown(KeyCode.Space)){
 			if (estaNoChao==true){
 				rigidbody.AddForce(new Vector2(0,450));
@@ -111,10 +135,16 @@ public class Player : MonoBehaviour {
 			TextLives.text = vidas.ToString();
 		}
 
+		if (collision2D.gameObject.CompareTag("FerramentaPeixe")){
+			Destroy(collision2D.gameObject);
+			ferramenta = true;
+		}
+
 		if (collision2D.gameObject.CompareTag("Ferramenta")){
 			Destroy(collision2D.gameObject);
 			ferramenta = true;
 		}
+
 
 		if (collision2D.gameObject.CompareTag("Plataforma")){
 			estaNoChao = true;
