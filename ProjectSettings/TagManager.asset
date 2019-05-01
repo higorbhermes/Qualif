@@ -21,6 +21,7 @@ TagManager:
   - FerramentaCarta
   - FerramentaDispersao
   - FerramentaHistograma
+  - EquipeQualif
   layers:
   - Default
   - TransparentFX

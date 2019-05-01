@@ -29,19 +29,43 @@ public class Player : MonoBehaviour {
     private float distToGround;
     public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_fluxograma, ferramenta_carta, ferramenta_dispersao;
     public GameObject raw_folha, raw_peixe, raw_pareto, raw_histograma, raw_fluxograma, raw_carta, raw_dispersao;
-    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta, painel_dispersao;
+    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta, painel_dispersao, painel_fimJogo, painel_Vitoria, painel_equipe, painel_pause;
     public bool folha = false, peixe = false, pareto = false, histograma = false, fluxograma = false, carta = false, dispersao = false;
-    public Text text_folha, text_peixe, text_pareto, text_histograma, text_fluxograma, text_carta, text_dispersao;
+    public Text text_folha, text_peixe, text_pareto, text_histograma, text_fluxograma, text_carta, text_dispersao, text_fimJogo, text_Vitoria;
     public Button button_sim_folha, button_sim_peixe, button_sim_pareto, button_sim_histograma, button_sim_fluxograma, button_sim_carta, button_sim_dispersao;
     public Button button_não_folha, button_não_peixe, button_não_pareto, button_não_histograma, button_não_fluxograma, button_não_carta, button_não_dispersao;
+    public Button button_sim, button_nao, button_fimJogo, button_Vitoria, button_pause, button_continuar, button_sair;
+    public bool pause = false;
 
 	// Use this for initialization
 	void Start () {
 		moedas = 0;
 		vidas = 3;
+        Time.timeScale = 0;
 		ferramenta = true;
         button_GameOver.onClick.AddListener(GameOver);
         button_inicio.onClick.AddListener(Inicio);
+        button_sim_folha.onClick.AddListener(SimFolha); 
+        button_sim_peixe.onClick.AddListener(SimPeixe); 
+        button_sim_pareto.onClick.AddListener(SimPareto); 
+        button_sim_histograma.onClick.AddListener(SimHistograma); 
+        button_sim_fluxograma.onClick.AddListener(SimFluxograma); 
+        button_sim_carta.onClick.AddListener(SimCarta); 
+        button_sim_dispersao.onClick.AddListener(SimDispersao);
+        button_não_folha.onClick.AddListener(NãoFolha); 
+        button_não_peixe.onClick.AddListener(NãoPeixe); 
+        button_não_pareto.onClick.AddListener(NãoPareto); 
+        button_não_histograma.onClick.AddListener(NãoHistograma); 
+        button_não_fluxograma.onClick.AddListener(NãoFluxograma); 
+        button_não_carta.onClick.AddListener(NãoCarta); 
+        button_não_dispersao.onClick.AddListener(NãoDispersao);
+        button_sim.onClick.AddListener(SimEquipe);
+        button_nao.onClick.AddListener(NaoEquipe);
+        button_fimJogo.onClick.AddListener(FimJogo);
+        button_Vitoria.onClick.AddListener(FimJogo);
+        button_sair.onClick.AddListener(FimJogo);
+        button_pause.onClick.AddListener(Pause);
+        button_continuar.onClick.AddListener(Continuar);
 		TextLives.text = vidas.ToString();
 		TextMoedas.text = moedas.ToString();
         PainelInicio.SetActive(true);
@@ -53,16 +77,250 @@ public class Player : MonoBehaviour {
         text_fluxograma.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
         text_carta.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
         text_dispersao.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
+        text_fimJogo.text = "FIM DE JOGO! VOCÊ ENTREGOU A FERRAMENTA ERRADA!";
+        text_Vitoria.text = "PARABÉNS, VOCÊ ENTREGOU A FERRAMENTA CORRETA!";
 }
 
     void GameOver(){
          SceneManager.LoadScene("TelaJogo");
     }
 
+    void Pause(){
+            painel_pause.SetActive(true);
+            Time.timeScale = 0;
+    }
+
+    void Continuar(){
+            painel_pause.SetActive(false);
+            Time.timeScale = 1;
+    }
+
+    void FimJogo(){
+         SceneManager.LoadScene("TelaJogo");
+    }
     void Inicio(){
          PainelInicio.SetActive(false);
+            Time.timeScale = 1;
+    }
+
+    void SimEquipe(){
+        painel_equipe.SetActive(false);
+         Time.timeScale = 0;
+        if (peixe == true){
+           painel_Vitoria.SetActive(true);
+        }
+        else{
+           painel_fimJogo.SetActive(true);
+        }
+    }
+
+    void NaoEquipe(){
+        painel_equipe.SetActive(false);
+    }
+
+    void SimFolha(){
+        painel_folha.SetActive(false);
+        ferramenta_folha.SetActive(false);
+        ferramenta_peixe.SetActive(true);
+        ferramenta_pareto.SetActive(true);
+        ferramenta_histograma.SetActive(true);
+        ferramenta_fluxograma.SetActive(true);
+        ferramenta_carta.SetActive(true);
+        ferramenta_dispersao.SetActive(true);
+        raw_folha.SetActive(true);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);
+        folha = true;
+        peixe = false;
+        pareto = false; 
+        histograma = false;
+        fluxograma = false;
+        carta = false;
+        dispersao = false;        
+    }
+
+    void NãoFolha(){
+        painel_folha.SetActive(false);      
+    }
+
+    void SimPeixe(){
+        painel_peixe.SetActive(false);
+        ferramenta_folha.SetActive(true);
+        ferramenta_peixe.SetActive(false);
+        ferramenta_pareto.SetActive(true);
+        ferramenta_histograma.SetActive(true);
+        ferramenta_fluxograma.SetActive(true);
+        ferramenta_carta.SetActive(true);
+        ferramenta_dispersao.SetActive(true);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(true);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);
+        folha = false;
+        peixe = true;
+        pareto = false; 
+        histograma = false;
+        fluxograma = false;
+        carta = false;
+        dispersao = false;        
+    }
+
+    void NãoPeixe(){
+        painel_peixe.SetActive(false);      
+    }
+
+    void SimPareto(){
+        painel_pareto.SetActive(false);
+        ferramenta_folha.SetActive(true);
+        ferramenta_peixe.SetActive(true);
+        ferramenta_pareto.SetActive(false);
+        ferramenta_histograma.SetActive(true);
+        ferramenta_fluxograma.SetActive(true);
+        ferramenta_carta.SetActive(true);
+        ferramenta_dispersao.SetActive(true);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(true);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);
+        folha = false;
+        peixe = false;
+        pareto = true; 
+        histograma = false;
+        fluxograma = false;
+        carta = false;
+        dispersao = false;        
+    }
+
+    void NãoPareto(){
+        painel_pareto.SetActive(false);      
+    }
+
+    void SimHistograma(){
+        painel_histograma.SetActive(false);
+        ferramenta_folha.SetActive(true);
+        ferramenta_peixe.SetActive(true);
+        ferramenta_pareto.SetActive(true);
+        ferramenta_histograma.SetActive(false);
+        ferramenta_fluxograma.SetActive(true);
+        ferramenta_carta.SetActive(true);
+        ferramenta_dispersao.SetActive(true);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(true);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);
+        folha = false;
+        peixe = false;
+        pareto = false; 
+        histograma = true;
+        fluxograma = false;
+        carta = false;
+        dispersao = false;        
+    }
+
+    void NãoHistograma(){
+        painel_histograma.SetActive(false);      
+    }
+
+    void SimFluxograma(){
+        painel_fluxograma.SetActive(false);
+        ferramenta_folha.SetActive(true);
+        ferramenta_peixe.SetActive(true);
+        ferramenta_pareto.SetActive(true);
+        ferramenta_histograma.SetActive(true);
+        ferramenta_fluxograma.SetActive(false);
+        ferramenta_carta.SetActive(true);
+        ferramenta_dispersao.SetActive(true);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(true);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);
+        folha = false;
+        peixe = false;
+        pareto = false; 
+        histograma = false;
+        fluxograma = true;
+        carta = false;
+        dispersao = false;        
+    }
+
+    void NãoFluxograma(){
+        painel_fluxograma.SetActive(false);      
     }
 	
+    void SimCarta(){
+        painel_carta.SetActive(false);
+        ferramenta_folha.SetActive(true);
+        ferramenta_peixe.SetActive(true);
+        ferramenta_pareto.SetActive(true);
+        ferramenta_histograma.SetActive(true);
+        ferramenta_fluxograma.SetActive(true);
+        ferramenta_carta.SetActive(false);
+        ferramenta_dispersao.SetActive(true);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(true);
+        raw_dispersao.SetActive(false);
+        folha = false;
+        peixe = false;
+        pareto = false; 
+        histograma = false;
+        fluxograma = false;
+        carta = true;
+        dispersao = false;        
+    }
+
+    void NãoCarta(){
+        painel_carta.SetActive(false);      
+    }
+
+    void SimDispersao(){
+        painel_dispersao.SetActive(false);
+        ferramenta_folha.SetActive(true);
+        ferramenta_peixe.SetActive(true);
+        ferramenta_pareto.SetActive(true);
+        ferramenta_histograma.SetActive(true);
+        ferramenta_fluxograma.SetActive(true);
+        ferramenta_carta.SetActive(true);
+        ferramenta_dispersao.SetActive(false);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(true);
+        folha = false;
+        peixe = false;
+        pareto = false; 
+        histograma = false;
+        fluxograma = false;
+        carta = false;
+        dispersao = true;        
+    }
+
+    void NãoDispersao(){
+        painel_dispersao.SetActive(false);      
+    }
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
@@ -71,6 +329,7 @@ public class Player : MonoBehaviour {
 		rigidbody.velocity = new Vector2(movimento*velocidadeMaxima, rigidbody.velocity.y);
         if (vidas <0){
             TextLives.text = "0";
+            Time.timeScale = 0;
            PainelGameOver.SetActive(true);
         }
 		if (Input.GetKeyDown(KeyCode.Space)){
@@ -147,16 +406,37 @@ public class Player : MonoBehaviour {
 			TextLives.text = vidas.ToString();
 		}
 
+		if (collision2D.gameObject.CompareTag("FerramentaFolha")){
+           painel_folha.SetActive(true);
+		}
+
 		if (collision2D.gameObject.CompareTag("FerramentaPeixe")){
-			Destroy(collision2D.gameObject);
-			ferramenta = true;
+           painel_peixe.SetActive(true);
 		}
 
-		if (collision2D.gameObject.CompareTag("Ferramenta")){
-			Destroy(collision2D.gameObject);
-			ferramenta = true;
+		if (collision2D.gameObject.CompareTag("FerramentaPareto")){
+           painel_pareto.SetActive(true);
 		}
 
+		if (collision2D.gameObject.CompareTag("FerramentaHistograma")){
+           painel_histograma.SetActive(true);
+		}
+
+		if (collision2D.gameObject.CompareTag("FerramentaFluxograma")){
+           painel_fluxograma.SetActive(true);
+		}
+
+		if (collision2D.gameObject.CompareTag("FerramentaCarta")){
+           painel_carta.SetActive(true);
+		}
+
+		if (collision2D.gameObject.CompareTag("FerramentaDispersao")){
+           painel_dispersao.SetActive(true);
+		}
+
+		if (collision2D.gameObject.CompareTag("EquipeQualif")){
+           painel_equipe.SetActive(true);
+		}
 
 		if (collision2D.gameObject.CompareTag("Plataforma")){
 			estaNoChao = true;
