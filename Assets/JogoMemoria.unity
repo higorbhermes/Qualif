@@ -383,6 +383,7 @@ MonoBehaviour:
   url_aleatorio: https://qualif.000webhostapp.com/html/num_aleatorio.php
   primeira_escolha: 0
   segunda_escolha: 0
+  num: 0
   contador: 0
   aux: 0
   acertou: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
   limpou2: 0
   inicio: 1
   amostra: 1
+  "\xE9_igual": 0
   revelou1: 0
   revelou2: 0
   revelou3: 0
@@ -410,6 +412,7 @@ MonoBehaviour:
   timer: 0.5
   timerErro: 0.5
   oldTimer: 0
+  tt: 0
 --- !u!1 &59319218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,7 +1395,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 283462483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: -331, z: 0}
+  m_LocalPosition: {x: 2, y: -334.39996, z: 0}
   m_LocalScale: {x: 0.50615996, y: 0.50615996, z: 0.50615996}
   m_Children: []
   m_Father: {fileID: 945581289}
@@ -1400,8 +1403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -331}
-  m_SizeDelta: {x: 2499.2, y: 218.74}
+  m_AnchoredPosition: {x: 2, y: -334.4}
+  m_SizeDelta: {x: 2499.2, y: 283.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283462485
 MonoBehaviour:
@@ -5238,7 +5241,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1417686726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0009766, y: -251, z: 0}
+  m_LocalPosition: {x: 2.0009766, y: -238, z: 0}
   m_LocalScale: {x: 0.50615996, y: 0.50615996, z: 0.50615996}
   m_Children: []
   m_Father: {fileID: 945581289}
@@ -5246,7 +5249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.0009766, y: -251}
+  m_AnchoredPosition: {x: 2.0009766, y: -238}
   m_SizeDelta: {x: 2499.2, y: 218.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417686728

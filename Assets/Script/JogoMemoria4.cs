@@ -753,7 +753,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph M. Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente, de modo que só apenas com esse retorno o produto terá alcançado o desempenho desejado."; 
+        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -768,7 +768,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema efetivo para integrar os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços permitindo a plena satisfação do cliente.";
+        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -783,7 +783,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade e reduzir custos. Essa filosofia é relativa a todo o ciclo de produção, segundo ele, a chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -798,7 +798,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Walter Shewhart foi o responsável do controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje. O também conhecido “Pai do Controle de Qualidade” nasceu em 18 de março de 1891, no estado Illinois nos Estados Unidos da América.";
+        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -813,7 +813,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "William Edwards Deming — também conhecido apenas por Deming — foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -828,7 +828,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Philip Crosby foi um empresário e escritor estadunidense que contribuiu para a teoria da gestão e métodos de gestão da qualidade. Para Crosby, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo à primeira, os quatro absolutos da qualidade, o processo de prevenção, a vacina da qualidade e os 6Cs";
+        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
 
     }
     if (acertou == false){
@@ -872,7 +872,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph M. Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente, de modo que só apenas com esse retorno o produto terá alcançado o desempenho desejado."; 
+        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -887,7 +887,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema efetivo para integrar os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços permitindo a plena satisfação do cliente.";
+        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -902,7 +902,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade e reduzir custos. Essa filosofia é relativa a todo o ciclo de produção, segundo ele, a chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -917,7 +917,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Walter Shewhart foi o responsável do controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje. O também conhecido “Pai do Controle de Qualidade” nasceu em 18 de março de 1891, no estado Illinois nos Estados Unidos da América.";
+        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -932,7 +932,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "William Edwards Deming — também conhecido apenas por Deming — foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -947,7 +947,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Philip Crosby foi um empresário e escritor estadunidense que contribuiu para a teoria da gestão e métodos de gestão da qualidade. Para Crosby, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo à primeira, os quatro absolutos da qualidade, o processo de prevenção, a vacina da qualidade e os 6Cs";
+        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
 
     }
     if (acertou == false){
@@ -991,7 +991,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph M. Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente, de modo que só apenas com esse retorno o produto terá alcançado o desempenho desejado."; 
+        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1006,7 +1006,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema efetivo para integrar os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços permitindo a plena satisfação do cliente.";
+        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1021,7 +1021,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade e reduzir custos. Essa filosofia é relativa a todo o ciclo de produção, segundo ele, a chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1036,7 +1036,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Walter Shewhart foi o responsável do controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje. O também conhecido “Pai do Controle de Qualidade” nasceu em 18 de março de 1891, no estado Illinois nos Estados Unidos da América.";
+        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -1051,7 +1051,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "William Edwards Deming — também conhecido apenas por Deming — foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1066,7 +1066,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Philip Crosby foi um empresário e escritor estadunidense que contribuiu para a teoria da gestão e métodos de gestão da qualidade. Para Crosby, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo à primeira, os quatro absolutos da qualidade, o processo de prevenção, a vacina da qualidade e os 6Cs";
+        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
 
     }
     if (acertou == false){
@@ -1110,7 +1110,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph M. Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente, de modo que só apenas com esse retorno o produto terá alcançado o desempenho desejado."; 
+        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1125,7 +1125,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema efetivo para integrar os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços permitindo a plena satisfação do cliente.";
+        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1140,7 +1140,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade e reduzir custos. Essa filosofia é relativa a todo o ciclo de produção, segundo ele, a chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1155,7 +1155,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Walter Shewhart foi o responsável do controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje. O também conhecido “Pai do Controle de Qualidade” nasceu em 18 de março de 1891, no estado Illinois nos Estados Unidos da América.";
+        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -1170,7 +1170,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "William Edwards Deming — também conhecido apenas por Deming — foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
         emoji_chorando.SetActive(false);
@@ -1185,7 +1185,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Philip Crosby foi um empresário e escritor estadunidense que contribuiu para a teoria da gestão e métodos de gestão da qualidade. Para Crosby, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo à primeira, os quatro absolutos da qualidade, o processo de prevenção, a vacina da qualidade e os 6Cs";
+        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
 
     }
     if (acertou == false){
@@ -1229,7 +1229,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph M. Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente, de modo que só apenas com esse retorno o produto terá alcançado o desempenho desejado."; 
+        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1244,7 +1244,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema efetivo para integrar os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços permitindo a plena satisfação do cliente.";
+        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1259,7 +1259,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade e reduzir custos. Essa filosofia é relativa a todo o ciclo de produção, segundo ele, a chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1274,7 +1274,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Walter Shewhart foi o responsável do controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje. O também conhecido “Pai do Controle de Qualidade” nasceu em 18 de março de 1891, no estado Illinois nos Estados Unidos da América.";
+        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1289,7 +1289,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "William Edwards Deming — também conhecido apenas por Deming — foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1304,7 +1304,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Philip Crosby foi um empresário e escritor estadunidense que contribuiu para a teoria da gestão e métodos de gestão da qualidade. Para Crosby, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo à primeira, os quatro absolutos da qualidade, o processo de prevenção, a vacina da qualidade e os 6Cs";
+        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
 
     }
     if (acertou == false){

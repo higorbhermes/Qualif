@@ -738,7 +738,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, o componente a ser testado é abordado como se fosse uma caixa-preta, ou seja, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso no teste se o resultado obtido for igual ao esperado.";
+        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -753,7 +753,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter uma estimativa de 1 ano de utilização, por exemplo, para avaliar o comportamento. Ou submeter uma entrada de dados do volume máximo de dados em cada campo ou a criação de consultas que retornem todo o conteúdo do banco de dados."; 
+        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -783,7 +783,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar o novo componente ou as suas alterações, com os componentes restantes do sistema e surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -813,7 +813,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de resposta, robustez, disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -857,7 +857,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, o componente a ser testado é abordado como se fosse uma caixa-preta, ou seja, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso no teste se o resultado obtido for igual ao esperado.";
+        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -872,7 +872,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter uma estimativa de 1 ano de utilização, por exemplo, para avaliar o comportamento. Ou submeter uma entrada de dados do volume máximo de dados em cada campo ou a criação de consultas que retornem todo o conteúdo do banco de dados."; 
+        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -902,7 +902,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar o novo componente ou as suas alterações, com os componentes restantes do sistema e surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -932,7 +932,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de resposta, robustez, disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -976,7 +976,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, o componente a ser testado é abordado como se fosse uma caixa-preta, ou seja, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso no teste se o resultado obtido for igual ao esperado.";
+        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -991,7 +991,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter uma estimativa de 1 ano de utilização, por exemplo, para avaliar o comportamento. Ou submeter uma entrada de dados do volume máximo de dados em cada campo ou a criação de consultas que retornem todo o conteúdo do banco de dados."; 
+        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1021,7 +1021,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar o novo componente ou as suas alterações, com os componentes restantes do sistema e surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1051,7 +1051,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de resposta, robustez, disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1095,7 +1095,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, o componente a ser testado é abordado como se fosse uma caixa-preta, ou seja, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso no teste se o resultado obtido for igual ao esperado.";
+        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1110,7 +1110,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter uma estimativa de 1 ano de utilização, por exemplo, para avaliar o comportamento. Ou submeter uma entrada de dados do volume máximo de dados em cada campo ou a criação de consultas que retornem todo o conteúdo do banco de dados."; 
+        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1140,7 +1140,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar o novo componente ou as suas alterações, com os componentes restantes do sistema e surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1170,7 +1170,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de resposta, robustez, disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
         emoji_chorando.SetActive(false);
@@ -1214,7 +1214,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, o componente a ser testado é abordado como se fosse uma caixa-preta, ou seja, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso no teste se o resultado obtido for igual ao esperado.";
+        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1229,7 +1229,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter uma estimativa de 1 ano de utilização, por exemplo, para avaliar o comportamento. Ou submeter uma entrada de dados do volume máximo de dados em cada campo ou a criação de consultas que retornem todo o conteúdo do banco de dados."; 
+        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1259,7 +1259,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar o novo componente ou as suas alterações, com os componentes restantes do sistema e surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1289,7 +1289,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de resposta, robustez, disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.​";
+        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.​";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);

@@ -738,7 +738,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA — também chamado de Ciclo de Deming ou Ciclo de Shewhart — é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -753,7 +753,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Esta prática visa o aprimoramento não só da empresa, como também de seus colaboradores. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -768,7 +768,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT é uma ferramenta que auxilia na priorização de resolução de problemas. É muito utilizada naquelas questões em que é preciso de uma orientação para tomar decisões complexas e que exigem a análise de vários problemas. Para isso, com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -783,7 +783,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação das palavras em inglês strengths, weaknesses, opportunities e threats, que significam forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -798,7 +798,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. Através de uma sequência de passos pré-estabelecida, Seis Sigma garante resultados em um tempo relativamente curto. O que caracteriza um bom projeto Seis Sigma é justamente o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -813,7 +813,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é uma  ferramenta para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, quais devem receber mais investimentos, etc. Para isso, os produtos ou serviços são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -828,7 +828,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas com o máximo de clareza e eficiência por todos os envolvidos em um projeto. Para isso, devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
 
     }
     if (acertou == false){
@@ -857,7 +857,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA — também chamado de Ciclo de Deming ou Ciclo de Shewhart — é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -872,7 +872,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Esta prática visa o aprimoramento não só da empresa, como também de seus colaboradores. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -887,7 +887,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT é uma ferramenta que auxilia na priorização de resolução de problemas. É muito utilizada naquelas questões em que é preciso de uma orientação para tomar decisões complexas e que exigem a análise de vários problemas. Para isso, com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -902,7 +902,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação das palavras em inglês strengths, weaknesses, opportunities e threats, que significam forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -917,7 +917,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. Através de uma sequência de passos pré-estabelecida, Seis Sigma garante resultados em um tempo relativamente curto. O que caracteriza um bom projeto Seis Sigma é justamente o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -932,7 +932,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é uma  ferramenta para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, quais devem receber mais investimentos, etc. Para isso, os produtos ou serviços são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -947,7 +947,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas com o máximo de clareza e eficiência por todos os envolvidos em um projeto. Para isso, devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?).";
+        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
 
     }
     if (acertou == false){
@@ -976,7 +976,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA — também chamado de Ciclo de Deming ou Ciclo de Shewhart — é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -991,7 +991,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Esta prática visa o aprimoramento não só da empresa, como também de seus colaboradores. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1006,7 +1006,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT é uma ferramenta que auxilia na priorização de resolução de problemas. É muito utilizada naquelas questões em que é preciso de uma orientação para tomar decisões complexas e que exigem a análise de vários problemas. Para isso, com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1021,7 +1021,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação das palavras em inglês strengths, weaknesses, opportunities e threats, que significam forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1036,7 +1036,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. Através de uma sequência de passos pré-estabelecida, Seis Sigma garante resultados em um tempo relativamente curto. O que caracteriza um bom projeto Seis Sigma é justamente o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -1051,7 +1051,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é uma  ferramenta para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, quais devem receber mais investimentos, etc. Para isso, os produtos ou serviços são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1066,7 +1066,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas com o máximo de clareza e eficiência por todos os envolvidos em um projeto. Para isso, devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
 
     }
     if (acertou == false){
@@ -1095,7 +1095,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA — também chamado de Ciclo de Deming ou Ciclo de Shewhart — é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1110,7 +1110,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Esta prática visa o aprimoramento não só da empresa, como também de seus colaboradores. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1125,7 +1125,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT é uma ferramenta que auxilia na priorização de resolução de problemas. É muito utilizada naquelas questões em que é preciso de uma orientação para tomar decisões complexas e que exigem a análise de vários problemas. Para isso, com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1140,7 +1140,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação das palavras em inglês strengths, weaknesses, opportunities e threats, que significam forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1155,7 +1155,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. Através de uma sequência de passos pré-estabelecida, Seis Sigma garante resultados em um tempo relativamente curto. O que caracteriza um bom projeto Seis Sigma é justamente o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -1170,7 +1170,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é uma  ferramenta para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, quais devem receber mais investimentos, etc. Para isso, os produtos ou serviços são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
         emoji_chorando.SetActive(false);
@@ -1185,7 +1185,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas com o máximo de clareza e eficiência por todos os envolvidos em um projeto. Para isso, devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
 
     }
     if (acertou == false){
@@ -1214,7 +1214,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA — também chamado de Ciclo de Deming ou Ciclo de Shewhart — é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1229,7 +1229,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Esta prática visa o aprimoramento não só da empresa, como também de seus colaboradores. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1244,7 +1244,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT é uma ferramenta que auxilia na priorização de resolução de problemas. É muito utilizada naquelas questões em que é preciso de uma orientação para tomar decisões complexas e que exigem a análise de vários problemas. Para isso, com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1259,7 +1259,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação das palavras em inglês strengths, weaknesses, opportunities e threats, que significam forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1274,7 +1274,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. Através de uma sequência de passos pré-estabelecida, Seis Sigma garante resultados em um tempo relativamente curto. O que caracteriza um bom projeto Seis Sigma é justamente o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1289,7 +1289,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é uma  ferramenta para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, quais devem receber mais investimentos, etc. Para isso, os produtos ou serviços são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1304,7 +1304,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas com o máximo de clareza e eficiência por todos os envolvidos em um projeto. Para isso, devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
 
     }
     if (acertou == false){

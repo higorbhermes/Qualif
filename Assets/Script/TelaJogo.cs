@@ -15,6 +15,7 @@ public Button button_sair;
 public Button button_quiz;
 public Button button_forca;
 public Button button_voltar;
+public Button button_missao;
 public Button button_ferramentas;
 public string num_gerado, num_gerado2, num_letras;
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
@@ -22,11 +23,13 @@ public string url_aleatorio_memoria = "https://qualif.000webhostapp.com/html/num
 public string url_selectJogoForca = "https://qualif.000webhostapp.com/html/selectJogoForca.php";
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
 public int num, merda, opcao;
+public Text memoria, missao;
+
 
  void Start()
     {
         //button_jogar.onClick.AddListener(Jogar);
-        //button_sair.onClick.AddListener(Sair);
+        button_missao.onClick.AddListener(Missao);
         button_forca.onClick.AddListener(Forca);
         button_dados.onClick.AddListener(Dados);
         button_quiz.onClick.AddListener(Quiz);
@@ -34,7 +37,14 @@ public int num, merda, opcao;
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Memória);
         Debug.Log(""+UserData.email);
+        memoria.text = "Memória";
+        missao.text = "Missão";
+        
      }
+
+void Missao(){
+        SceneManager.LoadScene("Cena1");
+}
 
 void Jogar(){
         SceneManager.LoadScene("TelaJogo");
@@ -53,7 +63,7 @@ void Quiz(){
 }
 
 void Voltar(){
-        SceneManager.LoadScene("Cena1");
+        SceneManager.LoadScene("Main");
     }
 
 void Dados(){

@@ -8,19 +8,18 @@ public class Splash : MonoBehaviour {
 	
 
 public Button b_play;
-public float timer = 1;
+public float timer = 0;
 public float oldTimer;
 
 
  void Start()
     {
-         oldTimer = timer;
+        timer -= Time.deltaTime;
      }
 
    
  void Update (){
-        timer -= Time.deltaTime;
-        if (timer < 0){
+        if (timer < -1){
               SceneManager.LoadScene("Main");
         }
   }
