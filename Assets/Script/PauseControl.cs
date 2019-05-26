@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseControl : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +12,10 @@ public class PauseControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
+
+	void Carregar () {
 		
 	}
 }

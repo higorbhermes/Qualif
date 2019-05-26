@@ -57,6 +57,16 @@ public GameObject emoji_triste;
 public GameObject emoji_chorando;
 public GameObject emoji_amei;
 public Text mensagem1, mensagem2, titulo;
+public GameObject object_caixa;
+public GameObject object_volume;
+public GameObject object_integridade;
+public GameObject object_regressao;
+public GameObject object_seguranca;
+public GameObject object_performance;
+public GameObject object_compatibilidade;
+public GameObject object_referencias;
+public Button continuar_caixa, continuar_volume, continuar_integridade, continuar_regressao, continuar_seguranca, continuar_performance, continuar_compatibilidade, continuar_referencias;
+public Button button_referencias;
 public string num_gerado;
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
 public string url_salvar = "https://qualif.000webhostapp.com/html/salvarJogadorQuiz.php";
@@ -106,9 +116,130 @@ void Start(){
         obj_figura13.SetActive(false);
         obj_figura14.SetActive(false);
         titulo.text = "JOGO DA MEMÓRIA";
-        //WWW www_gerarnumero = new WWW (url_aleatorio);
-        //StartCoroutine(Num_aleatorio(www_gerarnumero));
+        continuar_caixa.onClick.AddListener(ContinuarCaixa);
+        continuar_volume.onClick.AddListener(ContinuarVolume);
+        continuar_integridade.onClick.AddListener(ContinuarIntegridade);
+        continuar_regressao.onClick.AddListener(ContinuarRegressao);
+        continuar_seguranca.onClick.AddListener(ContinuarSeguranca);
+        continuar_performance.onClick.AddListener(ContinuarPerformance);
+        continuar_compatibilidade.onClick.AddListener(ContinuarCompatibilidade);
+        continuar_referencias.onClick.AddListener(ContinuarReferencia);
+        button_referencias.onClick.AddListener(Referencia);
 }
+
+void ContinuarCaixa(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_caixa.SetActive(false);
+     }
+}
+
+void ContinuarVolume(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_volume.SetActive(false);
+     }
+}
+
+void ContinuarIntegridade(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_integridade.SetActive(false);
+     }
+}
+
+void ContinuarRegressao(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_regressao.SetActive(false);
+     }
+}
+
+void ContinuarSeguranca(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_seguranca.SetActive(false);
+     }
+}
+
+void ContinuarPerformance(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_performance.SetActive(false);
+     }
+}
+
+void ContinuarCompatibilidade(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_compatibilidade.SetActive(false);
+     }
+}
+
+void ContinuarReferencia(){
+     object_referencias.SetActive(false);
+}
+
+void Referencia(){
+     object_referencias.SetActive(true);
+}
+
 
 void FixedUpdate(){
     timer -= Time.deltaTime;
@@ -264,7 +395,7 @@ void FixedUpdate(){
         mensagem1.text = "Você venceu";
         mensagem2.text = "";
     }*/
-    if (Input.GetKeyDown(KeyCode.Space)){
+    /*if (timer<-5){
         if (final == true){
            if (UserData.cont_jogo_memoria<=3){
                 WWW www_gerarnumero = new WWW (url_aleatorio);
@@ -274,9 +405,9 @@ void FixedUpdate(){
                SceneManager.LoadScene("TelaVitoria");
             }
         }
-    }
+    }*/
     if (contador == 7){
-       mensagem1.text = "Parabéns, você acertou ! Aperte ESPAÇO para o próximo desafio!";
+       mensagem1.text = "Parabéns, você acertou!";
        liberado = false;
        final = true;
        emoji_chorando.SetActive(false);
@@ -731,6 +862,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_caixa.SetActive(true);
         acertou = true;
         revelou1 = true;
         revelou12 = true;
@@ -738,7 +870,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -753,7 +885,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
+        object_volume.SetActive(true);
+        mensagem2.text = "Um volume é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -768,7 +901,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de integridade tem a função de verificar se os componentes envolvidos vão permanecer integros mesmo com um alto volume de dados. Por exemplo, verificar o comportamento de uma tabela com milhões de registros.";
+        object_integridade.SetActive(true);
+        mensagem2.text = "O integridade é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -783,7 +917,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        object_regressao.SetActive(true);
+        mensagem2.text = "Uma regressao de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -798,7 +933,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Teste de Segurança e Teste de Invasão visam identificar as falhas de segurança de um software ou ambiente em que está sendo executado. Avaliar as vulnerabilidades em aplicações e serviços frente a diferentes tipos de ataques de segurança.";
+        object_seguranca.SetActive(true);
+        mensagem2.text = "As segurancas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -813,7 +949,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        object_performance.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -828,7 +965,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de compatibilidade testa se o software instala como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço  de memória, interrupções de rede, interrupções na instalação, etc.";
+        object_compatibilidade.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -857,7 +995,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
+        object_caixa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -872,7 +1011,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
+        object_volume.SetActive(true);
+        mensagem2.text = "Um volume é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -887,7 +1027,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de integridade tem a função de verificar se os componentes envolvidos vão permanecer integros mesmo com um alto volume de dados. Por exemplo, verificar o comportamento de uma tabela com milhões de registros.";
+        object_integridade.SetActive(true);
+        mensagem2.text = "O integridade é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -902,7 +1043,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        object_regressao.SetActive(true);
+        mensagem2.text = "Uma regressao de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -917,7 +1059,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Teste de Segurança e Teste de Invasão visam identificar as falhas de segurança de um software ou ambiente em que está sendo executado. Avaliar as vulnerabilidades em aplicações e serviços frente a diferentes tipos de ataques de segurança.";
+        object_seguranca.SetActive(true);
+        mensagem2.text = "As segurancas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -932,7 +1075,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        object_performance.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -947,7 +1091,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de compatibilidade testa se o software instala como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço  de memória, interrupções de rede, interrupções na instalação, etc.";
+        object_compatibilidade.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -976,7 +1121,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
+        object_caixa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -991,7 +1137,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
+        object_volume.SetActive(true);
+        mensagem2.text = "Um volume é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1006,7 +1153,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de integridade tem a função de verificar se os componentes envolvidos vão permanecer integros mesmo com um alto volume de dados. Por exemplo, verificar o comportamento de uma tabela com milhões de registros.";
+        object_integridade.SetActive(true);
+        mensagem2.text = "O integridade é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1021,7 +1169,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        object_regressao.SetActive(true);
+        mensagem2.text = "Uma regressao de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1036,7 +1185,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Teste de Segurança e Teste de Invasão visam identificar as falhas de segurança de um software ou ambiente em que está sendo executado. Avaliar as vulnerabilidades em aplicações e serviços frente a diferentes tipos de ataques de segurança.";
+        object_seguranca.SetActive(true);
+        mensagem2.text = "As segurancas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -1051,7 +1201,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        object_performance.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1066,7 +1217,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de compatibilidade testa se o software instala como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço  de memória, interrupções de rede, interrupções na instalação, etc.";
+        object_compatibilidade.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -1095,7 +1247,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
+        object_caixa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1110,7 +1263,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
+        object_volume.SetActive(true);
+        mensagem2.text = "Um volume é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1125,7 +1279,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de integridade tem a função de verificar se os componentes envolvidos vão permanecer integros mesmo com um alto volume de dados. Por exemplo, verificar o comportamento de uma tabela com milhões de registros.";
+        object_integridade.SetActive(true);
+        mensagem2.text = "O integridade é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1140,7 +1295,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        object_regressao.SetActive(true);
+        mensagem2.text = "Uma regressao de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1155,7 +1311,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Teste de Segurança e Teste de Invasão visam identificar as falhas de segurança de um software ou ambiente em que está sendo executado. Avaliar as vulnerabilidades em aplicações e serviços frente a diferentes tipos de ataques de segurança.";
+        object_seguranca.SetActive(true);
+        mensagem2.text = "As segurancas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -1170,7 +1327,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.";
+        object_performance.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
         emoji_chorando.SetActive(false);
@@ -1185,7 +1343,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de compatibilidade testa se o software instala como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço  de memória, interrupções de rede, interrupções na instalação, etc.";
+        object_compatibilidade.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -1207,6 +1366,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_caixa.SetActive(true);
         acertou = true;
         revelou8 = true;
         revelou11 = true;
@@ -1214,7 +1374,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "No teste de caixa preta, ao testar um componente, não se considera o comportamento interno do mesmo. Dados são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido. Haverá sucesso se o resultado obtido for igual ao esperado.";
+        object_caixa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1229,7 +1390,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de volume submete uma certa quantidade de dados ao sistema para determinar seu comportamento. Pode submeter, por exemplo, uma estimativa de um ano de utilização, para assim avaliar o seu comportamento."; 
+        object_volume.SetActive(true);
+        mensagem2.text = "Um volume é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1244,7 +1406,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de integridade tem a função de verificar se os componentes envolvidos vão permanecer integros mesmo com um alto volume de dados. Por exemplo, verificar o comportamento de uma tabela com milhões de registros.";
+        object_integridade.SetActive(true);
+        mensagem2.text = "O integridade é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1259,7 +1422,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de regressão é uma técnica que consiste na aplicação de versões mais recente do software, para garantir que não surgiram novos defeitos. Se ao juntar as atualizações surgirem novos defeitos em componentes inalterados, então se considera que o sistema regrediu.";
+        object_regressao.SetActive(true);
+        mensagem2.text = "Uma regressao de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1274,7 +1438,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Teste de Segurança e Teste de Invasão visam identificar as falhas de segurança de um software ou ambiente em que está sendo executado. Avaliar as vulnerabilidades em aplicações e serviços frente a diferentes tipos de ataques de segurança.";
+        object_seguranca.SetActive(true);
+        mensagem2.text = "As segurancas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1289,7 +1454,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de performance consiste em avaliar a capacidade de disponibilidade, confiabilidade e escalabilidade de uma aplicação, conforme a quantidade de conexões simultâneas, avaliando seu desempenho em alta carga de trabalho e considerando seu comportamento em circunstâncias normais.​";
+        object_performance.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1304,7 +1470,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O teste de compatibilidade testa se o software instala como planejado, em diferentes hardwares e sob diferentes condições, como pouco espaço  de memória, interrupções de rede, interrupções na instalação, etc.";
+        object_compatibilidade.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){

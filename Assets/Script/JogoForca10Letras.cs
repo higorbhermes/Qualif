@@ -57,6 +57,8 @@ public string numero_convertido;
 public bool letra1_revelada = false, letra2_revelada = false, letra3_revelada = false, letra4_revelada = false, letra5_revelada = false, letra6_revelada = false, letra7_revelada = false, letra8_revelada = false, letra9_revelada = false, letra10_revelada = false, letra11_revelada = false;
 public bool a = false, b = false, c = false, d = false, e = false, f = false, g = false, h = false, letra_i = false, j = false, k = false, l = false, m = false, n = false, o = false, p = false, q = false, r = false, s = false, t = false, u = false, v = false, letra_x = false, w = false, y = false, z = false; 
 public AudioSource som_errado;
+public Button button_A, button_B, button_C, button_D, button_E, button_F, button_G, button_H, button_I, button_J, button_K, button_L, button_M, button_N, button_O, button_P, button_Q, button_R, button_S, button_T, button_U, button_V, button_X, button_W, button_Y, button_Z;
+public double timer = 0.0;
 
 
 void Start(){
@@ -106,7 +108,33 @@ void Start(){
       url_completa10 = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=12";
       WWW www10 = new WWW (url_completa10);
       Debug.Log(""+url_completa10); 
-      StartCoroutine(Verificar_Letra10(www10)); 
+      StartCoroutine(Verificar_Letra10(www10));
+      button_A.onClick.AddListener(LetraA);
+      button_B.onClick.AddListener(LetraB);
+      button_C.onClick.AddListener(LetraC);
+      button_D.onClick.AddListener(LetraD);
+      button_E.onClick.AddListener(LetraE);
+      button_F.onClick.AddListener(LetraF);
+      button_G.onClick.AddListener(LetraG);
+      button_H.onClick.AddListener(LetraH);
+      button_I.onClick.AddListener(LetraI);
+      button_J.onClick.AddListener(LetraJ);
+      button_K.onClick.AddListener(LetraK);
+      button_L.onClick.AddListener(LetraL);
+      button_M.onClick.AddListener(LetraM);
+      button_N.onClick.AddListener(LetraN);
+      button_O.onClick.AddListener(LetraO);
+      button_P.onClick.AddListener(LetraP);
+      button_Q.onClick.AddListener(LetraQ);
+      button_R.onClick.AddListener(LetraR);
+      button_S.onClick.AddListener(LetraS);
+      button_T.onClick.AddListener(LetraT);
+      button_U.onClick.AddListener(LetraU);
+      button_V.onClick.AddListener(LetraV);
+      button_X.onClick.AddListener(LetraX);
+      button_W.onClick.AddListener(LetraW);
+      button_Y.onClick.AddListener(LetraY);
+      button_Z.onClick.AddListener(LetraZ); 
       Conferir();
 }
 
@@ -172,6 +200,188 @@ void Conferir(){
         }
 }
 
+void LetraA(){
+    if (acertos<10 && erros<3 && a == false && liberado == true){
+        letra_digitada = "A";
+        a = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraB(){
+    if (acertos<10 && erros<3 && b == false && liberado == true){
+        letra_digitada = "B";
+        b = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraC(){
+    if (acertos<10 && erros<3 && c == false && liberado == true){
+        letra_digitada = "C";
+        c = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraD(){
+    if (acertos<10 && erros<3 && d == false && liberado == true){
+        letra_digitada = "D";
+        d = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraE(){
+    if (acertos<10 && erros<3 && e == false && liberado == true){
+        letra_digitada = "E";
+        e = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraF(){
+    if (acertos<10 && erros<3 && f == false && liberado == true){
+        letra_digitada = "F";
+        f = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraG(){
+    if (acertos<10 && erros<3 && g == false && liberado == true){
+        letra_digitada = "G";
+        g = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraH(){
+    if (acertos<10 && erros<3 && h == false && liberado == true){
+        letra_digitada = "H";
+        h = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraI(){
+    if (acertos<10 && erros<3 && letra_i == false && liberado == true){
+        letra_digitada = "I";
+        letra_i = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraJ(){
+    if (acertos<10 && erros<3 && j == false && liberado == true){
+        letra_digitada = "J";
+        j = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraK(){
+    if (acertos<10 && erros<3 && k == false && liberado == true){
+        letra_digitada = "K";
+        k = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraL(){
+    if (acertos<10 && erros<3 && l == false && liberado == true){
+        letra_digitada = "L";
+        l = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraM(){
+    if (acertos<10 && erros<3 && m == false && liberado == true){
+        letra_digitada = "M";
+        m = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraN(){
+    if (acertos<10 && erros<3 && n == false && liberado == true){
+        letra_digitada = "N";
+        n = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraO(){
+    if (acertos<10 && erros<3 && o == false && liberado == true){
+        letra_digitada = "O";
+        o = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraP(){
+    if (acertos<10 && erros<3 && p == false && liberado == true){
+        letra_digitada = "P";
+        p = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraQ(){
+    if (acertos<10 && erros<3 && q == false && liberado == true){
+        letra_digitada = "Q";
+        q = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraR(){
+    if (acertos<10 && erros<3 && r == false && liberado == true){
+        letra_digitada = "R";
+        r = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraS(){
+    if (acertos<10 && erros<3 && s == false && liberado == true){
+        letra_digitada = "S";
+        s = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraT(){
+    if (acertos<10 && erros<3 && t == false && liberado == true){
+        letra_digitada = "T";
+        t = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraU(){
+    if (acertos<10 && erros<3 && u == false && liberado == true){
+        letra_digitada = "U";
+        u = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraV(){
+    if (acertos<10 && erros<3 && v == false && liberado == true){
+        letra_digitada = "V";
+        v = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraX(){
+    if (acertos<10 && erros<3 && letra_x == false && liberado == true){
+        letra_digitada = "X";
+        letra_x = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraW(){
+    if (acertos<10 && erros<3 && w == false && liberado == true){
+        letra_digitada = "W";
+        w = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraY(){
+    if (acertos<10 && erros<3 && y == false && liberado == true){
+        letra_digitada = "Y";
+        y = true;
+        ConferirLetra(letra_digitada);
+    }
+}
+void LetraZ(){
+    if (acertos<10 && erros<3 && z == false && liberado == true){
+        letra_digitada = "Z";
+        z = true;
+        ConferirLetra(letra_digitada);
+    }
+}
 
 
 void FixedUpdate(){
@@ -385,7 +595,7 @@ void FixedUpdate(){
         WWW www_gerarnumero = new WWW (url_aleatorio);
         StartCoroutine(Num_aleatorio(www_gerarnumero));
     }*/
-    if (Input.GetKeyDown(KeyCode.Space) && liberar_fase == true){
+    if (timer<-4 && liberar_fase == true){
         if (UserData.forca_alternativo == true){
                if (UserData.cont_jogo_forca == 2 && UserData.forca2 == true){
                       UserData.id_jogo_forca_atual = 2;
@@ -499,7 +709,7 @@ void FixedUpdate(){
         }
 
     }
-    if (Input.GetKeyDown(KeyCode.Space) && bloquear_jogo == true){
+    if (timer<-4 && bloquear_jogo == true){
             UserData.pontuacao = 100;
                     UserData.forca1 = false;
                     UserData.forca2 = false;
@@ -516,7 +726,10 @@ void FixedUpdate(){
 
     }
     if (acertos>=10){
-        proximo_desafio.text = "Parabens! Aperte ESPAÇO para jogar o proximo desafio";
+        timer -= Time.deltaTime;
+    }
+    if (erros>=3){
+        timer -= Time.deltaTime;
     }
     if (acertos>=10 && liberar_fase == false){
         UserData.cont_jogo_forca = UserData.cont_jogo_forca+1;
@@ -533,7 +746,7 @@ void FixedUpdate(){
         limpar_mensagem = false;
         WWW www_salvar = new WWW (url_salvar+"?id_forca="+UserData.id_jogo_forca_atual+"&email="+UserData.email+"&resposta=0");
         StartCoroutine(SalvarJogo(www_salvar));
-        proximo_desafio.text = "Você Errou! A resposta correta era: "+letra_1+letra_2+letra_3+letra_4+letra_5+letra_6+letra_7+letra_8+letra_9+letra_10+". Aperte ESPAÇO ou clique em SAIR para encerrar a partida";
+        proximo_desafio.text = "Você Errou! A resposta correta era: "+letra_1+letra_2+letra_3+letra_4+letra_5+letra_6+letra_7+letra_8+letra_9+letra_10;
         bloquear_jogo = true;
     }
 
@@ -837,7 +1050,7 @@ void Dica(){
     if (pontos>=40  && acertos<10 && erros<3){
         pontos = pontos - 40;
         Pontuacao();
-        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=2";
+        url_completa = url_selectJogoForca+"?id="+UserData.id_jogo_forca_atual+"&opcao=16";
         WWW www_dica = new WWW (url_completa);
         StartCoroutine(Verificar_Dica(www_dica));
     }

@@ -1,4 +1,4 @@
-WindowsStandalone
+Android
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 33fa675d3cd6a29643d19c32b7b64b77 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -12,7 +12,10 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 3a372e98b7d3e45ccb0e2497afc2e210 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.RedSpike
-b0cc89f61eee77d3000baf03da020197 Assembly-CSharp.dll:.Menu
+2db62e609f8b6aa756e7577b1fc94f4c Assembly-CSharp.dll:.Menu
+552414ae1eded56753ac63a34da7a93e Assembly-CSharp.dll:.TelaCadastro
+6a218861cb045007bf2f2a31c3018f1f Assembly-CSharp.dll:.JogoMemoria4
+14b3052d7b43627a74f4d5f5f2241483 Assembly-CSharp.dll:.JogoMemoria3
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -77,6 +80,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PauseControl
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MonstroVertical
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 33fa675d3cd6a29643d19c32b7b64b77 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -90,6 +94,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 3a372e98b7d3e45ccb0e2497afc2e210 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 3a372e98b7d3e45ccb0e2497afc2e210 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+e7a78cbdeea4894acf79f6529a68e1c7 Assembly-CSharp.dll:.JogoForca1
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -113,10 +118,19 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Tentativa2
+377f252b60954b0c201ed2442e052bfe Assembly-CSharp.dll:.Splash
+fd734e841b2a7c8b124618ec10f35d3e Assembly-CSharp.dll:.TelaVitoria
+b6f22c066dfbcbfc7bdf2b744e8c6480 Assembly-CSharp.dll:.JogoMemoria
+fad55673bb30f2ef01ba2dc1eb42194e Assembly-CSharp.dll:.GameManager
+a0d12ef965d7dea44407003abee19431 Assembly-CSharp.dll:.TelaFiltro
+d3a25d6e6f9f3739f3035efcca298d08 Assembly-CSharp.dll:.TelaMeusDados
+8686f5e92b284d9af1c46bf2a852be21 Assembly-CSharp.dll:.MenuPrincipal
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Purchasing.dll:UnityEngine.Purchasing.AsyncUtil
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
-5aa91f201884165e21415b629d57f581 Assembly-CSharp.dll:.Player
+680a5ed6f27c3ee496add697994c08af Assembly-CSharp.dll:.JogoMemoria2
+92818fd7e67583685474c35cae8e03ab Assembly-CSharp.dll:.JogoQuiz
+f85f9fb8e2533dab3e3dbc88cf4a5276 Assembly-CSharp.dll:.Player
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -137,11 +151,18 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 2a56361227def9f56c2cf57a88b32f4d UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
+8f735854faf70727a1fe9053640581b0 Assembly-CSharp.dll:.JogoForca12Letras
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+a6aaf29df0580f6ec67836939ca1423e Assembly-CSharp.dll:.TelaPoliticaPrivacidade
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MonstroHorizontal
+e7a78cbdeea4894acf79f6529a68e1c7 Assembly-CSharp.dll:.JogoForca10Letras
+198b6dc5b0dcaea841dd50f83422bec5 Assembly-CSharp.dll:.TelaFiltroVV
+b69848a24c629fc17ce598e856dcf2b7 Assembly-CSharp.dll:.Pontuacao
+831b1782b5e20545cce2254c00188158 Assembly-CSharp.dll:.TelaJogo
+a6aaf29df0580f6ec67836939ca1423e Assembly-CSharp.dll:.Referências

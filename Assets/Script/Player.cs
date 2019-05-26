@@ -22,21 +22,22 @@ public class Player : MonoBehaviour {
     public GameObject PainelInicio;
     public Button button_inicio;
     public Button button_GameOver;
-    public Text text_inicio;
     public LayerMask LayerMaskPlatform;
     public LayerMask LayerMaskMonsters;
-    public GameObject LastCheckpoint;
+    public GameObject LastCheckpoint, obj_botoes, obj_botoes2;
     private float distToGround;
     public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_fluxograma, ferramenta_carta, ferramenta_dispersao;
     public GameObject raw_folha, raw_peixe, raw_pareto, raw_histograma, raw_fluxograma, raw_carta, raw_dispersao;
-    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta, painel_dispersao, painel_fimJogo, painel_Vitoria, painel_equipe, painel_pause;
+    public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta, painel_dispersao, painel_fimJogo, painel_Vitoria, painel_equipe, painel_pause, painel_regras;
     public bool folha = false, peixe = false, pareto = false, histograma = false, fluxograma = false, carta = false, dispersao = false;
-    public Text text_folha, text_peixe, text_pareto, text_histograma, text_fluxograma, text_carta, text_dispersao, text_fimJogo, text_Vitoria;
+    public Text text_fimJogo, text_Vitoria;
     public Button button_sim_folha, button_sim_peixe, button_sim_pareto, button_sim_histograma, button_sim_fluxograma, button_sim_carta, button_sim_dispersao;
     public Button button_não_folha, button_não_peixe, button_não_pareto, button_não_histograma, button_não_fluxograma, button_não_carta, button_não_dispersao;
     public Button button_sim, button_nao, button_fimJogo, button_Vitoria, button_pause, button_continuar, button_sair;
     public bool pause = false;
-
+    public Button button_esquerda, button_direita, button_pular, button_espada, button_regras, button_fecharRegras;
+    public Rigidbody2D rigidbody;
+    public float movimento;
 	// Use this for initialization
 	void Start () {
 		moedas = 0;
@@ -64,22 +65,29 @@ public class Player : MonoBehaviour {
         button_fimJogo.onClick.AddListener(FimJogo);
         button_Vitoria.onClick.AddListener(FimJogo);
         button_sair.onClick.AddListener(FimJogo);
+        button_espada.onClick.AddListener(Espada);
+        button_pular.onClick.AddListener(Pular);
+        button_regras.onClick.AddListener(Regras);
+        button_fecharRegras.onClick.AddListener(FecharRegras);
+        //button_esquerda.onClick.AddListener(Esquerda);
+       // button_direita.onClick.AddListener(Direita);
         button_pause.onClick.AddListener(Pause);
         button_continuar.onClick.AddListener(Continuar);
 		TextLives.text = vidas.ToString();
 		TextMoedas.text = moedas.ToString();
         PainelInicio.SetActive(true);
-        text_inicio.text = "A equipe de desenvolvimento do Qualif necessita realizar um mapeamento dos possíveis problemas do aplicativo, para isso pretende utilizar uma ferramenta que possibilite visualizar as causas e seus possiveis efeitos. Sua missão é encontrar a ferramenta de software adequada e levá-la até a equipe para auxiliá-los. Porém, tome cuidado, pois você irá encontrar várias ferramentas, entretanto, somente uma é a solução da sua missão. Boa sorte!";
-        text_folha.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_peixe.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_pareto.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_histograma.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_fluxograma.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_carta.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_dispersao.text = "SE VOCÊ ACHA QUE ESSA É A FERRAMENTA UTILIZADA PARA MAPEAR AS CAUSAS E EFEITOS, CLIQUE EM 'SIM' E LEVE ATÉ A EQUIPE DE SOFTWARE.";
-        text_fimJogo.text = "FIM DE JOGO! VOCÊ ENTREGOU A FERRAMENTA ERRADA!";
-        text_Vitoria.text = "PARABÉNS, VOCÊ ENTREGOU A FERRAMENTA CORRETA!";
+        obj_botoes2.SetActive(false);
+        obj_botoes.SetActive(false);
+        
 }
+
+    void Regras(){
+        painel_regras.SetActive(true);
+    }
+
+    void FecharRegras(){
+        painel_regras.SetActive(false);
+    }
 
     void GameOver(){
          SceneManager.LoadScene("TelaJogo");
@@ -88,19 +96,80 @@ public class Player : MonoBehaviour {
     void Pause(){
             painel_pause.SetActive(true);
             Time.timeScale = 0;
+            obj_botoes.SetActive(false);
+            obj_botoes2.SetActive(false);
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);
+    }
+
+    void Espada(){
+			if (ferramenta==true){
+				GetComponent<Animator>().SetTrigger("espada");
+				Collider2D[] colliders = new Collider2D[3];
+				transform.Find("SquareEspada").gameObject.GetComponent<Collider2D>()
+					.OverlapCollider(new ContactFilter2D(), colliders);
+				for (int i = 0; i<colliders.Length; i++){
+					if(colliders[i]!=null && colliders[i].gameObject.CompareTag("Monstro"))
+					{
+						Destroy(colliders[i].gameObject);
+					}
+				}
+
+			}
+    }
+
+
+    void Pular(){
+			if (estaNoChao==true){
+				rigidbody.AddForce(new Vector2(0,450));
+			    GetComponent<Animator>().SetBool("jump", true);
+			}
     }
 
     void Continuar(){
             painel_pause.SetActive(false);
             Time.timeScale = 1;
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true);
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        } 
     }
 
     void FimJogo(){
          SceneManager.LoadScene("TelaJogo");
+        obj_botoes.SetActive(false);
+        obj_botoes2.SetActive(false);
     }
+
     void Inicio(){
          PainelInicio.SetActive(false);
             Time.timeScale = 1;
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true);
     }
 
     void SimEquipe(){
@@ -116,6 +185,30 @@ public class Player : MonoBehaviour {
 
     void NaoEquipe(){
         painel_equipe.SetActive(false);
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true);
+            movimento = 0;
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }   
     }
 
     void SimFolha(){
@@ -140,11 +233,38 @@ public class Player : MonoBehaviour {
         histograma = false;
         fluxograma = false;
         carta = false;
-        dispersao = false;        
+        dispersao = false; 
+        obj_botoes.SetActive(true); 
+        obj_botoes2.SetActive(true);
+            movimento = 0;           
     }
 
     void NãoFolha(){
-        painel_folha.SetActive(false);      
+        painel_folha.SetActive(false); 
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true);
+            movimento = 0; 
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }      
     }
 
     void SimPeixe(){
@@ -169,11 +289,38 @@ public class Player : MonoBehaviour {
         histograma = false;
         fluxograma = false;
         carta = false;
-        dispersao = false;        
+        dispersao = false; 
+        obj_botoes.SetActive(true);    
+        obj_botoes2.SetActive(true); 
+            movimento = 0;            
     }
 
     void NãoPeixe(){
         painel_peixe.SetActive(false);      
+        obj_botoes.SetActive(true);   
+        obj_botoes2.SetActive(true); 
+            movimento = 0;   
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }      
     }
 
     void SimPareto(){
@@ -185,6 +332,7 @@ public class Player : MonoBehaviour {
         ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(true);
+        obj_botoes2.SetActive(true);     
         raw_folha.SetActive(false);
         raw_peixe.SetActive(false);
         raw_pareto.SetActive(true);
@@ -198,12 +346,39 @@ public class Player : MonoBehaviour {
         histograma = false;
         fluxograma = false;
         carta = false;
-        dispersao = false;        
+        dispersao = false;  
+        obj_botoes.SetActive(true); 
+            movimento = 0;          
     }
 
     void NãoPareto(){
-        painel_pareto.SetActive(false);      
+        painel_pareto.SetActive(false); 
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true); 
+            movimento = 0; 
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }                
     }
+
 
     void SimHistograma(){
         painel_histograma.SetActive(false);
@@ -217,6 +392,7 @@ public class Player : MonoBehaviour {
         raw_folha.SetActive(false);
         raw_peixe.SetActive(false);
         raw_pareto.SetActive(false);
+        obj_botoes2.SetActive(true);     
         raw_histograma.SetActive(true);
         raw_fluxograma.SetActive(false);
         raw_carta.SetActive(false);
@@ -227,15 +403,42 @@ public class Player : MonoBehaviour {
         histograma = true;
         fluxograma = false;
         carta = false;
-        dispersao = false;        
+        dispersao = false; 
+        obj_botoes.SetActive(true);  
+            movimento = 0;          
     }
 
     void NãoHistograma(){
-        painel_histograma.SetActive(false);      
+        painel_histograma.SetActive(false);
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true);  
+            movimento = 0;   
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }              
     }
 
     void SimFluxograma(){
         painel_fluxograma.SetActive(false);
+        obj_botoes.SetActive(true);     
         ferramenta_folha.SetActive(true);
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
@@ -245,6 +448,7 @@ public class Player : MonoBehaviour {
         ferramenta_dispersao.SetActive(true);
         raw_folha.SetActive(false);
         raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(true);     
         raw_pareto.SetActive(false);
         raw_histograma.SetActive(false);
         raw_fluxograma.SetActive(true);
@@ -256,15 +460,41 @@ public class Player : MonoBehaviour {
         histograma = false;
         fluxograma = true;
         carta = false;
-        dispersao = false;        
+        dispersao = false;      
+            movimento = 0;  
     }
 
     void NãoFluxograma(){
-        painel_fluxograma.SetActive(false);      
+        painel_fluxograma.SetActive(false); 
+        obj_botoes.SetActive(true);
+        obj_botoes2.SetActive(true); 
+            movimento = 0;  
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }               
     }
 	
     void SimCarta(){
         painel_carta.SetActive(false);
+        obj_botoes.SetActive(true);     
         ferramenta_folha.SetActive(true);
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
@@ -272,6 +502,7 @@ public class Player : MonoBehaviour {
         ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(false);
         ferramenta_dispersao.SetActive(true);
+        obj_botoes2.SetActive(true);     
         raw_folha.SetActive(false);
         raw_peixe.SetActive(false);
         raw_pareto.SetActive(false);
@@ -285,15 +516,44 @@ public class Player : MonoBehaviour {
         histograma = false;
         fluxograma = false;
         carta = true;
-        dispersao = false;        
+        dispersao = false;  
+        obj_botoes2.SetActive(true);    
+            movimento = 0;       
     }
 
+
     void NãoCarta(){
-        painel_carta.SetActive(false);      
+        painel_carta.SetActive(false); 
+        obj_botoes.SetActive(true);  
+        obj_botoes2.SetActive(true);   
+            movimento = 0; 
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }            
     }
 
     void SimDispersao(){
         painel_dispersao.SetActive(false);
+        obj_botoes2.SetActive(true);     
+        obj_botoes.SetActive(true);     
         ferramenta_folha.SetActive(true);
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
@@ -314,23 +574,83 @@ public class Player : MonoBehaviour {
         histograma = false;
         fluxograma = false;
         carta = false;
-        dispersao = true;        
+        dispersao = true;  
+            movimento = 0;      
     }
 
     void NãoDispersao(){
-        painel_dispersao.SetActive(false);      
+        painel_dispersao.SetActive(false); 
+        obj_botoes.SetActive(true); 
+        obj_botoes2.SetActive(true);  
+            movimento = 0; 
+        if (folha == true){
+            raw_folha.SetActive(true);
+        }
+        if (pareto == true){
+            raw_pareto.SetActive(true);
+        }
+        if (peixe == true){
+            raw_peixe.SetActive(true);
+        }
+        if (histograma == true){
+            raw_histograma.SetActive(true);
+        } 
+        if (fluxograma == true){
+            raw_fluxograma.SetActive(true);
+        }  
+        if (dispersao == true){
+            raw_dispersao.SetActive(true);
+        } 
+        if (carta == true){
+            raw_carta.SetActive(true);
+        }              
     }
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
-		float movimento = Input.GetAxis("Horizontal");
+        bool andando_direita = false;
+        bool andando_esquerda = false;
+        if (moedas>50){
+            vidas = vidas+1;
+            moedas = 0;
+			TextMoedas.text = moedas.ToString();
+            TextLives.text = vidas.ToString();
+        }
+        if (button_direita.tag == "A"){
+            movimento = 1;
+            andando_direita = true;
+        }
+        if (button_direita.tag == "B"){
+               andando_direita = false;
+        }
+        if (andando_direita == false && andando_esquerda == false){
+            movimento = 0;
+        }
+        if (button_esquerda.tag == "A"){
+            movimento = -1;
+            andando_esquerda = true;
+        }
+        if (button_esquerda.tag == "B"){
+               andando_esquerda = false;
+        }
+		rigidbody = GetComponent<Rigidbody2D>();
 		lado_direito = transform.localScale.x > 0;
 		rigidbody.velocity = new Vector2(movimento*velocidadeMaxima, rigidbody.velocity.y);
         if (vidas <0){
             TextLives.text = "0";
             Time.timeScale = 0;
            PainelGameOver.SetActive(true);
+         obj_botoes.SetActive(false);
+         obj_botoes2.SetActive(false);
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);  
         }
 		if (Input.GetKeyDown(KeyCode.Space)){
 			if (estaNoChao==true){
@@ -408,34 +728,137 @@ public class Player : MonoBehaviour {
 
 		if (collision2D.gameObject.CompareTag("FerramentaFolha")){
            painel_folha.SetActive(true);
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+           obj_botoes.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);        
 		}
 
 		if (collision2D.gameObject.CompareTag("FerramentaPeixe")){
            painel_peixe.SetActive(true);
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+           obj_botoes.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);              
 		}
 
 		if (collision2D.gameObject.CompareTag("FerramentaPareto")){
            painel_pareto.SetActive(true);
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+           obj_botoes.SetActive(false);  
+        obj_botoes2.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);             
 		}
 
 		if (collision2D.gameObject.CompareTag("FerramentaHistograma")){
            painel_histograma.SetActive(true);
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+           obj_botoes.SetActive(false);   
+        obj_botoes2.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);            
 		}
 
 		if (collision2D.gameObject.CompareTag("FerramentaFluxograma")){
            painel_fluxograma.SetActive(true);
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+           obj_botoes.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);              
 		}
 
 		if (collision2D.gameObject.CompareTag("FerramentaCarta")){
            painel_carta.SetActive(true);
+           obj_botoes.SetActive(false); 
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+        obj_botoes2.SetActive(false);  
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);             
 		}
 
 		if (collision2D.gameObject.CompareTag("FerramentaDispersao")){
            painel_dispersao.SetActive(true);
+           obj_botoes.SetActive(false); 
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+        obj_botoes2.SetActive(false);
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);               
 		}
 
 		if (collision2D.gameObject.CompareTag("EquipeQualif")){
            painel_equipe.SetActive(true);
+           obj_botoes.SetActive(false); 
+           button_direita.tag = "B";
+           button_esquerda.tag = "B";
+        obj_botoes2.SetActive(false); 
+        obj_botoes2.SetActive(false); 
+        raw_folha.SetActive(false);
+        raw_peixe.SetActive(false);
+        obj_botoes2.SetActive(false);     
+        raw_pareto.SetActive(false);
+        raw_histograma.SetActive(false);
+        raw_fluxograma.SetActive(false);
+        raw_carta.SetActive(false);
+        raw_dispersao.SetActive(false);              
 		}
 
 		if (collision2D.gameObject.CompareTag("Plataforma")){

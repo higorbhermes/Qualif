@@ -179,7 +179,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 386113157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.081054, y: -23, z: -6479.9995}
+  m_LocalPosition: {x: 10.081054, y: -52, z: -6479.9995}
   m_LocalScale: {x: 68.2934, y: 68.54175, z: 145.7901}
   m_Children: []
   m_Father: {fileID: 945581289}
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Aperte ESPA\xC7O para encerrar o jogo"
+  m_Text: 
 --- !u!222 &667873555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -380,12 +380,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -516,7 +516,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1064407595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19, y: 224, z: 0}
+  m_LocalPosition: {x: 7.9000244, y: 187.7, z: 0}
   m_LocalScale: {x: 0.73297185, y: 0.7329719, z: 0.7329719}
   m_Children: []
   m_Father: {fileID: 945581289}
@@ -524,8 +524,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: 224}
-  m_SizeDelta: {x: 1248.6, y: 79.1}
+  m_AnchoredPosition: {x: 7.8999996, y: 187.7}
+  m_SizeDelta: {x: 1598.2, y: 177.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1064407597
 MonoBehaviour:
@@ -661,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mensagem: {fileID: 1064407597}
+  timer: 0
 --- !u!1 &1514382729
 GameObject:
   m_ObjectHideFlags: 0

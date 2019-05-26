@@ -9,6 +9,8 @@ public class Menu : MonoBehaviour {
 
 public Button button_jogar;
 public Button button_cadastro;
+public Button button_fechar;
+public Button button_sobre;
 public InputField field_email;
 public InputField field_senha;
 public string email, senha, retorno;
@@ -21,12 +23,25 @@ public Text mensagem;
 void Start(){
      button_jogar.onClick.AddListener(Login);
      button_cadastro.onClick.AddListener(Cadastrar);
+     button_fechar.onClick.AddListener(Fechar);
+     button_sobre.onClick.AddListener(Sobre);
+     UserData.tela_main = true;
+     UserData.tela_menu = false;
+     UserData.tela_cadastro = false;
 }
 
 void FixedUpdate(){
     if (Input.GetKeyDown(KeyCode.Escape)){
        Application.Quit();
     }
+}
+
+void Sobre(){
+     SceneManager.LoadScene("Sobre");
+}
+
+void Fechar(){
+     Application.Quit();
 }
 
    

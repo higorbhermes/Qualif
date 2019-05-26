@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/TelaJogo.unity
+- path: "Assets/Refer\xEAncias.unity"
   isLoaded: 1
   isActive: 1

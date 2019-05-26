@@ -57,6 +57,16 @@ public GameObject emoji_triste;
 public GameObject emoji_chorando;
 public GameObject emoji_amei;
 public Text mensagem1, mensagem2, titulo;
+public GameObject object_pdca;
+public GameObject object_kaizen;
+public GameObject object_gut;
+public GameObject object_swot;
+public GameObject object_sigma;
+public GameObject object_bcg;
+public GameObject object_5W2H;
+public GameObject object_referencias;
+public Button continuar_pdca, continuar_kaizen, continuar_gut, continuar_swot, continuar_sigma, continuar_bcg, continuar_5W2H, continuar_referencias;
+public Button button_referencias;
 public string num_gerado;
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
 public string url_salvar = "https://qualif.000webhostapp.com/html/salvarJogadorQuiz.php";
@@ -106,9 +116,130 @@ void Start(){
         obj_figura13.SetActive(false);
         obj_figura14.SetActive(false);
         titulo.text = "JOGO DA MEMÓRIA";
-        //WWW www_gerarnumero = new WWW (url_aleatorio);
-        //StartCoroutine(Num_aleatorio(www_gerarnumero));
+        continuar_pdca.onClick.AddListener(ContinuarPdca);
+        continuar_kaizen.onClick.AddListener(ContinuarKaizen);
+        continuar_gut.onClick.AddListener(ContinuarGut);
+        continuar_swot.onClick.AddListener(ContinuarSwot);
+        continuar_sigma.onClick.AddListener(ContinuarSigma);
+        continuar_bcg.onClick.AddListener(ContinuarBcg);
+        continuar_5W2H.onClick.AddListener(Continuar5W2H);
+        continuar_referencias.onClick.AddListener(ContinuarReferencia);
+        button_referencias.onClick.AddListener(Referencia);
 }
+
+void ContinuarPdca(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_pdca.SetActive(false);
+     }
+}
+
+void ContinuarKaizen(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_kaizen.SetActive(false);
+     }
+}
+
+void ContinuarGut(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_gut.SetActive(false);
+     }
+}
+
+void ContinuarSwot(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_swot.SetActive(false);
+     }
+}
+
+void ContinuarSigma(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_sigma.SetActive(false);
+     }
+}
+
+void ContinuarBcg(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_bcg.SetActive(false);
+     }
+}
+
+void Continuar5W2H(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_5W2H.SetActive(false);
+     }
+}
+
+void ContinuarReferencia(){
+     object_referencias.SetActive(false);
+}
+
+void Referencia(){
+     object_referencias.SetActive(true);
+}
+
 
 void FixedUpdate(){
     timer -= Time.deltaTime;
@@ -264,7 +395,7 @@ void FixedUpdate(){
         mensagem1.text = "Você venceu";
         mensagem2.text = "";
     }*/
-    if (Input.GetKeyDown(KeyCode.Space)){
+    /*if (timer<-5){
         if (final == true){
            if (UserData.cont_jogo_memoria<=3){
                 WWW www_gerarnumero = new WWW (url_aleatorio);
@@ -274,9 +405,47 @@ void FixedUpdate(){
                SceneManager.LoadScene("TelaVitoria");
             }
         }
-    }
+    }*/
+
+/*
+PAVAN, Evandro. Gestão da Qualidade. 2017. Disponivel em: <http://geqs.com.br/servicos/gestao-em-saude/qualidade-em-saude>. Acesso em 25 de maio de 2019.
+IDEAL MARKETING. O que é análise SWOT. 2018. Disponivel em: <https://www.idealmarketing.com.br/blog/o-que-e-analise-swot>. Acesso em 25 de maio de 2019.
+GUERRERA, JON. Using Kaizen for Your Personal Goals. 2012. Disponivel em: <https://livingforimprovement.com/slow-and-steady-using-kaizen>. Acesso em 25 de maio de 2019.
+SABINO, Gabi. A ferramenta 5W2H é útil. 2015. Disponivel em: <http://www.radardeprojetos.com.br/2015/03/a-ferramenta-5w2h-e-util>. Acesso em 25 de maio de 2019.
+PRIORITY PARTNERS. A Matriz GUT. 2015. Disponivel em: <http://p1p.com.br/wp-content/uploads/2015/08/GUT.png>. Acesso em 25 de maio de 2019.
+SALES, Rafaela. Ferramentas de Qualidade: Conceito e Aplicação. 2017. Disponivel em: <http://www.portal-administracao.com/2017/09/sete-ferramentas-da-qualidade-conceito>. Acesso em 25 de maio de 2019.
+2. RAVAZOLLO, Rafael. Administração MPU. Casa do Concurseiro. 17  de setembro de 2018.
+DESIGN LIVRE RECURSOS E SOFTWARE
+
+
+Referências Bibliográficas:
+
+1. DEVMIDIA. Testes de Software. 2018. Disponivel em: <https://www.devmedia.com.br/guia/testes-de-software/34403>. Acesso em 25 de maio de 2019.
+
+2. TARGETRUST. Os 13 Principais Testes de Software.  Disponivel em: <https://targettrust.com.br/blog/os-13-principais-tipos-de-testes-de-software/>. Acesso em 25 de maio de 2019.
+
+
+
+GONÇALVES, Victor. As 7 ferramentas de qualidade.  23  de março de 2019. Disponível em: <https://www.voitto.com.br/blog/artigo/as-7-ferramentas-da-qualidade>, acesso em 25 de maio de 2019. 
+
+2. RAVAZOLLO, Rafael. Administração MPU. Casa do Concurseiro. 17  de setembro de 2018.
+
+ÍCONS8. Design Livre Recursos e Software. 2019. Disponivel em: <https://icons8.com.br/icons/set/diagrama>. Acesso em 25 de maio de 2019.
+ÍCONS8. Design Livre Recursos e Software. 2019. Disponivel em: <https://icons8.com.br/icons/set/peixe>. Acesso em 25 de maio de 2019.
+ÍCONS8. Design Livre Recursos e Software. 2019. Disponivel em: <https://icons8.com.br/icons/set/dispersao>. Acesso em 25 de maio de 2019.
+ÍCONS8. Design Livre Recursos e Software. 2019. Disponivel em: <https://icons8.com.br/icons/set/grafico>. Acesso em 25 de maio de 2019.
+ÍCONS8. Design Livre Recursos e Software. 2019. Disponivel em: <https://icons8.com.br/icons/set/histograma>. Acesso em 25 de maio de 2019.
+ÍCONS8. Design Livre Recursos e Software. 2019. Disponivel em: <https://icons8.com.br/icons/set/checklist>. Acesso em 25 de maio de 2019.
+
+
+
+
+SIX SIGMAS STYDY GUIDE. 2017. Disponível em: <https://sixsigmastudyguide.com/a-study-guide-to-the-founding-fathers-of-six-sigma-and-the-quality-movement>, acesso em 25 de maio de 2019. 
+*/
+
+
     if (contador == 7){
-       mensagem1.text = "Parabéns, você acertou ! Aperte ESPAÇO para o próximo desafio!";
+       mensagem1.text = "Parabéns, você acertou!";
        liberado = false;
        final = true;
        emoji_chorando.SetActive(false);
@@ -731,6 +900,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_pdca.SetActive(true);
         acertou = true;
         revelou1 = true;
         revelou12 = true;
@@ -738,7 +908,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -753,7 +923,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        object_kaizen.SetActive(true);
+        mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -768,7 +939,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        object_gut.SetActive(true);
+        mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -783,7 +955,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        object_swot.SetActive(true);
+        mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -798,7 +971,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        object_sigma.SetActive(true);
+        mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -813,7 +987,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        object_bcg.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -828,7 +1003,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        object_5W2H.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -857,7 +1033,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        object_pdca.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -872,7 +1049,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        object_kaizen.SetActive(true);
+        mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -887,7 +1065,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        object_gut.SetActive(true);
+        mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -902,7 +1081,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        object_swot.SetActive(true);
+        mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -917,7 +1097,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        object_sigma.SetActive(true);
+        mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -932,7 +1113,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        object_bcg.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -947,7 +1129,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        object_5W2H.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -976,7 +1159,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        object_pdca.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -991,7 +1175,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        object_kaizen.SetActive(true);
+        mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1006,7 +1191,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        object_gut.SetActive(true);
+        mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1021,7 +1207,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        object_swot.SetActive(true);
+        mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1036,7 +1223,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        object_sigma.SetActive(true);
+        mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -1051,7 +1239,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        object_bcg.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1066,7 +1255,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        object_5W2H.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -1095,7 +1285,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        object_pdca.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1110,7 +1301,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        object_kaizen.SetActive(true);
+        mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1125,7 +1317,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        object_gut.SetActive(true);
+        mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1140,7 +1333,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        object_swot.SetActive(true);
+        mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1155,7 +1349,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        object_sigma.SetActive(true);
+        mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -1170,7 +1365,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        object_bcg.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
         emoji_chorando.SetActive(false);
@@ -1185,7 +1381,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        object_5W2H.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -1207,6 +1404,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_pdca.SetActive(true);
         acertou = true;
         revelou8 = true;
         revelou11 = true;
@@ -1214,7 +1412,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O Ciclo PDCA é uma ferramenta de gestão que tem como objetivo promover a melhoria contínua dos processos por meio de um circuito de quatro ações: planejar (plan), fazer (do), checar (check) e agir (act).";
+        object_pdca.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1229,7 +1428,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaizen é uma filosofia de melhoria contínua que tem como premissa básica: 'Hoje melhor do que ontem, amanhã melhor do que hoje'. Para o método Kaizen, é essencial que nenhum dia se passe dentro de uma empresa sem que alguma melhoria seja implementada."; 
+        object_kaizen.SetActive(true);
+        mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1244,7 +1444,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A Matriz GUT auxilia na priorização de resolução de problemas. Muito utilizada naquelas questões em que é preciso tomar decisões complexas e que exigem a análise de vários problemas. Com o sistema GUT é possível classificar cada problema de acordo com a Gravidade, Urgência e Tendência";
+        object_gut.SetActive(true);
+        mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1259,7 +1460,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Análise SWOT é uma abreviação, em inglês, de forças, fraquezas, oportunidades e ameaças. A função dessa ferramenta é avaliar os ambientes interno e externo a um empreendimento, formulando táticas para otimizar o desempenho. Assim, são analisadas também as oportunidades e as ameaças.";
+        object_swot.SetActive(true);
+        mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1274,7 +1476,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Seis Sigma é um método de reolução de problemas crônicos. O que caracteriza um bom projeto Seis Sigma é o rigor no uso do método, respeitando as fases previstas na ordem recomendada: Definir, Medir, Analisar, Melhorar e Controlar";
+        object_sigma.SetActive(true);
+        mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1289,7 +1492,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "A matriz BCG é utilizada para tomadas de decisão relacionadas a investimentos em linhas de produtos ou de serviços – quais manter, quais descontinuar, etc. Para isso, os produtos são classificados em 4 categorias: estrelas, ponto de interrogação, vacas leiteiras e abacaxis";
+        object_bcg.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1304,7 +1508,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "O 5W2H é um checklist de atividades que devem ser desenvolvidas. Devem ser respondidas sete perguntas, são elas: What (o que será feito?), Why (por que será feito?), Where (onde será feito?), When (quando?), Who (por quem será feito?), How (como será feito?) e How much (quanto vai custar?)";
+        object_5W2H.SetActive(true);
+        mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){

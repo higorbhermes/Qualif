@@ -57,6 +57,16 @@ public GameObject emoji_triste;
 public GameObject emoji_chorando;
 public GameObject emoji_amei;
 public Text mensagem1, mensagem2, titulo;
+public GameObject object_ishikawa;
+public GameObject object_juran;
+public GameObject object_feigebaum;
+public GameObject object_taguchi;
+public GameObject object_stewart;
+public GameObject object_deming;
+public GameObject object_crosby;
+public GameObject object_referencias;
+public Button continuar_ishikawa, continuar_juran, continuar_feigebaum, continuar_taguchi, continuar_stewart, continuar_deming, continuar_crosby, continuar_referencias;
+public Button button_referencias;
 public string num_gerado;
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
 public string url_salvar = "https://qualif.000webhostapp.com/html/salvarJogadorQuiz.php";
@@ -106,8 +116,128 @@ void Start(){
         obj_figura13.SetActive(false);
         obj_figura14.SetActive(false);
         titulo.text = "JOGO DA MEMÓRIA";
-        //WWW www_gerarnumero = new WWW (url_aleatorio);
-        //StartCoroutine(Num_aleatorio(www_gerarnumero));
+        continuar_ishikawa.onClick.AddListener(ContinuarIshikawa);
+        continuar_juran.onClick.AddListener(ContinuarJuran);
+        continuar_feigebaum.onClick.AddListener(ContinuarFeigebaum);
+        continuar_taguchi.onClick.AddListener(ContinuarTaguchi);
+        continuar_stewart.onClick.AddListener(ContinuarStewart);
+        continuar_deming.onClick.AddListener(ContinuarDeming);
+        continuar_crosby.onClick.AddListener(ContinuarCrosby);
+        continuar_referencias.onClick.AddListener(ContinuarReferencia);
+        button_referencias.onClick.AddListener(Referencia);
+}
+
+void ContinuarIshikawa(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_ishikawa.SetActive(false);
+     }
+}
+
+void ContinuarJuran(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_juran.SetActive(false);
+     }
+}
+
+void ContinuarFeigebaum(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_feigebaum.SetActive(false);
+     }
+}
+
+void ContinuarTaguchi(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_taguchi.SetActive(false);
+     }
+}
+
+void ContinuarStewart(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_stewart.SetActive(false);
+     }
+}
+
+void ContinuarDeming(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_deming.SetActive(false);
+     }
+}
+
+void ContinuarCrosby(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_crosby.SetActive(false);
+     }
+}
+
+void ContinuarReferencia(){
+     object_referencias.SetActive(false);
+}
+
+void Referencia(){
+     object_referencias.SetActive(true);
 }
 
 void FixedUpdate(){
@@ -264,7 +394,7 @@ void FixedUpdate(){
         mensagem1.text = "Você venceu";
         mensagem2.text = "";
     }*/
-    if (Input.GetKeyDown(KeyCode.Space)){
+    /*if (timer<-5){
         if (final == true){
            if (UserData.cont_jogo_memoria<=3){
                 WWW www_gerarnumero = new WWW (url_aleatorio);
@@ -274,9 +404,9 @@ void FixedUpdate(){
                SceneManager.LoadScene("TelaVitoria");
             }
         }
-    }
+    }*/
     if (contador == 7){
-       mensagem1.text = "Parabéns, você acertou ! Aperte ESPAÇO para o próximo desafio!";
+       mensagem1.text = "Parabéns, você acertou!";
        liberado = false;
        final = true;
        emoji_chorando.SetActive(false);
@@ -731,6 +861,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_ishikawa.SetActive(true);
         acertou = true;
         revelou1 = true;
         revelou12 = true;
@@ -738,7 +869,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaoru Ishikawa foi um dos principais gurus da qualidade, e deixou um grande legado através de seus estudos e teorias. Suas principais teorias foram: Círculo de Controle da Qualidade, Diagrama de Ishikawa e os 5S";
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -753,7 +884,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
+        object_juran.SetActive(true);
+        mensagem2.text = "Um juran é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -768,7 +900,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
+        object_feigebaum.SetActive(true);
+        mensagem2.text = "O feigebaum é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -783,7 +916,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        object_taguchi.SetActive(true);
+        mensagem2.text = "Uma taguchi de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -798,7 +932,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
+        object_stewart.SetActive(true);
+        mensagem2.text = "As stewarts de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -813,7 +948,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        object_deming.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -828,7 +964,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
+        object_crosby.SetActive(true);
+        mensagem2.text = "O Diagrama de crosby, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -857,7 +994,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaoru Ishikawa foi um dos principais gurus da qualidade, e deixou um grande legado através de seus estudos e teorias. Suas principais teorias foram: Círculo de Controle da Qualidade, Diagrama de Ishikawa e os 5S";
+        object_ishikawa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -872,7 +1010,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
+        object_juran.SetActive(true);
+        mensagem2.text = "Um juran é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -887,7 +1026,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
+        object_feigebaum.SetActive(true);
+        mensagem2.text = "O feigebaum é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -902,7 +1042,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        object_taguchi.SetActive(true);
+        mensagem2.text = "Uma taguchi de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -917,7 +1058,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
+        object_stewart.SetActive(true);
+        mensagem2.text = "As stewarts de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -932,7 +1074,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.";
+        object_deming.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -947,7 +1090,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
+        object_crosby.SetActive(true);
+        mensagem2.text = "O Diagrama de crosby, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -976,7 +1120,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaoru Ishikawa foi um dos principais gurus da qualidade, e deixou um grande legado através de seus estudos e teorias. Suas principais teorias foram: Círculo de Controle da Qualidade, Diagrama de Ishikawa e os 5S";
+        object_ishikawa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -991,7 +1136,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
+        object_juran.SetActive(true);
+        mensagem2.text = "Um juran é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1006,7 +1152,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
+        object_feigebaum.SetActive(true);
+        mensagem2.text = "O feigebaum é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1021,7 +1168,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        object_taguchi.SetActive(true);
+        mensagem2.text = "Uma taguchi de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1036,7 +1184,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
+        object_stewart.SetActive(true);
+        mensagem2.text = "As stewarts de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 6)){
         emoji_chorando.SetActive(false);
@@ -1051,7 +1200,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        object_deming.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1066,7 +1216,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
+        object_crosby.SetActive(true);
+        mensagem2.text = "O Diagrama de crosby, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -1095,7 +1246,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaoru Ishikawa foi um dos principais gurus da qualidade, e deixou um grande legado através de seus estudos e teorias. Suas principais teorias foram: Círculo de Controle da Qualidade, Diagrama de Ishikawa e os 5S";
+        object_ishikawa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1110,7 +1262,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
+        object_juran.SetActive(true);
+        mensagem2.text = "Um juran é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1125,7 +1278,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
+        object_feigebaum.SetActive(true);
+        mensagem2.text = "O feigebaum é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1140,7 +1294,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        object_taguchi.SetActive(true);
+        mensagem2.text = "Uma taguchi de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1155,7 +1310,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
+        object_stewart.SetActive(true);
+        mensagem2.text = "As stewarts de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
         emoji_chorando.SetActive(false);
@@ -1170,7 +1326,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.​";
+        object_deming.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
         emoji_chorando.SetActive(false);
@@ -1185,7 +1342,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
+        object_crosby.SetActive(true);
+        mensagem2.text = "O Diagrama de crosby, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){
@@ -1207,6 +1365,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_ishikawa.SetActive(true);
         acertou = true;
         revelou8 = true;
         revelou11 = true;
@@ -1214,7 +1373,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Kaoru Ishikawa foi um dos principais gurus da qualidade, e deixou um grande legado através de seus estudos e teorias. Suas principais teorias foram: Círculo de Controle da Qualidade, Diagrama de Ishikawa e os 5S";
+        object_ishikawa.SetActive(true);
+        mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
         emoji_chorando.SetActive(false);
@@ -1229,7 +1389,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Joseph Juran é o responsável por desenvolver um método de gestão de qualidade utilizado até os dias de hoje. Sua teoria é norteada por três princípios: planejamento, controle e melhoria de qualidade. Sua conceituação de qualidade é baseada na satisfação do cliente."; 
+        object_juran.SetActive(true);
+        mensagem2.text = "Um juran é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
         emoji_chorando.SetActive(false);
@@ -1244,7 +1405,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Armand Feigenbaum é o idealizador do conceito de 'Total Quality Control'. O controle total de qualidade é um sistema que integra os esforços para desenvolver, manter e melhorar a qualidade de vários grupos na organização, e assim tornar possível económicos níveis de produção e serviços.";
+        object_feigebaum.SetActive(true);
+        mensagem2.text = "O feigebaum é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 3)){
         emoji_chorando.SetActive(false);
@@ -1259,7 +1421,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Genochi Taguchi é conhecido por desenvolver uma metodologia para melhorar a qualidade. Sua filosofia é relativa a todo o ciclo de produção, cuja chave para reduzir as perdas não está na conformidade com as especificações, mas na redução da variância estatística em relação aos objetivos fixados.";
+        object_taguchi.SetActive(true);
+        mensagem2.text = "Uma taguchi de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
         emoji_chorando.SetActive(false);
@@ -1274,7 +1437,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Shewhart foi o responsável pelo controle estatístico de qualidade. Ele criou técnicas inovadoras para avaliar e aprimorar a qualidade de serviços e produtos, que são utilizadas até hoje.";
+        object_stewart.SetActive(true);
+        mensagem2.text = "As stewarts de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
         emoji_chorando.SetActive(false);
@@ -1289,7 +1453,8 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Deming foi pioneiro tanto nos estudos como na aplicação de melhorias no âmbito da qualidade. Dentre seus trabalhos mais proeminentes podemos destacar a teoria de gerência, chamada de Sistema do Conhecimento Profundo, e os 14 pontos para um ambiente de trabalho otimizado.";
+        object_deming.SetActive(true);
+        mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
         emoji_chorando.SetActive(false);
@@ -1304,7 +1469,8 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
-        mensagem2.text = "Crosby foi um empresário e escritor que contribuiu para a teoria e métodos de gestão da qualidade. Para ele, Qualidade está associada aos seguintes conceitos: zero defeitos, fazer certo na primeira vez, a vacina da qualidade e os 6Cs";
+        object_crosby.SetActive(true);
+        mensagem2.text = "O Diagrama de crosby, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
     if (acertou == false){

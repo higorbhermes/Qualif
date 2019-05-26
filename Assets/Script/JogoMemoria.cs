@@ -56,6 +56,16 @@ public GameObject emoji_feliz;
 public GameObject emoji_triste;
 public GameObject emoji_chorando;
 public GameObject emoji_amei;
+public GameObject object_peixe;
+public GameObject object_histograma;
+public GameObject object_fluxograma;
+public GameObject object_carta;
+public GameObject object_folha;
+public GameObject object_dispersao;
+public GameObject object_pareto;
+public GameObject object_referencias;
+public Button continuar_peixe, continuar_histograma, continuar_fluxograma, continuar_carta, continuar_folha, continuar_dispersao, continuar_pareto, continuar_referencias;
+public Button button_referencias;
 public Text mensagem1, mensagem2, titulo;
 public string num_gerado;
 public string url_selectJogoQuiz = "https://qualif.000webhostapp.com/html/selectJogoQuiz.php";
@@ -67,6 +77,7 @@ public bool acertou = false, errou = false, final = false, liberado = true, limp
 public bool revelou1 = false, revelou2 = false, revelou3 = false, revelou4 = false, revelou5 = false, revelou6 = false, revelou7 = false, revelou8 = false, revelou9 = false, revelou10 = false, revelou11 = false, revelou12 = false, revelou13 = false, revelou14 = false;
 public double timer = 0.5;
 public double timerErro = 0.5;
+public double timerfinal = 0.5;
 public double oldTimer;
 public int tt = UserData.cont_jogo_memoria;
 
@@ -106,8 +117,128 @@ void Start(){
         obj_figura13.SetActive(false);
         obj_figura14.SetActive(false);
         titulo.text = "JOGO DA MEMÓRIA";
-        //WWW www_gerarnumero = new WWW (url_aleatorio);
-        //StartCoroutine(Num_aleatorio(www_gerarnumero));
+        continuar_peixe.onClick.AddListener(ContinuarPeixe);
+        continuar_histograma.onClick.AddListener(ContinuarHistograma);
+        continuar_fluxograma.onClick.AddListener(ContinuarFluxograma);
+        continuar_carta.onClick.AddListener(ContinuarCarta);
+        continuar_folha.onClick.AddListener(ContinuarFolha);
+        continuar_dispersao.onClick.AddListener(ContinuarDispersao);
+        continuar_pareto.onClick.AddListener(ContinuarPareto);
+        continuar_referencias.onClick.AddListener(ContinuarReferencia);
+        button_referencias.onClick.AddListener(Referencia);
+}
+
+void ContinuarPeixe(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_peixe.SetActive(false);
+     }
+}
+
+void ContinuarHistograma(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_histograma.SetActive(false);
+     }
+}
+
+void ContinuarFluxograma(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_fluxograma.SetActive(false);
+     }
+}
+
+void ContinuarCarta(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_carta.SetActive(false);
+     }
+}
+
+void ContinuarFolha(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_folha.SetActive(false);
+     }
+}
+
+void ContinuarDispersao(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_dispersao.SetActive(false);
+     }
+}
+
+void ContinuarPareto(){
+     if (final == true){
+        if (UserData.cont_jogo_memoria<=3){
+              WWW www_gerarnumero = new WWW (url_aleatorio);
+              StartCoroutine(Num_aleatorio(www_gerarnumero));
+        }
+        else{
+            SceneManager.LoadScene("TelaVitoria");
+        }
+     }
+     else{
+        object_pareto.SetActive(false);
+     }
+}
+
+void ContinuarReferencia(){
+     object_referencias.SetActive(false);
+}
+
+void Referencia(){
+     object_referencias.SetActive(true);
 }
 
 void FixedUpdate(){
@@ -264,7 +395,7 @@ void FixedUpdate(){
         mensagem1.text = "Você venceu";
         mensagem2.text = "";
     }*/
-    if (Input.GetKeyDown(KeyCode.Space)){
+    /*if (timer<-5){
         if (final == true){
            if (UserData.cont_jogo_memoria<=3){
                 WWW www_gerarnumero = new WWW (url_aleatorio);
@@ -274,9 +405,9 @@ void FixedUpdate(){
                SceneManager.LoadScene("TelaVitoria");
             }
         }
-    }
+    }*/
     if (contador == 7){
-       mensagem1.text = "Parabéns, você acertou ! Aperte ESPAÇO para o próximo desafio!";
+       mensagem1.text = "Parabéns, você acertou!";
        liberado = false;
        final = true;
        emoji_chorando.SetActive(false);
@@ -731,6 +862,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_peixe.SetActive(true);
         acertou = true;
         revelou1 = true;
         revelou12 = true;
@@ -753,6 +885,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_histograma.SetActive(true);
         mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 3)){
@@ -768,6 +901,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_fluxograma.SetActive(true);
         mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
@@ -783,6 +917,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_carta.SetActive(true);
         mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 6)){
@@ -798,6 +933,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_folha.SetActive(true);
         mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
@@ -813,6 +949,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_dispersao.SetActive(true);
         mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
@@ -828,6 +965,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
+        object_pareto.SetActive(true);
         mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
@@ -857,6 +995,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_peixe.SetActive(true);
         mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 7)){
@@ -872,6 +1011,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_histograma.SetActive(true);
         mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 1 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 1)){
@@ -887,6 +1027,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_fluxograma.SetActive(true);
         mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
@@ -902,6 +1043,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_carta.SetActive(true);
         mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 3)){
@@ -917,6 +1059,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_folha.SetActive(true);
         mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 2)){
@@ -932,6 +1075,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_dispersao.SetActive(true);
         mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 9)){
@@ -947,6 +1091,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
+        object_pareto.SetActive(true);
         mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
@@ -976,6 +1121,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_peixe.SetActive(true);
         mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 1)){
@@ -991,6 +1137,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_histograma.SetActive(true);
         mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 3 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 3)){
@@ -1006,6 +1153,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_fluxograma.SetActive(true);
         mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 2)){
@@ -1021,6 +1169,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_carta.SetActive(true);
         mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 4)){
@@ -1036,6 +1185,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_folha.SetActive(true);
         mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 6 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 6)){
@@ -1051,6 +1201,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_dispersao.SetActive(true);
         mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 5 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 5)){
@@ -1066,6 +1217,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
+        object_pareto.SetActive(true);
         mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
@@ -1095,6 +1247,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_peixe.SetActive(true);
         mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 8) || (primeira_escolha == 8 && segunda_escolha == 4)){
@@ -1110,6 +1263,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_histograma.SetActive(true);
         mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 2 && segunda_escolha == 5) || (primeira_escolha == 5 && segunda_escolha == 2)){
@@ -1125,6 +1279,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_fluxograma.SetActive(true);
         mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
@@ -1140,6 +1295,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_carta.SetActive(true);
         mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 11) || (primeira_escolha == 11 && segunda_escolha == 1)){
@@ -1155,6 +1311,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_folha.SetActive(true);
         mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 9 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 9)){
@@ -1170,6 +1327,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_dispersao.SetActive(true);
         mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 12 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 12)){
@@ -1185,6 +1343,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
+        object_pareto.SetActive(true);
         mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }
@@ -1207,6 +1366,7 @@ void VerificarJogada(){
         emoji_feliz.SetActive(true);
         emoji_triste.SetActive(false);
         emoji_amei.SetActive(false);
+        object_peixe.SetActive(true);
         acertou = true;
         revelou8 = true;
         revelou11 = true;
@@ -1214,6 +1374,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_peixe.SetActive(true);
         mensagem2.text = "O Diagrama de Ishikawa permite estruturar as causas de um problema ou oportunidade de melhoria. Sendo extremamente útil, pois ajuda  a explorar todas as causas potenciais ou reais que resultam em um defeito ou falha. Diante disso, podemos propor as melhores ações para sanar um problema.";
     }
     if ((primeira_escolha == 7 && segunda_escolha == 10) || (primeira_escolha == 10 && segunda_escolha == 7)){
@@ -1229,6 +1390,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_histograma.SetActive(true);
         mensagem2.text = "Um Histograma é a representação gráfica de um conjunto de dados previamente tabulado e dividido em classes uniformes. Ao dispor as informações graficamente, permite a visualização dos valores centrais, a dispersão em torno dos valores centrais e a forma da distribuição."; 
     }
     if ((primeira_escolha == 5 && segunda_escolha == 9) || (primeira_escolha == 9 && segunda_escolha == 5)){
@@ -1244,6 +1406,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_fluxograma.SetActive(true);
         mensagem2.text = "O fluxograma é um diagrama que expressa um determinado processo de forma sequencial, gráfica, simples e objetiva. O objetivo é estabelecer uma gestão à vista, de forma a facilitar o entendimento das etapas que compõem um processo";
     }
     if ((primeira_escolha == 3 && segunda_escolha == 14) || (primeira_escolha == 14 && segunda_escolha == 3)){
@@ -1259,6 +1422,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_carta.SetActive(true);
         mensagem2.text = "Uma carta de controle é um conjunto de amostras ordenadas, no tempo, que são interpretados em função de linhas horizontais, chamadas de LSC (limite superior de controle) e LIC (limite inferior de controle). A partir da verificação, pode-se agir para corrigir os eventuais problemas no processo, gerando maior eficiência.";
     }
     if ((primeira_escolha == 4 && segunda_escolha == 6) || (primeira_escolha == 6 && segunda_escolha == 4)){
@@ -1274,6 +1438,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_folha.SetActive(true);
         mensagem2.text = "As folhas de verificação são formulários em que os dados coletados são preenchidos de forma rápida, fácil e concisa. Registram dados e itens a serem verificados momentaneamente e também serve para identificar não conformidades no processo.";
     }
     if ((primeira_escolha == 2 && segunda_escolha == 13) || (primeira_escolha == 13 && segunda_escolha == 2)){
@@ -1289,6 +1454,7 @@ void VerificarJogada(){
         primeira_escolha = 0;
         segunda_escolha = 0; 
         mensagem1.text = "Parabéns, você acertou!";
+        object_dispersao.SetActive(true);
         mensagem2.text = "Os Diagramas de dispersão são representações de duas ou mais variáveis que são organizadas em um gráfico, uma em função da outra. Ao entender a correlação entre duas variáveis e como uma pode influenciar a outra, podemos determinar o melhor uso delas para melhorar a qualidade e produtividade da  empresa.";
     }
     if ((primeira_escolha == 1 && segunda_escolha == 12) || (primeira_escolha == 12 && segunda_escolha == 1)){
@@ -1304,6 +1470,7 @@ void VerificarJogada(){
         segunda_escolha = 0; 
         contador = contador+1;
         mensagem1.text = "Parabéns, você acertou!";
+        object_pareto.SetActive(true);
         mensagem2.text = "O Diagrama de Pareto, mais conhecido como regra 20-80, nos diz que 20% das causas principais são responsáveis por 80% dos problemas em uma organização. Ou seja, se solucionarmos essas 20% principais, acabamos com boa parte dos problemas.";
 
     }

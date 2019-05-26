@@ -34,6 +34,7 @@ public bool limpar_mensagem = true;
 public bool acertou = false, errou = false, fim_fase = false, é_igual;
 public int num_ajuda = 0, num;
 public string resposta_escolhida = "", num_gerado, text_enunciado;
+public double timer = 0.0;
 
 void Start(){
         button_ajuda.onClick.AddListener(Ajuda);
@@ -190,7 +191,10 @@ void FixedUpdate(){
             }
         }*/
     }
-    if (Input.GetKeyDown(KeyCode.Space)){
+    if (acertou == true || errou == true){
+        timer -= Time.deltaTime;
+    }
+    if (timer<-3){
         if (acertou == true){
            if (UserData.quiz_alternativo == true){
                if (UserData.cont_jogo_quiz == 2 && UserData.quiz2 == true){
@@ -466,13 +470,13 @@ void Responder(){
              UserData.cont_jogo_quiz = UserData.cont_jogo_quiz+1;
              UserData.JogoQuizAtual[UserData.cont_jogo_quiz] = UserData.id_jogo_quiz_atual;
              acertou = true;
-             mensagem.text = "Parabéns, você acertou! Aperte ESPAÇO para jogar o próximo desafio";
+             mensagem.text = "Parabéns, você acertou!";
             }
             if (resposta_escolhida != gabarito && errou == false){
              Debug.Log("Errou");
              WWW www_salvar = new WWW (url_salvar+"?id_quiz="+UserData.id_jogo_quiz_atual+"&email="+UserData.email+"&resposta=0");
              StartCoroutine(SalvarJogo(www_salvar));
-             mensagem.text = "Você Errou! A alternativa correta era: "+gabarito+". Aperte ESPAÇO ou clique em SAIR para encerrar a partida";
+             mensagem.text = "Você Errou! A alternativa correta era: "+gabarito;
              errou = true;
             }
         }

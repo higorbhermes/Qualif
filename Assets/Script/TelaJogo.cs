@@ -7,16 +7,15 @@ using UnityEngine.UI;
 public class TelaJogo : MonoBehaviour {
 	
 
-public Button button_jogar;
-public Button button_dados;
-public Button button_caderno;
 public Button button_estatisticas;
 public Button button_sair;
 public Button button_quiz;
 public Button button_forca;
 public Button button_voltar;
+public Button button_expandir;
 public Button button_missao;
 public Button button_ferramentas;
+public GameObject com_painel, sem_painel;
 public string num_gerado, num_gerado2, num_letras;
 public string url_aleatorio = "https://qualif.000webhostapp.com/html/num_aleatorio.php";
 public string url_aleatorio_memoria = "https://qualif.000webhostapp.com/html/num_aleatorio_memoria.php";
@@ -28,19 +27,34 @@ public Text memoria, missao;
 
  void Start()
     {
-        //button_jogar.onClick.AddListener(Jogar);
         button_missao.onClick.AddListener(Missao);
         button_forca.onClick.AddListener(Forca);
-        button_dados.onClick.AddListener(Dados);
         button_quiz.onClick.AddListener(Quiz);
         button_estatisticas.onClick.AddListener(Pontuacao);
         button_voltar.onClick.AddListener(Voltar);
         button_ferramentas.onClick.AddListener(Memória);
-        Debug.Log(""+UserData.email);
+        button_expandir.onClick.AddListener(Expandir);
         memoria.text = "Memória";
         missao.text = "Missão";
-        
+        UserData.tela_cadastro = false;
+        UserData.tela_menu = true;
+        UserData.tela_main = false;
      }
+
+void Expandir(){
+     sem_painel.SetActive(false);
+     com_painel.SetActive(true);
+}
+
+void Sobre(){
+     SceneManager.LoadScene("Sobre");
+}
+
+ void Politica(){
+        SceneManager.LoadScene("TelaPoliticaPrivacidade");
+    }
+
+
 
 void Missao(){
         SceneManager.LoadScene("Cena1");
@@ -78,6 +92,8 @@ void Sair(){
 void Forca(){
      opcao = 2;
      UserData.escolha = "2";
+     //WWW www = new WWW (url_aleatorio);
+     //StartCoroutine(Num_aleatorio(www));
      SceneManager.LoadScene("TelaFiltro");
 }
 

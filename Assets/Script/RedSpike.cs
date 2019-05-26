@@ -75,4 +75,6 @@ public class RedSpike : MonoBehaviour {
 		}
     }  
 
+    void Calejjjj(){}
+
 }
