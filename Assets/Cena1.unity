@@ -3713,7 +3713,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241957500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 227.4, y: 311.29947, z: 0}
+  m_LocalPosition: {x: 227.40002, y: 311.29944, z: 0}
   m_LocalScale: {x: 0.29663995, y: 0.23183997, z: 1.0785599}
   m_Children:
   - {fileID: 73382374}
@@ -3722,7 +3722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -412.6, y: -48.70053}
+  m_AnchoredPosition: {x: -412.59998, y: -48.70056}
   m_SizeDelta: {x: 264.9, y: 330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241957502
@@ -4474,7 +4474,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 306682485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.18434, y: -9.698543, z: 90}
+  m_LocalPosition: {x: -34.18434, y: -16.058542, z: 90}
   m_LocalScale: {x: 0.013888889, y: 0.013888889, z: 0.013888889}
   m_Children:
   - {fileID: 1506566016}
@@ -79529,7 +79529,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1026101537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.3, y: -10.04, z: 0}
+  m_LocalPosition: {x: -34.3, y: -16.4, z: 0}
   m_LocalScale: {x: 0.5021638, y: 0.42682183, z: 1.1026614}
   m_Children:
   - {fileID: 411064299}
@@ -79574,7 +79574,6 @@ MonoBehaviour:
   ferramenta_peixe: {fileID: 734112335}
   ferramenta_pareto: {fileID: 1108800564}
   ferramenta_histograma: {fileID: 1480933588}
-  ferramenta_fluxograma: {fileID: 0}
   ferramenta_carta: {fileID: 599436914}
   ferramenta_dispersao: {fileID: 900563861}
   raw_folha: {fileID: 1673614428}
@@ -83749,7 +83748,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1250797270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.77, y: 0.05, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0.05, z: 0}
   m_LocalScale: {x: 8.88515, y: 4.4807916, z: 0.90689677}
   m_Children: []
   m_Father: {fileID: 1026101539}
@@ -85342,8 +85341,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ao clicar nesse bot\xE3o, seu personagem dar\xE1 pequeno passo para a esquerda.
-    Se mantiver pressionado, ele ir\xE1 correr."
+  m_Text: "Ao clicar nesse bot\xE3o, seu personagem dar\xE1 um pequeno passo para
+    a esquerda. Se mantiver pressionado, ele ir\xE1 correr."
 --- !u!222 &1360970960
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -95079,8 +95078,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ao clicar nesse bot\xE3o, seu personagem dar\xE1 pequeno passo para a direita.
-    Se mantiver pressionado, ele ir\xE1 correr."
+  m_Text: "Ao clicar nesse bot\xE3o, seu personagem dar\xE1 um pequeno passo para
+    a direita. Se mantiver pressionado, ele ir\xE1 correr."
 --- !u!222 &1999133317
 CanvasRenderer:
   m_ObjectHideFlags: 0

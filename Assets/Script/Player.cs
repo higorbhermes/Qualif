@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
     public LayerMask LayerMaskMonsters;
     public GameObject LastCheckpoint, obj_botoes, obj_botoes2;
     private float distToGround;
-    public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_fluxograma, ferramenta_carta, ferramenta_dispersao;
+    public GameObject ferramenta_folha, ferramenta_peixe, ferramenta_pareto, ferramenta_histograma, ferramenta_carta, ferramenta_dispersao;
     public GameObject raw_folha, raw_peixe, raw_pareto, raw_histograma, raw_fluxograma, raw_carta, raw_dispersao;
     public GameObject painel_folha, painel_peixe, painel_pareto, painel_histograma, painel_fluxograma, painel_carta, painel_dispersao, painel_fimJogo, painel_Vitoria, painel_equipe, painel_pause, painel_regras;
     public bool folha = false, peixe = false, pareto = false, histograma = false, fluxograma = false, carta = false, dispersao = false;
@@ -217,7 +217,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
         ferramenta_histograma.SetActive(true);
-        ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(true);
         raw_folha.SetActive(true);
@@ -273,7 +272,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(false);
         ferramenta_pareto.SetActive(true);
         ferramenta_histograma.SetActive(true);
-        ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(true);
         raw_folha.SetActive(false);
@@ -329,7 +327,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(false);
         ferramenta_histograma.SetActive(true);
-        ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(true);
         obj_botoes2.SetActive(true);     
@@ -386,7 +383,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
         ferramenta_histograma.SetActive(false);
-        ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(true);
         raw_folha.SetActive(false);
@@ -443,7 +439,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
         ferramenta_histograma.SetActive(true);
-        ferramenta_fluxograma.SetActive(false);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(true);
         raw_folha.SetActive(false);
@@ -499,7 +494,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
         ferramenta_histograma.SetActive(true);
-        ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(false);
         ferramenta_dispersao.SetActive(true);
         obj_botoes2.SetActive(true);     
@@ -558,7 +552,6 @@ public class Player : MonoBehaviour {
         ferramenta_peixe.SetActive(true);
         ferramenta_pareto.SetActive(true);
         ferramenta_histograma.SetActive(true);
-        ferramenta_fluxograma.SetActive(true);
         ferramenta_carta.SetActive(true);
         ferramenta_dispersao.SetActive(false);
         raw_folha.SetActive(false);

@@ -94,6 +94,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 3a372e98b7d3e45ccb0e2497afc2e210 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 3a372e98b7d3e45ccb0e2497afc2e210 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+a6aaf29df0580f6ec67836939ca1423e Assembly-CSharp.dll:.Referências
 e7a78cbdeea4894acf79f6529a68e1c7 Assembly-CSharp.dll:.JogoForca1
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -130,7 +131,7 @@ d3a25d6e6f9f3739f3035efcca298d08 Assembly-CSharp.dll:.TelaMeusDados
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 680a5ed6f27c3ee496add697994c08af Assembly-CSharp.dll:.JogoMemoria2
 92818fd7e67583685474c35cae8e03ab Assembly-CSharp.dll:.JogoQuiz
-f85f9fb8e2533dab3e3dbc88cf4a5276 Assembly-CSharp.dll:.Player
+b6ae7515b391f060302706d5054ac275 Assembly-CSharp.dll:.Player
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -165,4 +166,3 @@ e7a78cbdeea4894acf79f6529a68e1c7 Assembly-CSharp.dll:.JogoForca10Letras
 198b6dc5b0dcaea841dd50f83422bec5 Assembly-CSharp.dll:.TelaFiltroVV
 b69848a24c629fc17ce598e856dcf2b7 Assembly-CSharp.dll:.Pontuacao
 831b1782b5e20545cce2254c00188158 Assembly-CSharp.dll:.TelaJogo
-a6aaf29df0580f6ec67836939ca1423e Assembly-CSharp.dll:.Referências
